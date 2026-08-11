@@ -349,8 +349,8 @@ Learned linear projection to swap a large text encoder for a small one. With a d
 | Qwen3-VL 4B → H3 (int8 ConvRot, tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_4b_int8convrot_tap24.safetensors) |
 | Qwen3-VL 4B → H3 COND-PROJ (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_4b_CONDPROJ_tap24.safetensors) |
 | Qwen3-VL 8B → H3 COND-PROJ (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_8b_CONDPROJ_tap24.safetensors) |
-| H3 Control Identity | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_identity.safetensors) |
-| H3 Control Zero | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_zero.safetensors) |
+| H3 Control Identity | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_identity.safetensors) |
+| H3 Control Zero | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_zero.safetensors) |
 
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
