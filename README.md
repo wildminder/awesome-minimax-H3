@@ -195,10 +195,10 @@ GGUF quants for use with stable-diffusion.cpp, ComfyUI, and Unsloth. Non-pruned 
 | ✓ | ![Q5_0][badge-Q5_0] | 12.97 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-Q5_0.gguf) |
 | ✓ | ![Q6_K][badge-Q6_K] | 15.45 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-Q6_K.gguf) |
 | ✓ | ![Q8_0][badge-Q8_0] | 19.97 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-Q8_0.gguf) |
-| ✓ | UD-Q2_K_XL | 7.51 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-UD-Q2_K_XL.gguf) |
-| ✓ | UD-Q3_K_XL | 8.90 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-UD-Q3_K_XL.gguf) |
-| ✓ | IQ1_S | 3.78 GB | [![][gh-MarxistLeninist]](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF/resolve/main/minimax_h3_fl2va_pruned-IQ1_S.gguf) |
-| ✓ | IQ1_M | 4.22 GB | [![][gh-MarxistLeninist]](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF/resolve/main/minimax_h3_fl2va_pruned-IQ1_M.gguf) |
+| ✓ | ![UD-Q2_K_XL][badge-UD-Q2_K_XL] | 7.51 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-UD-Q2_K_XL.gguf) |
+| ✓ | ![UD-Q3_K_XL][badge-UD-Q3_K_XL] | 8.90 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-GGUF/resolve/main/minimax_h3_fl2va_pruned-UD-Q3_K_XL.gguf) |
+| ✓ | ![IQ1_S][badge-IQ1_S] | 3.78 GB | [![][gh-MarxistLeninist]](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF/resolve/main/minimax_h3_fl2va_pruned-IQ1_S.gguf) |
+| ✓ | ![IQ1_M][badge-IQ1_M] | 4.22 GB | [![][gh-MarxistLeninist]](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF/resolve/main/minimax_h3_fl2va_pruned-IQ1_M.gguf) |
 
 </details>
 
@@ -311,7 +311,7 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Video VAE | ![fp16][badge-fp16] | 4.85 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors) |
-| Audio VAE | fp32 | 577 MB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors) |
+| Audio VAE | ![fp32][badge-fp32] | 577 MB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors) |
 
 #### FP8 VAE (dummy9996)
 
@@ -360,6 +360,7 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | H3 Control Zero | — | 52.5 MB | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/mmh3-ClipProj-control-zero.safetensors) |
 
 **Older `h3_*` filenames** (with `tap24` / `CONDPROJ` / `int8convrot` suffixes) have moved to [`obsolete/`](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/tree/main/obsolete) — canonical names are now `mmh3-*-ClipProj*.safetensors`.
+
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ LoRA
@@ -611,6 +612,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
 [badge-fp8]: https://img.shields.io/badge/fp8-28a745?style=flat-square
 [badge-mxfp8]: https://img.shields.io/badge/mxfp8-20c997?style=flat-square
+[badge-fp32]: https://img.shields.io/badge/fp32-6c757d?style=flat-square
 [badge-int8]: https://img.shields.io/badge/int8-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
 [badge-nvfp4]: https://img.shields.io/badge/nvfp4-6f42c1?style=flat-square
@@ -627,6 +629,10 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [badge-Q5_K_S]: https://img.shields.io/badge/Q5__K__S-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
 [badge-Q8_0]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
+[badge-UD-Q2_K_XL]: https://img.shields.io/badge/UD-Q2__K__XL-e05d44?style=flat-square
+[badge-UD-Q3_K_XL]: https://img.shields.io/badge/UD-Q3__K__XL-fe7d37?style=flat-square
+[badge-IQ1_S]: https://img.shields.io/badge/IQ1__S-b02a37?style=flat-square
+[badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-d64545?style=flat-square
 [badge-noinfo]: https://img.shields.io/badge/no%20description-6c757d?style=flat-square&logoColor=white
 
 [cat-cond]: https://img.shields.io/badge/Conditioning-0077cc?style=flat-square

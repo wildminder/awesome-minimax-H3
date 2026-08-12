@@ -1,0 +1,7 @@
+_backup/
+__pycache__/
+.pytest_cache/
+docs/
+tests/
+.workbuddy-ai/
+scripts/
