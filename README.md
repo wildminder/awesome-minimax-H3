@@ -32,6 +32,7 @@ A curated list of models, text encoders, quants, and tools for the MiniMax-H3 om
 * [ComfyUI Nodes](#nodes)
   * [Custom Node Collections](#nodes)
   * [Special Stuff](#nodes)
+* [Prompt Tools](#prompt-tools)
 * [Guides & Tutorials](#guides)
 * [Workflow & Technical Notes](#wf)
   * [ComfyUI](#wf-comfyui)
@@ -527,6 +528,14 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 
 * [h3.c (h3-metal)](https://github.com/antirez/h3.c) by antirez - Native C/Metal inference engine for Apple Silicon. Prompt-to-video/audio, first/last-frame, and Ref2VA references work end-to-end on M3/M5 Max. Interactive Iris-style session. Not a ComfyUI node — standalone binary.
 
+
+<p id="prompt-tools" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
+
+## ▓ Prompt Tools
+
+Standalone prompt-expansion tools (not ComfyUI nodes). These produce validated H3-oriented text; they do not submit generation jobs.
+
+* [Omni-Rewriter](https://github.com/WayneJin0918/Omni-Rewriter) - Open agentic prompt-expansion harness with a typed H3 profile: schema → Writer draft → deterministic validate → bounded repair → dialect render. Expand ≠ generate. Apache-2.0.
 
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
