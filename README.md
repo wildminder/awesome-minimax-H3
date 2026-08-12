@@ -31,7 +31,7 @@ A curated list of models, text encoders, quants, and tools for the MiniMax-H3 om
   * [Experimental / Other](#lora)
 * [ComfyUI Nodes](#nodes)
   * [Custom Node Collections](#nodes)
-  * [Special Recipes](#nodes)
+  * [Special Stuff](#nodes)
 * [Guides & Tutorials](#guides)
 * [Workflow & Technical Notes](#wf)
   * [ComfyUI](#wf-comfyui)
@@ -96,6 +96,10 @@ Unified quantization tables for FL2VA and Ref2VA. The **Pruned** column marks wh
 | Pruned | Precision | Method | Size | Download |
 | :---: | :---: | :--- | :---: | :--- |
 | | ![bf16][badge-bf16] | BF16 | 61.73 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_bf16.safetensors) |
+| | ![bf16][badge-bf16] | Hybrid (fl2va base + ref2va adaln b15-49) | 20.97 GB | [![][gh-smhfacct]](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models/resolve/main/minimax_h3_hybrid_fl2va_ref2va_b15-49.safetensors) |
+| | ![bf16][badge-bf16] | Hybrid (fl2va base + ref2va adaln b20-49) | 20.97 GB | [![][gh-smhfacct]](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models/resolve/main/minimax_h3_hybrid_fl2va_ref2va_b20-49.safetensors) |
+| | ![bf16][badge-bf16] | Hybrid (fl2va base + ref2va adaln b25-49) | 20.97 GB | [![][gh-smhfacct]](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models/resolve/main/minimax_h3_hybrid_fl2va_ref2va_b25-49.safetensors) |
+| | ![bf16][badge-bf16] | Hybrid (fl2va base + ref2va adaln b30-49) | 20.97 GB | [![][gh-smhfacct]](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models/resolve/main/minimax_h3_hybrid_fl2va_ref2va_b30-49.safetensors) |
 | | ![int8][badge-int8] | ConvRot | 31.70 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_int8_convrot.safetensors) |
 | | ![fp8][badge-fp8] | FP8 E4M3FN | 43.78 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2va_fp8_e4m3fn/resolve/main/minimax_h3_fl2va_fp8_e4m3fn.safetensors) |
 | | ![mxfp8][badge-mxfp8] | MXFP8 | 44.34 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2va_fp8_e4m3fn/resolve/main/minimax_h3_fl2va_mxfp8.safetensors) |
@@ -338,19 +342,17 @@ Experimental image-specialized MiniMax H3 VAE that decodes a single temporal lat
 
 <p id="cliproj" align="center">· · · · · · · · · · · · · ·</p>
 
-### ▣ Clip Projection (ClipProj)
+### ▣ Clip Projection (ClipProj + Conditioning)
 
-Learned linear projection to swap a large text encoder for a small one. With a dedicated [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) node.
+Learned linear projections to condition H3 from a smaller text encoder. Two modes: (1) **ClipProj** — swap the large Qwen3-VL for a small one (~10 GB VRAM saved), and (2) **H3 Control** — identity/zero matrices for no-control baseline. Requires the [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) node. See the [repo](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3) for the full variant matrix (8b/4b, standard/int8convrot/CONDPROJ, tap24 vs 200-prompt calibration).
 
 | Variant | Size | Download |
 | :--- | :---: | :--- |
-| Qwen3-VL 8B → H3 (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_8b_tap24.safetensors) |
-| Qwen3-VL 4B → H3 (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_4b_tap24.safetensors) |
-| Qwen3-VL 4B → H3 (int8 ConvRot, tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_4b_int8convrot_tap24.safetensors) |
-| Qwen3-VL 4B → H3 COND-PROJ (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_4b_CONDPROJ_tap24.safetensors) |
-| Qwen3-VL 8B → H3 COND-PROJ (tap24) | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_qwen3vl_8b_CONDPROJ_tap24.safetensors) |
-| H3 Control Identity | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_identity.safetensors) |
-| H3 Control Zero | — | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/h3_control_zero.safetensors) |
+| ClipProj projections (Qwen3-VL 8B/4B, all formats) | 52–386 MB | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3) |
+| H3 Control Identity | 52.51 MB | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/mmh3-ClipProj-control-identity.safetensors) |
+| H3 Control Zero | 52.51 MB | [![][gh-NicoLab28]](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/resolve/main/mmh3-ClipProj-control-zero.safetensors) |
+
+**Older `h3_*` filenames** (with `tap24` / `CONDPROJ` / `int8convrot` suffixes) have moved to [`obsolete/`](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3/tree/main/obsolete) — canonical names are now `mmh3-*-ClipProj*.safetensors`.
 
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -454,13 +456,29 @@ Learned linear projection to swap a large text encoder for a small one. With a d
 | `turbo_4step` (10ErosMax, ComfyUI) | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-10Eros-Max-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_10eros_max_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_comfyui.safetensors) |
 | `turbo_4step_ema` (10ErosMax, ComfyUI) | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-10Eros-Max-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_10eros_max_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9Fema_comfyui.safetensors) |
 
+* [infosave/MiniMax-H3-Turbo-cmf](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf) - MiniMax-H3 + larryvrh Turbo in a single [CMF container](https://github.com/infosave2007/cmf): DiT, Qwen3-VL, video VAE decoder, audio vocoder, all memory-mapped. Runs on [cortiq](https://github.com/infosave2007/cortiq) — a Rust binary with no ML framework underneath. One-file deploy, no Python.
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `mmh3-turbo-q4tp.cmf` (full) | 25.20 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-q4tp.cmf) |
+| `mmh3-turbo-fl2va-q4tp.cmf` (FL2VA-only) | 25.70 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q4tp.cmf) |
+| `mmh3-turbo-fl2va-q2tp.cmf` (FL2VA-only, smaller) | 20.12 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q2tp.cmf) |
+
 ### ▣ Experimental / Other
 
 * [bghira/minimax-h3-anyflow-wip](https://huggingface.co/bghira/minimax-h3-anyflow-wip) - SimpleTuner WIP LoRA checkpoints (steps 200/300/400/500 + EMA). WIP research builds; not production-tuned.
 
 * [ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental](https://huggingface.co/ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental) - **Highly experimental, mechanically extracted adapters** — randomized-SVD approximations of the weight difference between pruned FL2VA and Ref2VA checkpoints. Not trained as LoRAs, not generation-tested. Explore behavior transfer in either direction. (ranks 256/512/1024, BF16)
 
-* [Kijai/MiniMax-H3-experimental loras](https://huggingface.co/Kijai/MiniMax-H3-experimental/tree/main/loras) - Experimental rank-256 BF16 LoRA capturing the FL2VA↔Ref2VA difference (same class as ethanfel's). No confirmed use case yet. (2.40 GB)<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
+* [Kijai/MiniMax-H3-experimental loras](https://huggingface.co/Kijai/MiniMax-H3-experimental/tree/main/loras) - Experimental rank-256 BF16 LoRA capturing the FL2VA↔Ref2VA difference (same class as ethanfel's). No confirmed use case yet. (2.40 GB)
+
+* [DIE2025/MiniMaxH3Loras](https://huggingface.co/DIE2025/MiniMaxH3Loras) - ![no description][badge-noinfo] Three unnamed style LoRAs (B, Spicy, V) of equal size. No README; use at own discretion. (310 MB each)
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `MiniMaxB.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxB.safetensors) |
+| `MiniMaxSpicy.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxSpicy.safetensors) |
+| `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ ComfyUI Nodes
 
@@ -491,10 +509,15 @@ Learned linear projection to swap a large text encoder for a small one. With a d
 | [minimax-h3-mlx](https://github.com/mrbizarro/minimax-h3-mlx) | mrbizarro | ![Port][cat-port] | Apple Silicon MLX port of the full H3 pipeline. AdaLN precompute drops 13B params at inference. Validated against the diffusers reference. |
 | [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) | nicolab28 | ![Port][cat-port] | Swap a large text encoder for a small one via a learned linear projection. MiniMax H3 conditioning from 15.7 GB down to 5.2 GB. Proof of concept. |
 | [ComfyUI MiniMax H3 Contex Loop](https://github.com/ethanfel/ComfyUI-MiniMaxH3-Contex-Loop) | ethanfel | ![Conditioning][cat-cond] | Turn one sampling body into a scene-by-scene production loop — each accepted scene carries motion + audio forward, saves a checkpoint, joins into final video without huge cumulative tensors. |
+| [ComfyUI MiniMax H3 LongMedia](https://github.com/vizart-vj/ComfyUI-MiniMax-H3-LongMedia) | vizart-vj | ![Acceleration][cat-accel] | Long single-pass video/audio generation with streamed Sol attention, compressed KV, adaptive VRAM guards, chunked MLP/final output. SAFE long-sequence optimizations for limited VRAM. |
+| [ComfyUI MiniMaxH3 Hybrid Loader](https://github.com/scottmudge/ComfyUI_MinimaxH3HybridLoader) | scottmudge | ![Port][cat-port] | Load a checkpoint by merging selected tensor groups (e.g. `adaln_proj` only) from a ref2va overlay onto a fl2va base. Default preset preserves ref-conditioning pathway while keeping fl2va quality. |
+| [ComfyUI MiniMax H3 Legacy Audio Sampling](https://github.com/starsFriday/ComfyUI-MiniMax-H3-LegacySampling) | starsFriday | ![Acceleration][cat-accel] | Restores the v0.30.0 audio sampling behavior after upgrading to ComfyUI v0.31.0. One model-patch node — no source modification. Fixes regressed audio (background noise, stereo stability, HF artifacts). |
 
-### ▣ Special Recipes
+### ▣ Special Stuff
 
 * [keys-heretic-MiniMax-H3 sol-engine + speed upgrades + upscaler finish — Single DGX Spark](https://github.com/drowzeys/keys-heretic-MiniMax-H3-sol-engine-more-speed-upgrades-upscaler-finish-Single-DGX-Spark) by drowzeys - One-shot recipe for MiniMax-H3 on a single NVIDIA DGX Spark (GB10, sm_121): Sol-Engine ports, Ultra-Heretic TE, Spectrum forecasting, SageAttention, 0.5 MPix generate + RealESRGAN x2 finish. Includes formal benchmark ladder (1.55× vs dense stock).
+
+* [h3.c (h3-metal)](https://github.com/antirez/h3.c) by antirez - Native C/Metal inference engine for Apple Silicon. Prompt-to-video/audio, first/last-frame, and Ref2VA references work end-to-end on M3/M5 Max. Interactive Iris-style session. Not a ComfyUI node — standalone binary.
 
 
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -570,6 +593,12 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [gh-joyfox]: https://img.shields.io/badge/joyfox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ethanfel]: https://img.shields.io/badge/ethanfel-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-antirez]: https://img.shields.io/badge/antirez-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-smhfacct]: https://img.shields.io/badge/smhfacct-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-infosave]: https://img.shields.io/badge/infosave-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-DIE2025]: https://img.shields.io/badge/DIE2025-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-vizart-vj]: https://img.shields.io/badge/vizart--vj-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-scottmudge]: https://img.shields.io/badge/scottmudge-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-starsFriday]: https://img.shields.io/badge/starsFriday-lightgrey?style=flat-square&logo=github&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
@@ -591,6 +620,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [badge-Q5_K_S]: https://img.shields.io/badge/Q5__K__S-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
 [badge-Q8_0]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
+[badge-noinfo]: https://img.shields.io/badge/no%20description-6c757d?style=flat-square&logoColor=white
 
 [cat-cond]: https://img.shields.io/badge/Conditioning-0077cc?style=flat-square
 [cat-prompt]: https://img.shields.io/badge/Prompt-28a745?style=flat-square
