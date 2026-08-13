@@ -72,3 +72,4 @@
 [cat-upscale]: https://img.shields.io/badge/Upscaling-fe7d37?style=flat-square
 [cat-accel]: https://img.shields.io/badge/Acceleration-6f42c1?style=flat-square
 [cat-port]: https://img.shields.io/badge/Port-17a2b8?style=flat-square
+[cat-face]: https://img.shields.io/badge/Face%20Refine-e83e8c?style=flat-square

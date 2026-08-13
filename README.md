@@ -92,7 +92,7 @@ Official and ComfyUI-repackaged model files.
 | `fl2v v1.0` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_bf16.safetensors) |
 | `fl2v v1.0 · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors) |
 | `lightx2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy.safetensors) |
-| `lightx2v v0.1 · resized` | 4 | Full | ![bf16][badge-bf16] · resized avg-rank-21 | 300 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_resized_avg_rank_21_bf16.safetensors) |
+| `lightx2v v0.1 · resized` | 4 | Full | ![bf16][badge-bf16] | 300 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_resized_avg_rank_21_bf16.safetensors) |
 | `fl2v` | 4 | Full | ![bf16][badge-bf16] | 744 MB | [![][gh-larryvrh]](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/resolve/main/minimax_h3_turbo_4step.safetensors) |
 | `fl2v ema` | 4 | Full | ![bf16][badge-bf16] | 744 MB | [![][gh-larryvrh]](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/resolve/main/minimax_h3_turbo_4step_ema.safetensors) |
 | `fl2v ckpt500` | 4 | Full | ![bf16][badge-bf16] | 744 MB | [![][gh-larryvrh]](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/resolve/main/minimax_h3_turbo_4step_ckpt500.safetensors) |
@@ -109,8 +109,8 @@ Official and ComfyUI-repackaged model files.
 | `fl2v pruned ema ckpt850` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_turbo_4step_ema_ckpt850_pruned_comfyui.safetensors) |
 | `fl2v pruned v4 step600` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_turbo_v4_step600_pruned_comfyui.safetensors) |
 | `fl2v pruned v4 step600 ema` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors) |
-| `fl2v v1.0 768p · resized` | 4 | Pruned | ![bf16][badge-bf16] · resized avg-rank-21 | 298 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_resized_avg_rank_21_bf16.safetensors) |
-| `fl2v v1.0 · resized` | 8 | Pruned | ![bf16][badge-bf16] · resized avg-rank-21 | 327 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_resized_avg_rank_21_bf16.safetensors) |
+| `fl2v v1.0 768p · resized` | 4 | Pruned | ![bf16][badge-bf16] | 298 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_resized_avg_rank_21_bf16.safetensors) |
+| `fl2v v1.0 · resized` | 8 | Pruned | ![bf16][badge-bf16] | 327 MB | [![][gh-drbaph]](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_resized_avg_rank_21_bf16.safetensors) |
 | `fl2v pruned ckpt500 V1` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-Abiray]](https://huggingface.co/Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI/resolve/main/minimax_h3_turbo_4step_ckpt500_V1.safetensors) |
 | `fl2v pruned ckpt600 V4` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-Abiray]](https://huggingface.co/Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI/resolve/main/minimax_h3_turbo_4step_ckpt600_V4.safetensors) |
 | `fl2v pruned ckpt600 ema V4` | 4 | Pruned | ![bf16][badge-bf16] | 592 MB | [![][gh-Abiray]](https://huggingface.co/Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI/resolve/main/minimax_h3_turbo_4step_ckpt600_ema_V4.safetensors) |
@@ -119,20 +119,21 @@ Official and ComfyUI-repackaged model files.
 | `fl2v step 100` | 8 NFE | Full | ![bf16][badge-bf16] | 738 MB | [![][gh-tutututututu]](https://huggingface.co/tutututututu/Tutu-MiniMax-H3-AudioVideo-20to8-NFE-LoRA/resolve/main/comfyui/tutu-t8-minimax-h3-av-20to8-nfe-lora-step000100-bf16-comfyui.safetensors) |
 | `fl2v step 200` | 8 NFE | Full | ![bf16][badge-bf16] | 738 MB | [![][gh-tutututututu]](https://huggingface.co/tutututututu/Tutu-MiniMax-H3-AudioVideo-20to8-NFE-LoRA/resolve/main/comfyui/tutu-t8-minimax-h3-av-20to8-nfe-lora-step000200-bf16-comfyui.safetensors) |
 | `fl2v step 300` | 8 NFE | Full | ![bf16][badge-bf16] | 738 MB | [![][gh-tutututututu]](https://huggingface.co/tutututututu/Tutu-MiniMax-H3-AudioVideo-20to8-NFE-LoRA/resolve/main/comfyui/tutu-t8-minimax-h3-av-20to8-nfe-lora-step000300-bf16-comfyui.safetensors) |
-| `fl2v` | 4 | Full | ![int8][badge-int8] ConvRot · ⚠️ needs dual-clock sampler or 8–10 steps | 744 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_comfyui.safetensors) |
-| `fl2v ema` | 4 | Full | ![int8][badge-int8] ConvRot | 744 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9Fema_comfyui.safetensors) |
-| `fl2v v4 step600 (T8-convert)` | 4 | Full | ![int8][badge-int8] ConvRot | 744 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_v4_step600_comfyui_T8-convert.safetensors) |
-| `fl2v 10ErosMax ⚠️` | 4 | Full | ![int8][badge-int8] ConvRot | 758 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-10Eros-Max-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_10eros_max_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_comfyui.safetensors) |
-| `fl2v 10ErosMax ema ⚠️` | 4 | Full | ![int8][badge-int8] ConvRot | 758 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-10Eros-Max-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_10eros_max_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9Fema_comfyui.safetensors) |
+| `fl2v 4-step acceleration` · ConvRot · ⚠️ needs dual-clock sampler or 8–10 steps | 4 | Full | ![int8][badge-int8] | 779.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_comfyui.safetensors) |
+| `fl2v 4-step acceleration ema` · ConvRot | 4 | Full | ![int8][badge-int8] | 779.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9Fema_comfyui.safetensors) |
+| `fl2v v4 step600 (T8-convert)` · ConvRot | 4 | Full | ![int8][badge-int8] | 779.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax-h3-4step-turbo-loras-comfyui-exp/resolve/main/minimax_h3_turbo_v4_step600_comfyui_T8-convert.safetensors) |
+| `lightx2v v0.1 · alpha8 T8-convert` · ConvRot · ⚠️ needs dual-clock sampler or 8–10 steps  | 4 | Full | ![int8][badge-int8]| 1.96 GB | [![][gh-t8star]](https://huggingface.co/t8star/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert.safetensors) |
+| `fl2v 10ErosMax test4 · 4-step curveproj1025 (T8)` · ConvRot · ⚠️ needs dual-clock sampler or 8–10 steps  | 4 | Pruned | ![int8][badge-int8] | 794.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8/resolve/main/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_exp_v001-T8.safetensors) |
+| `fl2v 10ErosMax test4 · 4-step curveproj1025` | 4 | Pruned | ![int8][badge-int8] | 794.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8/resolve/main/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_exp_v001.safetensors) |
+| `fl2v 10ErosMax test4 · 8-step v1.0` · ConvRot | 8 | Pruned | ![int8][badge-int8]  | 1.96 GB | [![][gh-t8star]](https://huggingface.co/t8star/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_10ErosMax_beta1_pruned_compat_v001_T8.safetensors) |
 | `fl2v CMF · full` | 4 | Full | Q4TP (CMF) | 25.20 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-q4tp.cmf) |
 | `fl2v CMF · FL2VA` | 4 | Full | Q4TP (CMF) | 25.70 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q4tp.cmf) |
 | `fl2v CMF · FL2VA (smaller)` | 4 | Full | Q2TP (CMF) | 20.12 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q2tp.cmf) |
-| `fl2v v1.0 768p` | 4 | Full | ![int8][badge-int8] ConvRot · needs ComfyUI-LoraInt8Loader | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16_int8convrot.safetensors) |
-| `fl2v v1.0` | 8 | Full | ![int8][badge-int8] ConvRot · needs ComfyUI-LoraInt8Loader | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
-| `lightx2v v0.1 · int8` | 4 | Full | ![int8][badge-int8] ConvRot · needs ComfyUI-LoraInt8Loader | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
-*larryvrh also publishes experimental training checkpoints (11 `.bin` files: step 149/490/729/850/922, v2 step 298, v3 step 300, v4 step 150/600, v5 step 600; 7.26–10.17 GB) — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
-*⚠️ `t8star/minimax-h3-10Eros-Max-4step-turbo-loras-comfyui-exp` returned 404 / auth-error at verification (2026-08-13); its 2 entries above are carried from prior curation and the links may need re-checking.*
+| `fl2v v1.0 768p` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8]  | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16_int8convrot.safetensors) |
+| `fl2v v1.0` · ConvRot · needs ComfyUI-LoraInt8Loader | 8 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
+| `lightx2v v0.1 · int8` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
 
+*larryvrh also publishes experimental training checkpoints (11 `.bin` files: step 149/490/729/850/922, v2 step 298, v3 step 300, v4 step 150/600, v5 step 600; 7.26–10.17 GB) — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
 
 
 <p id="quants" align="center">══════════════════════════════════</p>
@@ -364,19 +365,14 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 
 ### ▣ VAE (Video & Audio)
 
-| Component | Precision | Size | Download |
-| :--- | :---: | :---: | :--- |
-| Video VAE | ![fp16][badge-fp16] | 4.85 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors) |
-| Audio VAE | ![fp32][badge-fp32] | 577 MB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors) |
+| Component | Source | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :--- |
+| Video VAE | ![Comfy-Org][gh-Comfy--Org] | ![fp16][badge-fp16] | 4.85 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors) |
+| Audio VAE | ![Comfy-Org][gh-Comfy--Org] | ![fp32][badge-fp32] | 577 MB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors) |
+| Video VAE | ![dummy9996][gh-dummy9996] | ![fp8][badge-fp8] | 2.60 GB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_video_vae_fp8mix.safetensors) |
+| Audio VAE | ![dummy9996][gh-dummy9996] | ![bf16][badge-bf16] | 289 MB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_audio_vae_bf16.safetensors) |
 
-#### FP8 VAE (dummy9996)
-
-FP8-mixed quantized video VAE by [dummy9996](https://huggingface.co/dummy9996/minimax_h3_vae_fp8).
-
-| Component | Precision | Size | Download |
-| :--- | :---: | :---: | :--- |
-| Video VAE | ![fp8][badge-fp8] | 2.60 GB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_video_vae_fp8mix.safetensors) |
-| Audio VAE | ![bf16][badge-bf16] | 289 MB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_audio_vae_bf16.safetensors) |
+*FP8-mixed quantized VAE set by [dummy9996](https://huggingface.co/dummy9996/minimax_h3_vae_fp8) — smaller video VAE (2.60 GB, fp8) and audio VAE (289 MB, bf16) for low-VRAM workflows.*
 
 <p id="tae" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -500,6 +496,7 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | [ComfyUI MiniMax H3 LongMedia](https://github.com/vizart-vj/ComfyUI-MiniMax-H3-LongMedia) | vizart-vj | ![Acceleration][cat-accel] | Long single-pass video/audio generation with streamed Sol attention, compressed KV, adaptive VRAM guards, chunked MLP/final output. SAFE long-sequence optimizations for limited VRAM. |
 | [ComfyUI MiniMaxH3 Hybrid Loader](https://github.com/scottmudge/ComfyUI_MinimaxH3HybridLoader) | scottmudge | ![Port][cat-port] | Load a checkpoint by merging selected tensor groups (e.g. `adaln_proj` only) from a ref2va overlay onto a fl2va base. Default preset preserves ref-conditioning pathway while keeping fl2va quality. |
 | [ComfyUI MiniMax H3 Legacy Audio Sampling](https://github.com/starsFriday/ComfyUI-MiniMax-H3-LegacySampling) | starsFriday | ![Acceleration][cat-accel] | Restores the v0.30.0 audio sampling behavior after upgrading to ComfyUI v0.31.0. One model-patch node — no source modification. Fixes regressed audio (background noise, stereo stability, HF artifacts). |
+| [ComfyUI-H3-FaceRefine](https://github.com/Carasibana/ComfyUI-H3-FaceRefine) | Carasibana | ![Face Refine][cat-face] | Face-refinement node for MiniMax H3 outputs — repair/enhance faces in generated video frames. |
 
 ### ▣ Special Stuff
 
@@ -628,3 +625,4 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [cat-upscale]: https://img.shields.io/badge/Upscaling-fe7d37?style=flat-square
 [cat-accel]: https://img.shields.io/badge/Acceleration-6f42c1?style=flat-square
 [cat-port]: https://img.shields.io/badge/Port-17a2b8?style=flat-square
+[cat-face]: https://img.shields.io/badge/Face%20Refine-e83e8c?style=flat-square

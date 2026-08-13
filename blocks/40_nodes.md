@@ -33,6 +33,7 @@
 | [ComfyUI MiniMax H3 LongMedia](https://github.com/vizart-vj/ComfyUI-MiniMax-H3-LongMedia) | vizart-vj | ![Acceleration][cat-accel] | Long single-pass video/audio generation with streamed Sol attention, compressed KV, adaptive VRAM guards, chunked MLP/final output. SAFE long-sequence optimizations for limited VRAM. |
 | [ComfyUI MiniMaxH3 Hybrid Loader](https://github.com/scottmudge/ComfyUI_MinimaxH3HybridLoader) | scottmudge | ![Port][cat-port] | Load a checkpoint by merging selected tensor groups (e.g. `adaln_proj` only) from a ref2va overlay onto a fl2va base. Default preset preserves ref-conditioning pathway while keeping fl2va quality. |
 | [ComfyUI MiniMax H3 Legacy Audio Sampling](https://github.com/starsFriday/ComfyUI-MiniMax-H3-LegacySampling) | starsFriday | ![Acceleration][cat-accel] | Restores the v0.30.0 audio sampling behavior after upgrading to ComfyUI v0.31.0. One model-patch node — no source modification. Fixes regressed audio (background noise, stereo stability, HF artifacts). |
+| [ComfyUI-H3-FaceRefine](https://github.com/Carasibana/ComfyUI-H3-FaceRefine) | Carasibana | ![Face Refine][cat-face] | Face-refinement node for MiniMax H3 outputs — repair/enhance faces in generated video frames. |
 
 ### ▣ Special Stuff
 
