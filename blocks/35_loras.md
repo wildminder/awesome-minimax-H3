@@ -20,6 +20,8 @@
 
 * [Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) - Looping anime-style sketch LoRA. Hand-drawn 2D outlines, flat colors, white outline. Strength 0.75–1.25; pair with a Turbo LoRA for higher strength. (569 MB)
 
+* [nikdevs/minimax-h3-loras](https://huggingface.co/nikdevs/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Curated MiniMax-H3 LoRA collection (styles + characters). Browse at your own discretion; not enumerated with per-file downloads here.
+
 ### ▣ Turbo (Acceleration LoRA)
 
 4-step audio-video generation LoRAs — render joint video + synchronized stereo audio in 4 sampling steps instead of ~20 (~5× speedup). Early prototype; comfort zone for sharpness is 6–8 steps. For pruned checkpoints use the ComfyUI-converted variants; the original targets the full (non-pruned) FL2VA checkpoint and needs the [ComfyUI-MiniMax-H3-Turbo](https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo) sampler node.
@@ -107,6 +109,14 @@
 | `mmh3-turbo-q4tp.cmf` (full) | 25.20 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-q4tp.cmf) |
 | `mmh3-turbo-fl2va-q4tp.cmf` (FL2VA-only) | 25.70 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q4tp.cmf) |
 | `mmh3-turbo-fl2va-q2tp.cmf` (FL2VA-only, smaller) | 20.12 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q2tp.cmf) |
+
+* [rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy) - Int8-ConvRot‑quantized FL2V LightX2V Turbo adapters (4/8‑step) that patch the base MiniMax-H3 for faster T2V in ComfyUI. Requires the [ComfyUI-LoraInt8Loader](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/ComfyUI-LoraInt8Loader/ComfyUI-LoraInt8Loader.zip) node — stock ComfyUI LoRA loaders cannot dequantize the files. Apache-2.0. (991 MB each)
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `turbo_4step_v1.0` (768p, int8_convrot) | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16_int8convrot.safetensors) |
+| `turbo_8step_v1.0` (int8_convrot) | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
+| `turbo_4step_v0.1` (lightx2v, int8_convrot) | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
 
 ### ▣ Experimental / Other
 

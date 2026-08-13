@@ -23,3 +23,8 @@ Official ComfyUI workflow templates for MiniMax-H3:
 
 * [MiniMax H3 FL2V GGUF Workflow](https://huggingface.co/Abiray/MiniMax-H3-GGUF/resolve/main/minimax_fl2v_gguf_workflow.json) - ComfyUI workflow for loading and running the GGUF quantized FL2VA model.
 
+### ❖ Community Packs
+
+* [joeygambino/MiniMax-H3-Multishot-Workflow](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow) - Seamless multi-shot chaining workflow for MiniMax-H3 in ComfyUI — string multiple FL2VA/Ref2VA clips into one continuous sequence with matched audio handoffs. Apache-2.0.
+* [javawock7618/comfy-MiniMax-H3-workflows](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) - Curated ComfyUI workflow pack covering the full low-VRAM acceleration stack in one importable bundle: INT8 + SageAttention + Spectrum + Lightx2v + Turbo + Motion Context + Latent Upscale + TTS.
+
