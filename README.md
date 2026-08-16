@@ -463,7 +463,9 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | :--- | :---: | :--- |
 | `MiniMaxB.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxB.safetensors) |
 | `MiniMaxSpicy.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxSpicy.safetensors) |
-| `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
+| `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |
+
+* [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ ComfyUI Nodes
 
@@ -501,6 +503,9 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | [ComfyUI-H3-FaceRefine](https://github.com/Carasibana/ComfyUI-H3-FaceRefine) | Carasibana | ![Face Refine][cat-face] | Face-refinement node for MiniMax H3 outputs — repair/enhance faces in generated video frames. |
 | [ComfyUI-MiniMaxH3Mod](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod) | Luisacaotica | ![Conditioning][cat-cond] | No-training "RefMod" reference adapters for MiniMax H3 — compress reference images/videos into tiny `.safetensors` latent files reused like LoRAs without loading heavy references or training. Extract/Load/Apply nodes, folder and A/B-axis loaders, a standalone CLI, and strength/retention controls injected via the model's native conditioning path. |
 | [ComfyUI MiniMax H3 Extender](https://github.com/tritant/ComfyUI_MiniMax_H3_Extender) | tritant | ![Conditioning][cat-cond] | Chains multiple H3 clips into one long continuous sequence, preserving motion, visual, and audio continuity. Combines Ref2VA conditioning, motion context, disk latent caching, dynamic image references (up to 9), audio reference support, per-clip prompt/seed/duration, clip validation, and seamless video/audio decoding with seam correction (H.264 / H.265 / FFV1 export). |
+| [ComfyUI ALLinONE MiniMaxH3](https://github.com/LeonQ8/ComfyUI-ALLinONE-MinimaxH3) | LeonQ8 | ![Conditioning][cat-cond] | All-in-one MiniMax H3 node — T2V, I2V, R2V, audio drive (lip sync), keyframes, extend, chain (multi-clip continuation via H3 Motion Context), and an RTX/Seed2VR upscale hook in a single node. Ships searchable history, a library, and settings UI. Beta, GPL-3.0. |
+| [ComfyUI Qwen H3 Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt) | chflame163 | ![Prompt][cat-prompt] | Generates H3 prompts inside ComfyUI with a local Qwen3.8-27B GGUF model (bundled llama-server, fully offline) plus the official MiniMax-H3 Skills. Routes modes (T2VA/I2VA/L2VA/FL2VA/Ref2VA) from image/video references, writes sound design, and supports think mode with per-reference image/video inputs. |
+| [OpenH3-IR](https://github.com/ruashots/open-h3-ir) | ruashots | ![Prompt][cat-prompt] | Open-source, local implementation of MiniMax H3's Context-IR stage — compiles a plain-language sentence (with optional referenced media) into a structured, validated six-section H3 video brief that feeds ComfyUI's native H3 render nodes. Three nodes (Main, Media, Setup), a creativity-level dial, strict brief validation, and exact dialogue/reference-image binding via `@`-syntax prompts. |
 
 ### ▣ Special Stuff
 
@@ -524,6 +529,11 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 
 * [ComfyUI MiniMax-H3 Tutorial](https://docs.comfy.org/tutorials/video/minimax/minimax-h3) - Official ComfyUI documentation tutorial for MiniMax-H3 setup and usage.
 * [MiniMax H3 Day-0 Support in ComfyUI](https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui) - ComfyUI blog post covering open weights, native audio, 2K video output, and local execution on a 3060.
+
+### ▣ Performance
+
+* [MiniMax H3 — Performance & Best-Configuration Report](guides/minimax-h3-performance.md) - Local-inference performance guide for MiniMax H3 (FL2VA / Ref2VA) across consumer & workstation GPUs, Apple Silicon, and the DGX Spark — distilled from 2 hard-numbered benchmarks and 17 community field reports. Covers a TL;DR config recommendation, hardware-tier tiers, the best speed/quality recipe, and caveats & licensing.
+* [MiniMax H3 on an RTX 3060 12GB: what we actually measured](https://www.minimaxh3tutorial.com/rtx-3060) - Real-world write-up of running MiniMax-H3 on a 12 GB RTX 3060 — what actually fits, at what resolution and step counts, and the configuration that worked.
 
 
 <p id="wf" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
