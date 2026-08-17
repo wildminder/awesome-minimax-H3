@@ -423,6 +423,18 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | :--- | :---: | :--- |
 | Ref Patch | 148 MB | [![][gh-lihaoyun6]](https://huggingface.co/lihaoyun6/MiniMax-H3-Ref-Patch) |
 
+<p id="lupid" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ Latent Upscaler (LBH-123-AI)
+
+Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler). Works directly on H3's 24-channel VAE latents to upscale spatial resolution (H×W) while preserving the time dimension — **accelerates high-res video gen by skipping the costly ~5B-param VAE decode → pixel-upscale → encode round-trip**, and avoids the ghosting / double-image artifacts of naive bilinear/bicubic latent interpolation. 3D-convolution backbone (2D and 3D node variants; one checkpoint serves both, architecture auto-detected). Trained on ~80k paired samples (≈70k video + ≈8k 2K image pairs). Apache-2.0. Pairs with the [ComfyUI_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) node. ⚠️ Saves **time, not VRAM** — the refine pass still runs at target resolution.
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| Latent Upscaler | ![bf16][badge-bf16] | 691 MB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_bf16.safetensors) |
+| Latent Upscaler | ![fp16][badge-fp16] | 691 MB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_fp16.safetensors) |
+| Latent Upscaler | ![fp32][badge-fp32] | 1.38 GB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_fp32.pth) |
+
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ LoRA
@@ -448,6 +460,11 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 * [nikdevs/minimax-h3-loras](https://huggingface.co/nikdevs/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Curated MiniMax-H3 LoRA collection (styles + characters). Browse at your own discretion; not enumerated with per-file downloads here.
 
 * [DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime) - **Anime video line-art colorization** — feeds a line-art video as a reference and generates fully colored anime output from it (Ref2VA video-reference workflow). Apache-2.0. (1.26 GB)
+
+* Jojocodex
+  * [minimax-h3-wushu-action-lora](https://huggingface.co/Jojocodex/minimax-h3-wushu-action-lora) - **Wushu / martial-arts action** — trains H3 to generate human martial-arts motion (punches, kicks, spins, staff techniques), focused on body physics. Trigger by action description (e.g. `a martial artist performing punches and kicks in fast combat`); no fixed trigger word. ai-toolkit, rank 16, 2000 steps, 512 / 90 frames @ 24fps; pruned + full safetensors. ComfyUI users load the `_pruned` variant at strength 0.8–1.0; compatible with the Turbo LoRA (adaln_proj trimmed, 417 keys). Base-model use is under the MiniMax H3 Community License. (155 MB pruned · 310 MB full)
+  * [minimax-h3-spatial-physics-lora](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) - **Spatial & physics (objects)** — teaches H3 object physics (collision, stacking, falling, occlusion) via pure spatial+physics captions; complements the wushu LoRA, which covers body motion. No fixed trigger word — describe object motion directly. Trained on CLEVRER / WISA / PhyCo-Kubric (700 clips); ai-toolkit, rank 16. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned · 310 MB full)
+  * [minimax-h3-yunjing-lora](https://huggingface.co/Jojocodex/minimax-h3-yunjing-lora) - **Camera-movement (yunjing) control** — cinematic camera-movement control (push in/out, orbit, tracking, handheld) via the `yunjing` trigger word. 12 movement types trained (handheld / pull / dolly best-covered; pan / crane / 360° weakly covered). ai-toolkit, rank 32, 1000 steps; pruned + full. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA (6–8 steps, Euler, Beta). (310 MB pruned · 620 MB full)
 
 ### ▣ Experimental / Other
 
@@ -506,6 +523,11 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 | [ComfyUI ALLinONE MiniMaxH3](https://github.com/LeonQ8/ComfyUI-ALLinONE-MinimaxH3) | LeonQ8 | ![Conditioning][cat-cond] | All-in-one MiniMax H3 node — T2V, I2V, R2V, audio drive (lip sync), keyframes, extend, chain (multi-clip continuation via H3 Motion Context), and an RTX/Seed2VR upscale hook in a single node. Ships searchable history, a library, and settings UI. Beta, GPL-3.0. |
 | [ComfyUI Qwen H3 Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt) | chflame163 | ![Prompt][cat-prompt] | Generates H3 prompts inside ComfyUI with a local Qwen3.8-27B GGUF model (bundled llama-server, fully offline) plus the official MiniMax-H3 Skills. Routes modes (T2VA/I2VA/L2VA/FL2VA/Ref2VA) from image/video references, writes sound design, and supports think mode with per-reference image/video inputs. |
 | [OpenH3-IR](https://github.com/ruashots/open-h3-ir) | ruashots | ![Prompt][cat-prompt] | Open-source, local implementation of MiniMax H3's Context-IR stage — compiles a plain-language sentence (with optional referenced media) into a structured, validated six-section H3 video brief that feeds ComfyUI's native H3 render nodes. Three nodes (Main, Media, Setup), a creativity-level dial, strict brief validation, and exact dialogue/reference-image binding via `@`-syntax prompts. |
+| [MiniMax H3 Latent Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) | LBH-123-AI | ![Upscaling][cat-upscale] | Learned neural latent upscaler for H3's 24-channel VAE latents — upscales spatial resolution (1×–4×, continuous) in latent space via 2D/3D backbones, skipping the costly VAE decode/encode round-trip to accelerate high-res video gen and avoid ghosting. Pairs with the LBH-123-AI/Minimax_h3_latent_Upscaler checkpoint (weights auto-detected). Saves time, not VRAM. |
+| [ComfyUI MiniMax H3 Studio](https://github.com/thaakeno/ComfyUI-MiniMax-H3-Studio) | thaakeno | ![Conditioning][cat-cond] | "H3 Studio" — turns H3 into a maintained ComfyUI image workflow: T2I, I2I, reference editing via one Director node, up to 9 ordered multi-references (`@Image1`–`@Image9`), LightX/PDD accelerated paths, smart Qwen3-VL prompt prep, YOLOv8 Face Refine, TAEH3 previews, and a Benchmark Lab. Alpha (MIT code). ⚠️ Not compatible with ComfyUI Nodes 2.0 yet. |
+| [ComfyUI MiniMax H3 Sampler Unlimited](https://github.com/hradec/ComfyUI-MiniMax-H3-Sampler-Unlimited) | hradec | ![Acceleration][cat-accel] | Chunked replacement for `SamplerCustomAdvanced` (`SamplerCustomAdvanced-Unlimited`) that samples long H3 video/audio latents in chunks with native latent continuation — produces >15 s video and 2K on ~16 GB VRAM without loop workflows. Frame-accurate shot-prompt rewriting, accumulated live preview. |
+| [ComfyUI MiniMax H3 Parallel](https://github.com/AesSedai/ComfyUI-MiniMaxH3-Parallel) | AesSedai | ![Acceleration][cat-accel] | Exact activation-only multi-GPU attention-head sharding for H3 Ref2VA — model/TE/VAE stay on the model GPU; helper GPUs receive packed INT8 Q/K/V head slices and return BF16 attention. Up to 4× peer-access CUDA GPUs (Comfy Kitchen INT8 attention); ~2× denoiser speedup at 4 GPUs with bit-identical output. |
+| [ComfyUI MiniMax H3 SPEED](https://github.com/StanLukuvka/ComfyUI-MiniMax-H3-SPEED) | StanLukuvka | ![Acceleration][cat-accel] | Progressive-resolution (Spectral Progressive Diffusion / SPEED) sampler for H3's packed video+audio latent — replaces KSAMPLER + `SamplerCustomAdvanced` and denoises starting coarse (¼–½ res) then refines to full, cutting VRAM and wall-clock time. Presets (`half_then_full` default, `three_quarter_then_full`, `quarter_half_full`, `aggressive`, `quarter_half_3q_full`) trade speed vs mid-frequency detail. Requires the StanLukuvka/ComfyUI-MiniMax-H3 plugin (ComfyUI 0.32.0+). ⚠️ PolyForm Noncommercial 1.0.0 license. |
 
 ### ▣ Special Stuff
 
@@ -591,6 +613,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [gh-NicoLab28]: https://img.shields.io/badge/NicoLab28-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lihaoyun6]: https://img.shields.io/badge/lihaoyun6-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-LBH-123-AI]: https://img.shields.io/badge/LBH--123--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-tutututututu]: https://img.shields.io/badge/tutututututu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-abakanai]: https://img.shields.io/badge/abakanai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
