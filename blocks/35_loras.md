@@ -14,7 +14,10 @@
 
 * [matlod/minimax-h3-turnaround](https://huggingface.co/matlod/minimax-h3-turnaround) - **Contact-Sheet diffusion** — one reference image + one instruction → five coherent, progressively rotated views of the same subject in a single pass. A character turnaround from one photo (~10 s at 512², ~57 s at 1024²). Uses H3's timeline as a slot axis. (60 MB each: 1024-cont/s600, 512/s1500, 512-instruct/s400)
 
-* [EllaPriest45/MinimaxH3_Actions](https://huggingface.co/EllaPriest45/MinimaxH3_Actions/tree/main) - Collection of NSFW action LoRAs for MiniMax-H3 (T2V/I2V/R2V). Includes motion-specific LoRAs with trigger words and strength recommendations. See the repo for the full list. (reference only)
+* EllaPriest45
+  * [MinimaxH3_Actions](https://huggingface.co/EllaPriest45/MinimaxH3_Actions/tree/main) - ⚠️ **Contains explicit / NSFW content.** Collection of NSFW action LoRAs for MiniMax-H3 (T2V/I2V/R2V). Includes motion-specific LoRAs with trigger words and strength recommendations. See the repo for the full list. (reference only)
+  * [MinimaxH3_Characters](https://huggingface.co/EllaPriest45/MinimaxH3_Characters/tree/main) - ⚠️ **Contains explicit / NSFW content.** Character LoRA collection for MiniMax-H3 (e.g. Aunt Cass, Baldur's Gate 3 Party Pack, Judy Hopps). Browse at your own discretion; not enumerated with per-file downloads here.
+  * [MinimaxH3_Styles](https://huggingface.co/EllaPriest45/MinimaxH3_Styles/tree/main) - ⚠️ **Contains explicit / NSFW content.** Style LoRA collection for MiniMax-H3 with previews and config text; significant NSFW/nude portion (anime, digicam, Playboy styles). Browse at your own discretion; not enumerated with per-file downloads here.
 
 * [fal/research-mini-max-h3-realism-people-lora](https://huggingface.co/fal/research-mini-max-h3-realism-people-lora) - Realism LoRA for natural-looking people in everyday scenarios. Trained by fal on diverse photo data. (125 MB)
 
