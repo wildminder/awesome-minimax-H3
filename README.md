@@ -469,6 +469,21 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
   * [minimax-h3-spatial-physics-lora](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) - **Spatial & physics (objects)** — teaches H3 object physics (collision, stacking, falling, occlusion) via pure spatial+physics captions; complements the wushu LoRA, which covers body motion. No fixed trigger word — describe object motion directly. Trained on CLEVRER / WISA / PhyCo-Kubric (700 clips); ai-toolkit, rank 16. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned · 310 MB full)
   * [minimax-h3-yunjing-lora](https://huggingface.co/Jojocodex/minimax-h3-yunjing-lora) - **Camera-movement (yunjing) control** — cinematic camera-movement control (push in/out, orbit, tracking, handheld) via the `yunjing` trigger word. 12 movement types trained (handheld / pull / dolly best-covered; pan / crane / 360° weakly covered). ai-toolkit, rank 32, 1000 steps; pruned + full. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA (6–8 steps, Euler, Beta). (310 MB pruned · 620 MB full)
 
+
+* [Hearmeman/minimax-h3-loras](https://huggingface.co/Hearmeman/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Six single-concept NSFW adapters, split into **anatomy** (stills-trained — they restore structure the base model renders soft and vague) and **action** (video-trained — what the body does). They are meant to stack: anatomy underneath, action on top, your character or scene LoRA above both. Each has its own trigger word and a documented prompt vocabulary; `HMBreasts` and `HMInnie` expose named shape/colour axes written as plain English rather than tags. Mirrored from [CivitAI](https://civitai.com/user/HearmemanAI), byte-identical with SHA-256 published. Base-model use is under the MiniMax H3 Community License.
+
+| LoRA | Trigger | Kind | Strength | Download |
+| :--- | :--- | :--- | :---: | :--- |
+| `HMNSFW_AIO_V2` — all-in-one sex motion | `hmmotion` | action · video | ≤ 0.5 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMNSFW_AIO_V2.safetensors) |
+| `HMCumshot_V2` — cumshot action | `cumshot` | action · video | 0.9 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMCumshot_V2.safetensors) |
+| `vagassist_e40` — pussy/anus structure | `Vagina` | anatomy · stills | 1.0 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/vagassist_e40.safetensors) |
+| `hmpussy_v6_epoch30` — holds it through motion | `hmpussy` | anatomy · video | 0.35 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/hmpussy_v6_epoch30.safetensors) |
+| `HMInnie_v1_e50` — innie shape control | `inniepussy` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMInnie_v1_e50.safetensors) |
+| `HMBreasts_085e0750_e40` — size/areole control | `HMBreasts` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMBreasts_085e0750_e40.safetensors) |
+| `HMPenis_v2_e35` — penis anatomy | `HMPenis` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMPenis_v2_e35.safetensors) |
+
+  The two HMPussy files are one LoRA in two halves and load together: the stills file restores the structure, the video file holds it together through motion. (296 MB each, 597 MB for `HMCumshot_V2` and `hmpussy_v6_epoch30`)
+
 ### ▣ Experimental / Other
 
 * [bghira/minimax-h3-anyflow-wip](https://huggingface.co/bghira/minimax-h3-anyflow-wip) - SimpleTuner WIP LoRA checkpoints (steps 200/300/400/500 + EMA). WIP research builds; not production-tuned.
@@ -532,6 +547,7 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | [ComfyUI MiniMax H3 Parallel](https://github.com/AesSedai/ComfyUI-MiniMaxH3-Parallel) | AesSedai | ![Acceleration][cat-accel] | Exact activation-only multi-GPU attention-head sharding for H3 Ref2VA — model/TE/VAE stay on the model GPU; helper GPUs receive packed INT8 Q/K/V head slices and return BF16 attention. Up to 4× peer-access CUDA GPUs (Comfy Kitchen INT8 attention); ~2× denoiser speedup at 4 GPUs with bit-identical output. |
 | [ComfyUI MiniMax H3 SPEED](https://github.com/StanLukuvka/ComfyUI-MiniMax-H3-SPEED) | StanLukuvka | ![Acceleration][cat-accel] | Progressive-resolution (Spectral Progressive Diffusion / SPEED) sampler for H3's packed video+audio latent — replaces KSAMPLER + `SamplerCustomAdvanced` and denoises starting coarse (¼–½ res) then refines to full, cutting VRAM and wall-clock time. Presets (`half_then_full` default, `three_quarter_then_full`, `quarter_half_full`, `aggressive`, `quarter_half_3q_full`) trade speed vs mid-frequency detail. Requires the StanLukuvka/ComfyUI-MiniMax-H3 plugin (ComfyUI 0.32.0+). ⚠️ PolyForm Noncommercial 1.0.0 license. |
 | [ComfyUI MiniMax H3 Keyframe Offset](https://github.com/asirusasr-maker/ComfyUI-MiniMax-H3-Keyframe-Offset) | asirusasr-maker | ![Conditioning][cat-cond] | Drop-in replacement for the stock MiniMax H3 Image-to-Video conditioning node, injecting `first_frame`/`last_frame` keyframes at **arbitrary frame indices** (not just start/end) so H3 freely generates motion between them. Plus an all-in-one text-to-audio node (conditioning → sampling → audio-VAE decode in one node; CFG hardcoded 1.0). 23 samplers / 9 schedulers, smart offset clamping, non-invasive in-memory `PackedLayout` patch. Apache-2.0. |
+| [ComfyUI-MiniMaxRefPack](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack) | Hearmeman24 | ![Prompt][cat-prompt] | Manages all 18 Ref2VA references from one node's own upload UI — preview, crop/trim and delete, with the tag H3 will actually use (`<Picture 2>`, `<Video 1>`, `<Audio 1>`) shown on every tile. Wire the 18 sockets plus `prompt` once and the graph never changes again. Writes the six-section H3 prompt for you via OpenRouter **or** any local OpenAI-compatible server (one-click discovery of Ollama / LM Studio / llama.cpp / vLLM, loopback-only), or passes your text straight through. Portable JSON configs, `standard`/`replacement`/`auto` registers, editable system prompt, and a `debug` output showing the exact request sent. MIT. |
 
 ### ▣ Special Stuff
 
@@ -590,6 +606,8 @@ Official ComfyUI workflow templates for MiniMax-H3:
 
 * [joeygambino/MiniMax-H3-Multishot-Workflow](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow) - Seamless multi-shot chaining workflow for MiniMax-H3 in ComfyUI — string multiple FL2VA/Ref2VA clips into one continuous sequence with matched audio handoffs. Apache-2.0.
 * [javawock7618/comfy-MiniMax-H3-workflows](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) - Curated ComfyUI workflow pack covering the full low-VRAM acceleration stack in one importable bundle: INT8 + SageAttention + Spectrum + Lightx2v + Turbo + Motion Context + Latent Upscale + TTS.
+* [Hearmeman24/ComfyUI-MiniMaxRefPack — R2V + Reference Manager](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack/blob/main/example_workflows/MiniMax%20R2V%20-%20Auto%20Prompting%20%2B%20Reference%20Manager.json) - Reference-to-Video graph built around the MiniMax References Manager node: all 18 references wired once, the H3 prompt written automatically from those references, video preview on the output.
+* [Hearmeman24/comfyui-minimax — T2V / I2V workflows](https://github.com/Hearmeman24/comfyui-minimax/tree/master/workflows/MiniMax%20H3) - T2V and I2V, each in a Custom Prompt version (you write it) and an Auto Prompt version (you type one line and a VLM writes the full six-section H3 prompt). Turbo LoRA and video preview wired in.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [telegram-shield]: https://img.shields.io/badge/TokenDiff-26A5E4?style=for-the-badge&logo=telegram&logoColor=white
@@ -633,6 +651,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [gh-vizart-vj]: https://img.shields.io/badge/vizart--vj-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-scottmudge]: https://img.shields.io/badge/scottmudge-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-starsFriday]: https://img.shields.io/badge/starsFriday-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-Hearmeman]: https://img.shields.io/badge/Hearmeman-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square

@@ -32,6 +32,21 @@
   * [minimax-h3-spatial-physics-lora](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) - **Spatial & physics (objects)** — teaches H3 object physics (collision, stacking, falling, occlusion) via pure spatial+physics captions; complements the wushu LoRA, which covers body motion. No fixed trigger word — describe object motion directly. Trained on CLEVRER / WISA / PhyCo-Kubric (700 clips); ai-toolkit, rank 16. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned · 310 MB full)
   * [minimax-h3-yunjing-lora](https://huggingface.co/Jojocodex/minimax-h3-yunjing-lora) - **Camera-movement (yunjing) control** — cinematic camera-movement control (push in/out, orbit, tracking, handheld) via the `yunjing` trigger word. 12 movement types trained (handheld / pull / dolly best-covered; pan / crane / 360° weakly covered). ai-toolkit, rank 32, 1000 steps; pruned + full. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA (6–8 steps, Euler, Beta). (310 MB pruned · 620 MB full)
 
+
+* [Hearmeman/minimax-h3-loras](https://huggingface.co/Hearmeman/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Six single-concept NSFW adapters, split into **anatomy** (stills-trained — they restore structure the base model renders soft and vague) and **action** (video-trained — what the body does). They are meant to stack: anatomy underneath, action on top, your character or scene LoRA above both. Each has its own trigger word and a documented prompt vocabulary; `HMBreasts` and `HMInnie` expose named shape/colour axes written as plain English rather than tags. Mirrored from [CivitAI](https://civitai.com/user/HearmemanAI), byte-identical with SHA-256 published. Base-model use is under the MiniMax H3 Community License.
+
+| LoRA | Trigger | Kind | Strength | Download |
+| :--- | :--- | :--- | :---: | :--- |
+| `HMNSFW_AIO_V2` — all-in-one sex motion | `hmmotion` | action · video | ≤ 0.5 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMNSFW_AIO_V2.safetensors) |
+| `HMCumshot_V2` — cumshot action | `cumshot` | action · video | 0.9 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMCumshot_V2.safetensors) |
+| `vagassist_e40` — pussy/anus structure | `Vagina` | anatomy · stills | 1.0 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/vagassist_e40.safetensors) |
+| `hmpussy_v6_epoch30` — holds it through motion | `hmpussy` | anatomy · video | 0.35 | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/hmpussy_v6_epoch30.safetensors) |
+| `HMInnie_v1_e50` — innie shape control | `inniepussy` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMInnie_v1_e50.safetensors) |
+| `HMBreasts_085e0750_e40` — size/areole control | `HMBreasts` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMBreasts_085e0750_e40.safetensors) |
+| `HMPenis_v2_e35` — penis anatomy | `HMPenis` | anatomy · stills | — | [![][gh-Hearmeman]](https://huggingface.co/Hearmeman/minimax-h3-loras/resolve/main/HMPenis_v2_e35.safetensors) |
+
+  The two HMPussy files are one LoRA in two halves and load together: the stills file restores the structure, the video file holds it together through motion. (296 MB each, 597 MB for `HMCumshot_V2` and `hmpussy_v6_epoch30`)
+
 ### ▣ Experimental / Other
 
 * [bghira/minimax-h3-anyflow-wip](https://huggingface.co/bghira/minimax-h3-anyflow-wip) - SimpleTuner WIP LoRA checkpoints (steps 200/300/400/500 + EMA). WIP research builds; not production-tuned.
