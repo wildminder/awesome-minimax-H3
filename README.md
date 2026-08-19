@@ -456,6 +456,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
   * [MinimaxH3_Characters](https://huggingface.co/EllaPriest45/MinimaxH3_Characters/tree/main) - ⚠️ **Contains explicit / NSFW content.** Character LoRA collection for MiniMax-H3 (e.g. Aunt Cass, Baldur's Gate 3 Party Pack, Judy Hopps). Browse at your own discretion; not enumerated with per-file downloads here.
   * [MinimaxH3_Styles](https://huggingface.co/EllaPriest45/MinimaxH3_Styles/tree/main) - ⚠️ **Contains explicit / NSFW content.** Style LoRA collection for MiniMax-H3 with previews and config text; significant NSFW/nude portion (anime, digicam, Playboy styles). Browse at your own discretion; not enumerated with per-file downloads here.
 
+* [Hearmeman/minimax-h3-loras](https://huggingface.co/Hearmeman/minimax-h3-loras/tree/main) - ⚠️ **Contains explicit / NSFW content.** LoRA collection for MiniMax-H3 (repo tagged NSFW; MiniMax H3 Community License). Browse at your own discretion; not enumerated with per-file downloads here.
+
 * [fal/research-mini-max-h3-realism-people-lora](https://huggingface.co/fal/research-mini-max-h3-realism-people-lora) - Realism LoRA for natural-looking people in everyday scenarios. Trained by fal on diverse photo data. (125 MB)
 
 * [Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) - Looping anime-style sketch LoRA. Hand-drawn 2D outlines, flat colors, white outline. Strength 0.75–1.25; pair with a Turbo LoRA for higher strength. (569 MB)
@@ -485,7 +487,9 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | `MiniMaxSpicy.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxSpicy.safetensors) |
 | `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |
 
-* [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
+* [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)
+
+* [mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA](https://huggingface.co/mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA) - **RAVEN: real-time autoregressive video extrapolation** — turns MiniMax-H3 into a causal streaming generator that extrapolates each chunk from previously generated content (4-NFE preview) instead of denoising one bidirectional clip. Academic preview (Imperial College London); the released weight is undertrained (limited texture) but validates the full RAVEN training→generation pipeline. Single PEFT LoRA adapter, `r=128` / `lora_alpha=128`; 192 frames @ 768×1376, 24 fps, causal chunking `sink=2 / window=2`. Training/inference/eval code in [mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN). MiniMax H3 Community License. (≈5.1 GB)<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ ComfyUI Nodes
 
@@ -532,6 +536,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | [ComfyUI MiniMax H3 Parallel](https://github.com/AesSedai/ComfyUI-MiniMaxH3-Parallel) | AesSedai | ![Acceleration][cat-accel] | Exact activation-only multi-GPU attention-head sharding for H3 Ref2VA — model/TE/VAE stay on the model GPU; helper GPUs receive packed INT8 Q/K/V head slices and return BF16 attention. Up to 4× peer-access CUDA GPUs (Comfy Kitchen INT8 attention); ~2× denoiser speedup at 4 GPUs with bit-identical output. |
 | [ComfyUI MiniMax H3 SPEED](https://github.com/StanLukuvka/ComfyUI-MiniMax-H3-SPEED) | StanLukuvka | ![Acceleration][cat-accel] | Progressive-resolution (Spectral Progressive Diffusion / SPEED) sampler for H3's packed video+audio latent — replaces KSAMPLER + `SamplerCustomAdvanced` and denoises starting coarse (¼–½ res) then refines to full, cutting VRAM and wall-clock time. Presets (`half_then_full` default, `three_quarter_then_full`, `quarter_half_full`, `aggressive`, `quarter_half_3q_full`) trade speed vs mid-frequency detail. Requires the StanLukuvka/ComfyUI-MiniMax-H3 plugin (ComfyUI 0.32.0+). ⚠️ PolyForm Noncommercial 1.0.0 license. |
 | [ComfyUI MiniMax H3 Keyframe Offset](https://github.com/asirusasr-maker/ComfyUI-MiniMax-H3-Keyframe-Offset) | asirusasr-maker | ![Conditioning][cat-cond] | Drop-in replacement for the stock MiniMax H3 Image-to-Video conditioning node, injecting `first_frame`/`last_frame` keyframes at **arbitrary frame indices** (not just start/end) so H3 freely generates motion between them. Plus an all-in-one text-to-audio node (conditioning → sampling → audio-VAE decode in one node; CFG hardcoded 1.0). 23 samplers / 9 schedulers, smart offset clamping, non-invasive in-memory `PackedLayout` patch. Apache-2.0. |
+| [MaskVidExperiments](https://github.com/drozbay/MaskVidExperiments) | drozbay | ![Conditioning][cat-cond] | Video masking / inpainting utility — crops a stable region around a masked subject, processes it at high resolution inside a moving crop, then pastes it back without jitter or visible seams (naive per-frame crops jitter, which video models read as camera motion). Nodes: Subject Crop (stable by construction through mask noise/occlusions), Subject Uncrop (feathered paste-back), Mask Cleanup, Frame Range Mask, Mask To Latent Space (token grid e.g. 2×2 for MiniMax H3 → latent noise mask), Audio Mask To Latent, Differential Diffusion (Soft), Audio Mask Debug. GPL-3.0. Requires ComfyUI 0.15.0+. |
+| [ComfyUI-MiniMaxRefPack](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack) | Hearmeman24 | ![Prompt][cat-prompt] | Manages all 18 Ref2VA references from one node's own upload UI — preview, crop/trim and delete, with the tag H3 will actually use (`<Picture 2>`, `<Video 1>`, `<Audio 1>`) shown on every tile. Wire the 18 sockets plus `prompt` once and the graph never changes again. Writes the six-section H3 prompt for you via OpenRouter **or** any local OpenAI-compatible server (one-click discovery of Ollama / LM Studio / llama.cpp / vLLM, loopback-only), or passes your text straight through. Portable JSON configs, `standard`/`replacement`/`auto` registers, editable system prompt, and a `debug` output showing the exact request sent. MIT. |
 
 ### ▣ Special Stuff
 
@@ -540,6 +546,16 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 * [h3.c (h3-metal)](https://github.com/antirez/h3.c) by antirez - Native C/Metal inference engine for Apple Silicon. Prompt-to-video/audio, first/last-frame, and Ref2VA references work end-to-end on M3/M5 Max. Interactive Iris-style session. Not a ComfyUI node — standalone binary.
 
 * [Omni-Rewriter](https://github.com/WayneJin0918/Omni-Rewriter) by WayneJin0918 - Open agentic prompt-expansion (PE) harness for image/video generation. Turns everyday intent into validated, model-ready prompts via a bounded AI-agent loop (Analyze → Draft → Validate → Repair → Render). Current video profile is MiniMax-H3; ships a CLI (`omni-rewriter expand`) + HTTP server (`POST /v1/expand`), deterministic PE validation, and a reusable CI lint Action. Apache-2.0. Not a ComfyUI node — standalone tool (generation adapters stay outside `expand`).
+
+* **MiniMax-H3-Prompt-Rewriter-LoRA-8B** — PEFT LoRA adapter on Qwen3-VL-8B-Instruct ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B)) that turns short user requests into production-oriented MiniMax-H3 audio-video prompts — structured shot timeline, synchronized physical/ambient sound, and music guidance. Covers T2VA / I2VA / L2VA / FL2VA (text + keyframe-conditioned); Ref2VA not supported. Pair with LightX2V (or the pytraveler ComfyUI node) to generate. GGUF quants ([pytraveler](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF)) run under llama.cpp against a quantized multimodal Qwen3-VL-8B-Instruct (sees reference frames) and ship a [ComfyUI node](https://github.com/pytraveler/MiniMax-H3-Prompt-Rewriter-ComfyUI).
+
+  | Format | Precision | Size | Download |
+  | :--- | :---: | :---: | :--- |
+  | PEFT adapter | ![fp32][badge-fp32] | 2.79 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B/resolve/main/adapter_model.safetensors) |
+  | GGUF | ![F16][badge-fp16] | 1.30 GB | [![][gh-pytraveler]](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF/resolve/main/MiniMax-H3-Prompt-Rewriter-LoRA-8B-F16.gguf) |
+  | GGUF ★ | ![Q8_0][badge-Q8_0] | 0.69 GB | [![][gh-pytraveler]](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF/resolve/main/MiniMax-H3-Prompt-Rewriter-LoRA-8B-Q8_0.gguf) |
+
+  *★ Q8_0 recommended for most setups.*
 
 
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -590,6 +606,8 @@ Official ComfyUI workflow templates for MiniMax-H3:
 
 * [joeygambino/MiniMax-H3-Multishot-Workflow](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow) - Seamless multi-shot chaining workflow for MiniMax-H3 in ComfyUI — string multiple FL2VA/Ref2VA clips into one continuous sequence with matched audio handoffs. Apache-2.0.
 * [javawock7618/comfy-MiniMax-H3-workflows](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) - Curated ComfyUI workflow pack covering the full low-VRAM acceleration stack in one importable bundle: INT8 + SageAttention + Spectrum + Lightx2v + Turbo + Motion Context + Latent Upscale + TTS.
+* [Hearmeman24/ComfyUI-MiniMaxRefPack — R2V + Reference Manager](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack/blob/main/example_workflows/MiniMax%20R2V%20-%20Auto%20Prompting%20%2B%20Reference%20Manager.json) - Reference-to-Video graph built around the MiniMax References Manager node: all 18 references wired once, the H3 prompt written automatically from those references, video preview on the output.
+* [Hearmeman24/comfyui-minimax — T2V / I2V workflows](https://github.com/Hearmeman24/comfyui-minimax/tree/master/workflows/MiniMax%20H3) - T2V and I2V, each in a Custom Prompt version (you write it) and an Auto Prompt version (you type one line and a VLM writes the full six-section H3 prompt). Turbo LoRA and video preview wired in.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [telegram-shield]: https://img.shields.io/badge/TokenDiff-26A5E4?style=for-the-badge&logo=telegram&logoColor=white
@@ -616,6 +634,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [gh-Mamad8]: https://img.shields.io/badge/Mamad8-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-NicoLab28]: https://img.shields.io/badge/NicoLab28-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-pytraveler]: https://img.shields.io/badge/pytraveler-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lihaoyun6]: https://img.shields.io/badge/lihaoyun6-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-LBH-123-AI]: https://img.shields.io/badge/LBH--123--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-tutututututu]: https://img.shields.io/badge/tutututututu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -633,6 +652,7 @@ Official ComfyUI workflow templates for MiniMax-H3:
 [gh-vizart-vj]: https://img.shields.io/badge/vizart--vj-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-scottmudge]: https://img.shields.io/badge/scottmudge-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-starsFriday]: https://img.shields.io/badge/starsFriday-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-Hearmeman]: https://img.shields.io/badge/Hearmeman-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
