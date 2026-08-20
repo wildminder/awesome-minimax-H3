@@ -91,6 +91,12 @@ Official and ComfyUI-repackaged model files.
 | `fl2v v1.0 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors) |
 | `fl2v v1.0` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_bf16.safetensors) |
 | `fl2v v1.0 · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors) |
+| `fl2v v1.1 768p` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_bf16.safetensors) |
+| `fl2v v1.1 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_comfyui_bf16.safetensors) |
+| `ref2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors) |
+| `ref2v v0.1 · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors) |
+| `fl2v v0.1 768p · SLA` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_bf16.safetensors) |
+| `fl2v v0.1 768p · SLA · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_comfyui_bf16.safetensors) |
 | `lightx2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy.safetensors) |
 | `lightx2v v0.1 · resized` | 4 | Full | ![bf16][badge-bf16] | 300 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_resized_avg_rank_21_bf16.safetensors) |
 | `fl2v` | 4 | Full | ![bf16][badge-bf16] | 744 MB | [![][gh-larryvrh]](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/resolve/main/minimax_h3_turbo_4step.safetensors) |
@@ -470,6 +476,7 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
   * [minimax-h3-wushu-action-lora](https://huggingface.co/Jojocodex/minimax-h3-wushu-action-lora) - **Wushu / martial-arts action** — trains H3 to generate human martial-arts motion (punches, kicks, spins, staff techniques), focused on body physics. Trigger by action description (e.g. `a martial artist performing punches and kicks in fast combat`); no fixed trigger word. ai-toolkit, rank 16, 2000 steps, 512 / 90 frames @ 24fps; pruned + full safetensors. ComfyUI users load the `_pruned` variant at strength 0.8–1.0; compatible with the Turbo LoRA (adaln_proj trimmed, 417 keys). Base-model use is under the MiniMax H3 Community License. (155 MB pruned · 310 MB full)
   * [minimax-h3-spatial-physics-lora](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) - **Spatial & physics (objects)** — teaches H3 object physics (collision, stacking, falling, occlusion) via pure spatial+physics captions; complements the wushu LoRA, which covers body motion. No fixed trigger word — describe object motion directly. Trained on CLEVRER / WISA / PhyCo-Kubric (700 clips); ai-toolkit, rank 16. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned · 310 MB full)
   * [minimax-h3-yunjing-lora](https://huggingface.co/Jojocodex/minimax-h3-yunjing-lora) - **Camera-movement (yunjing) control** — cinematic camera-movement control (push in/out, orbit, tracking, handheld) via the `yunjing` trigger word. 12 movement types trained (handheld / pull / dolly best-covered; pan / crane / 360° weakly covered). ai-toolkit, rank 32, 1000 steps; pruned + full. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA (6–8 steps, Euler, Beta). (310 MB pruned · 620 MB full)
+  * [minimax-h3-Camera-Motion-lora](https://huggingface.co/Jojocodex/minimax-h3-Camera-Motion-lora) - **Dedicated camera-motion LoRA (v1, 1000 steps)** — broader camera-movement control for H3, shipped with a `camera_motion_Prompt Library.md` of ready-made motion prompts. Separate, dedicated camera-motion training from the `yunjing` LoRA (use one or the other per shot). ai-toolkit, pruned safetensors. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned)
 
 ### ▣ Experimental / Other
 
@@ -557,6 +564,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
   *★ Q8_0 recommended for most setups.*
 
+* [MiniMax-H3-Single-Frame-VAE-500K](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K) by iamkaikai - Single-frame **image** decoder (VAE) for MiniMax-H3, trained 500K steps — reconstructs, generates, and edits individual H3 frames (text-to-image, material edits, sketch→render, reconstruction). Ships `load_decoder.py` + example prompts; use alongside the H3 video VAE for image-only work. Download `minimax_h3_single_frame_decoder_500k.safetensors` (≈9.69 GB) via [resolve/main](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K/resolve/main/minimax_h3_single_frame_decoder_500k.safetensors).
+
 
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -598,6 +607,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [I2V — Auto Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20I2V%20-%20Auto%20Prompt.json) | Hearmeman24 | I2VA | VLM writes the H3 prompt from one line + image. |
 | [INT8 I2V (javano2608.13)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.13.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow. |
 | [INT8 I2V (javano2608.14.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.14.1.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow (variant). |
+| [INT8 I2V (javano2608.15)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.15.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow (variant). |
 | [FL2V GGUF Workflow](https://huggingface.co/Abiray/MiniMax-H3-GGUF/resolve/main/minimax_fl2v_gguf_workflow.json) | Abiray | FL2VA | ComfyUI workflow for loading/running the GGUF-quantized FL2VA model. |
 | [Video (generic API)](https://github.com/Comfy-Org/workflow_templates/blob/main/archived/api_hailuo_minimax_video.json) | Comfy-Org | Ref2VA | Official Comfy-Org generic API video template; archived. |
 | [OrbitQuant Ref2VA API Workflow](https://huggingface.co/WaveCut/MiniMax-H3-OrbitQuant-W4A4/resolve/main/comfyui/workflows/MiniMax-H3-OrbitQuant-Ref2VA-api.json) | WaveCut | Ref2VA | API-prompt version of the OrbitQuant Ref2VA workflow. |
@@ -607,6 +617,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [R2V (video_minimax_h3_r2v)](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/video_minimax_h3_r2v.json) | Hearmeman24 | Ref2VA | Reference-to-video workflow (stock naming). |
 | [INT8 R2V (javano2608.20.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.20.1.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow. |
 | [INT8 R2V (javano2608.22.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.22.1.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow (variant). |
+| [INT8 R2V (javano2608.23)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.23.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow (variant). |
 | [H3 Seamless Chain (CORE)](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Seamless_Chain_CORE.json) | joeygambino | Multi-shot | Core seamless multi-shot chaining graph (FL2VA/Ref2VA clips). |
 | [H3 Seamless Chain v2](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Seamless_Chain_v2.json) | joeygambino | Multi-shot | Multi-shot chaining workflow (v2). |
 | [H3 Extend Take](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Extend_Take.json) | joeygambino | Multi-shot | Clip extension / take workflow. |

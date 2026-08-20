@@ -66,3 +66,5 @@
 
   *★ Q8_0 recommended for most setups.*
 
+* [MiniMax-H3-Single-Frame-VAE-500K](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K) by iamkaikai - Single-frame **image** decoder (VAE) for MiniMax-H3, trained 500K steps — reconstructs, generates, and edits individual H3 frames (text-to-image, material edits, sketch→render, reconstruction). Ships `load_decoder.py` + example prompts; use alongside the H3 video VAE for image-only work. Download `minimax_h3_single_frame_decoder_500k.safetensors` (≈9.69 GB) via [resolve/main](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K/resolve/main/minimax_h3_single_frame_decoder_500k.safetensors).
+
