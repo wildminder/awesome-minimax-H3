@@ -581,6 +581,10 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 * [ComfyUI MiniMax-H3 Tutorial](https://docs.comfy.org/tutorials/video/minimax/minimax-h3) - Official ComfyUI documentation tutorial for MiniMax-H3 setup and usage.
 * [MiniMax H3 Day-0 Support in ComfyUI](https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui) - ComfyUI blog post covering open weights, native audio, 2K video output, and local execution on a 3060.
 
+### ▣ Prompt Resources
+
+* [minimax-h3-1000-prompts](https://github.com/yangzhou-chaofan/minimax-h3-1000-prompts) - Curated index of the MiniMax H3 1K prompt dataset (1,000 prompts + 768p videos): 3-field prompt anatomy, 10 hand-picked reusable prompts, and an H3 vs. peer model comparison. Interactive atlas of all 1,000 clips at [neta.art H3 1000 Prompt List](https://neta.art/use-cases/en/h3-1000-prompt-list).
+
 ### ▣ Performance
 
 * [MiniMax H3 — Performance & Best-Configuration Report](guides/minimax-h3-performance.md) - Local-inference performance guide for MiniMax H3 (FL2VA / Ref2VA) across consumer & workstation GPUs, Apple Silicon, and the DGX Spark — distilled from 2 hard-numbered benchmarks and 17 community field reports. Covers a TL;DR config recommendation, hardware-tier tiers, the best speed/quality recipe, and caveats & licensing.
