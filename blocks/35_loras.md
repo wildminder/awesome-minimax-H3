@@ -12,6 +12,18 @@
 * ssjenforcer191
   * [Homelander](https://huggingface.co/ssjenforcer191/Homelander_Minimax_H3_experimental) - Character LoRA for The Boys' Homelander. Triggerword `HeroHomelander` (optionally append `wearing red leather gloves`). Experimental. (296 MB)
 
+* [Playtime-AI/Minimax_H3-Mila_Kunis](https://huggingface.co/Playtime-AI/Minimax_H3-Mila_Kunis) - Character LoRA of actress Mila Kunis (`MM-H3 - Mila Kunis v1.70.safetensors`, 155 MB pruned). Ships a sample audio clip; minimal card (Apache-2.0).
+
+* SexGod1979 — AfterMidnight
+  * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `AfterMidnight_ref2va_h3_sexytime_rank64-v1.2.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64-v1.2.safetensors) |
+| `AfterMidnight_ref2va_h3_sexytime_rank64_v1.1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64_v1.1.safetensors) |
+| `AfterMidnight_ref2va_h3_sexytime_rank64_v1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64_v1.safetensors) |
+| `AfterMidnight_ref2va_h3_softer_rank64_v1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_softer_rank64_v1.safetensors) |
+
 * [matlod/minimax-h3-turnaround](https://huggingface.co/matlod/minimax-h3-turnaround) - **Contact-Sheet diffusion** — one reference image + one instruction → five coherent, progressively rotated views of the same subject in a single pass. A character turnaround from one photo (~10 s at 512², ~57 s at 1024²). Uses H3's timeline as a slot axis. (60 MB each: 1024-cont/s600, 512/s1500, 512-instruct/s400)
 
 * EllaPriest45

@@ -96,7 +96,9 @@ Official and ComfyUI-repackaged model files.
 | `ref2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors) |
 | `ref2v v0.1 · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors) |
 | `fl2v v0.1 768p · SLA` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_bf16.safetensors) |
-| `fl2v v0.1 768p · SLA · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_comfyui_bf16.safetensors) |
+| `fl2v v1.0 768p · SLA · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_comfyui_bf16.safetensors) |
+| `fl2v DasiwaREF2VAHybridV1 · curveproj1025 (T8)` · ConvRot | 4 | Full | ![int8][badge-int8] | 757.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/Minimax-H3-Dasiwa-V1-Hybird-4steps/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_DasiwaREF2VAHybridV1_curveproj1025_compat_v001-T8.safetensors) |
+| `fl2v 8-step merge 0821` | 4→8 | Full | ![bf16][badge-bf16] | 1.96 GB | [![][gh-sonnybox]](https://huggingface.co/sonnybox/MiniMax-H3_experimental/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_8step_merge_0821_bf16.safetensors) |
 | `lightx2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy.safetensors) |
 | `lightx2v v0.1 · resized` | 4 | Full | ![bf16][badge-bf16] | 300 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/MiniMax-H3_comfy/resolve/main/loras/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_resized_avg_rank_21_bf16.safetensors) |
 | `fl2v` | 4 | Full | ![bf16][badge-bf16] | 744 MB | [![][gh-larryvrh]](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/resolve/main/minimax_h3_turbo_4step.safetensors) |
@@ -137,7 +139,8 @@ Official and ComfyUI-repackaged model files.
 | `fl2v CMF · FL2VA (smaller)` | 4 | Full | Q2TP (CMF) | 20.12 GB | [![][gh-infosave]](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf/resolve/main/mmh3-turbo-fl2va-q2tp.cmf) |
 | `fl2v v1.0 768p` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8]  | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16_int8convrot.safetensors) |
 | `fl2v v1.0` · ConvRot · needs ComfyUI-LoraInt8Loader | 8 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
-| `lightx2v v0.1 · int8` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
+| `lightx2v v0.1 · int8` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
+| `flashgen v1.0 768p` · T2VA · ⚠️ Ascend NPU / MindIE-SD / vllm-omni target (merge via `merge_lora_ckpt.py`) | 4 | Full | ![bf16][badge-bf16] | 1.26 GB | [![][gh-Beidouqixing]](https://huggingface.co/Beidouqixing/minimax-h3-4step-lora-flashgen/resolve/main/minimax_h3_4step_lora_flashgen_v1.0_768p_bf16.safetensors) |
 
 *larryvrh also publishes experimental training checkpoints (11 `.bin` files: step 149/490/729/850/922, v2 step 298, v3 step 300, v4 step 150/600, v5 step 600; 7.26–10.17 GB) — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
 
@@ -309,6 +312,49 @@ Patch-required FL2VA for the **10Eros_Max** fine-tune. DT-sQKV edition ([DmitryD
 | :--- | :---: | :--- | :---: | :--- |
 | FL2VA 10Eros | ![int8][badge-int8] | ⚠️ DT-sQKV ConvRot | 21.00 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/MiniMax-H3-10Eros-Max-DT-sQKV/resolve/main/FL2VA/10Eros_Max_H3_FL2VA-DT-sQKV-INT8-ConvRot.safetensors) |
 
+#### H3 × Z-Image Graft (joeygambino)
+
+Z-Image's spatial-attention profile grafted onto H3's engine (`zs05` = late-block gains, dose 0.5) — richer sets and textures, same identity, no per-shot sharpening creep. Native ComfyUI cuts load with the plain **Load Diffusion Model** node (ComfyUI 0.32+); GGUF quants for the [GGUF repo](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-GGUF) (fl2va/ref2va × curve/standard, Q4_0–Q8_0 + Q3mix, 10.7–24.1 GB). RTX 30/40: the GGUF repo is 4–8× faster than any 4-bit comfy-native arm on Ampere.
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| fl2va pruned zs05 | ![bf16][badge-bf16] | — | see [repo](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native) |
+| ref2va pruned zs05 (master) | ![bf16][badge-bf16] | 37.46 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/minimax_h3_ref2va_pruned_zs05_bf16.safetensors) |
+| fl2va pruned zs05 · int8_convrot | ![int8][badge-int8] | 31.69 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/minimax_h3_fl2va_zs05_int8_convrot.safetensors) |
+| ref2va pruned zs05 · int8_convrot | ![int8][badge-int8] | 19.53 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/minimax_h3_ref2va_pruned_zs05_int8_convrot.safetensors) |
+| fl2va pruned zs05 | ![fp8][badge-fp8] | 19.52 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-fl2va-pruned-zs05-comfy-fp8.safetensors) |
+| ref2va pruned zs05 | ![fp8][badge-fp8] | 19.52 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-fp8.safetensors) |
+| ref2va pruned zs05 | ![fp8][badge-fp8] e5m2 | 19.52 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-fp8e5m2.safetensors) |
+| fl2va / ref2va pruned zs05 | ![int8][badge-int8] comfy | 19.53 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-fl2va-pruned-zs05-comfy-int8.safetensors) ┊ [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-int8.safetensors) |
+| fl2va / ref2va pruned zs05 | ![mxfp8][badge-mxfp8] | 20.08 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-fl2va-pruned-zs05-comfy-mxfp8.safetensors) ┊ [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-mxfp8.safetensors) |
+| fl2va / ref2va pruned zs05 | ![nvfp4][badge-nvfp4] | 11.67 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-fl2va-pruned-zs05-comfy-nvfp4.safetensors) ┊ [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-nvfp4.safetensors) |
+| fl2va / ref2va pruned zs05 | w4a8 | 11.68 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-fl2va-pruned-zs05-comfy-w4a8.safetensors) ┊ [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-w4a8.safetensors) |
+| ref2va pruned zs05 | w4a4 | 10.56 GB | [![][gh-joeygambino]](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native/resolve/main/MiniMax-H3-ref2va-pruned-zs05-comfy-w4a4.safetensors) |
+
+#### H3 × Z-Image FL2VA+Ref2VA Hybrid (hoidhxd)
+
+Community hybrid of joeygambino's ZS05 INT8 checkpoints: **FL2VA base with REF2VA `adaln_proj` blocks 25–49** (b25-49 strategy; final layer stays FL2VA). Raw-tensor splice — no dequant/requant. Research/experimental; not claimed better than either source. Load as a diffusion model. ([repo](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid))
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| Hybrid b25-49 zs05 | ![int8][badge-int8] | 19.53 GiB | [![][gh-hoidhxd]](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid/resolve/main/minimax_h3_hybrid_fl2va_ref2va_zs05_b25-49_int8.safetensors) |
+
+#### Pruned Ref-Delta Fused r1024 (xmarre)
+
+Native ComfyUI single-file conversion of [`diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024`](https://huggingface.co/diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024) — a fused checkpoint carrying the Ref2VA delta LoRA at rank 1024 on the pruned base (see also ethanfel's unfused delta adapters in [LoRAs → Experimental](#lora)). Diffusion transformer only; use stock H3 TE + VAEs. INT8 variants keep all 50 MLP `fc2` layers BF16 to avoid fused-swiglu INT8 OOM; validated end-to-end in ComfyUI (Continuum/Spectrum/refine). MiniMax H3 Community License.
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| BF16 native conversion | ![bf16][badge-bf16] | 37.47 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy.safetensors) |
+| INT8 tensorwise · fc2 bf16 | ![int8][badge-int8] | 23.12 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy-int8-fc2bf16.safetensors) |
+| INT8 ConvRot gs256 · fc2 bf16 | ![int8][badge-int8] | 23.13 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy-int8-convrot-fc2bf16.safetensors) |
+
+#### FastH3 DMD2 Distillation (FastVideo)
+
+Official **data-free DMD2 few-step distillation** of MiniMax-H3 FL2VA by the FastVideo team (hao-ai-lab): 50-step base sampled in **4 steps** (`[999, 749, 500, 250]` ladder, cfg 1.0, guidance-distilled), joint video+audio, 768×1344 @ 124 frames. Diffusers-format full pipeline (only `transformer/` differs from base); student trained with VSA block-sparse attention (runnable dense). Preview status — v0.1 = step 1400, [v0.2 = step 2900/4000](https://huggingface.co/FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2); quality still maturing on high-motion detail. MiniMax H3 Community License. A ComfyUI-ready LoRA extraction of this checkpoint by drozbay is listed under [Turbo](#checkpoints).
+
+> ℹ️ Note: `Beidouqixing/MiniMax-H3-DMD2-4step` (previously circulated link) is dead (HF 404) — FastVideo's repos are the canonical DMD2 distills.
+
 #### Notes
 
 * **t8star Ref2VA patchin HF 1.02** — experimental weight modification (not a quant): +2% on 2×2 spatial HF patch in the video-input projection. Tests showed weak HF agent gain; "oily/waxy" look not confirmed removed. [Repo](https://huggingface.co/t8star/minimax_h3_ref2va_patchin_hf102). (31.70 GB, INT8 ConvRot, listed in the Ref2VA table above with `*(patchin)*` label.)
@@ -455,6 +501,18 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 * ssjenforcer191
   * [Homelander](https://huggingface.co/ssjenforcer191/Homelander_Minimax_H3_experimental) - Character LoRA for The Boys' Homelander. Triggerword `HeroHomelander` (optionally append `wearing red leather gloves`). Experimental. (296 MB)
 
+* [Playtime-AI/Minimax_H3-Mila_Kunis](https://huggingface.co/Playtime-AI/Minimax_H3-Mila_Kunis) - Character LoRA of actress Mila Kunis (`MM-H3 - Mila Kunis v1.70.safetensors`, 155 MB pruned). Ships a sample audio clip; minimal card (Apache-2.0).
+
+* SexGod1979 — AfterMidnight
+  * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `AfterMidnight_ref2va_h3_sexytime_rank64-v1.2.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64-v1.2.safetensors) |
+| `AfterMidnight_ref2va_h3_sexytime_rank64_v1.1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64_v1.1.safetensors) |
+| `AfterMidnight_ref2va_h3_sexytime_rank64_v1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_sexytime_rank64_v1.safetensors) |
+| `AfterMidnight_ref2va_h3_softer_rank64_v1.safetensors` | 1.11 GB | [![][gh-SexGod1979]](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW/resolve/main/AfterMidnight_ref2va_h3_softer_rank64_v1.safetensors) |
+
 * [matlod/minimax-h3-turnaround](https://huggingface.co/matlod/minimax-h3-turnaround) - **Contact-Sheet diffusion** — one reference image + one instruction → five coherent, progressively rotated views of the same subject in a single pass. A character turnaround from one photo (~10 s at 512², ~57 s at 1024²). Uses H3's timeline as a slot axis. (60 MB each: 1024-cont/s600, 512/s1500, 512-instruct/s400)
 
 * EllaPriest45
@@ -525,6 +583,7 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | [MiniMax H3 Block Cache T8](https://github.com/T8mars/comfyui-minimax-h3-blockcache-T8) | T8mars | ![Acceleration][cat-accel] | F1B0 block cache — computes Block 0 and reuses residual for Blocks 1–49 when audio/video are stable. Skips up to 49 of 50 blocks per step. |
 | [TE-Speed-MiniMaxH3-OSS](https://github.com/HELPMEEADICE/TE-Speed-MiniMaxH3-OSS) | HELPMEEADICE | ![Acceleration][cat-accel] | Block-cache accelerator patching H3's 50-layer DiT loop. Reuses cached tail-block residuals when sigma delta is small. ~45% speedup at default settings. |
 | [MiniMaxH3 Dual-Clock Euler Sampler](https://github.com/shuaixn/ComfyUI-MiniMaxH3DualClockSampler) | shuaixn | ![Acceleration][cat-accel] | Dual-clock Euler sampler for the Turbo LoRA — fixes audio crackling/noise at 4-step generation by running video and audio on separate schedules. |
+| [ComfyUI-H3-AudioRefine](https://github.com/Adudeguyman/ComfyUI-H3-AudioRefine) | Adudeguyman | ![Acceleration][cat-accel] | Audio-only refinement pass for H3 packed AV latents: freezes the video stream of an already-sampled latent (e.g. a 4-step Turbo pass) and denoises just the audio for extra steps — via ComfyUI's native masked-inpaint path with a per-stream noise mask (video=0 preserve, audio=1 generate; video bit-identical at `video_denoise` 0). Nodes: all-in-one **Audio Refine Sampler** (`audio_denoise` 0.3–0.6 cleans noise floor, 1.0 regenerates against frozen video), composable **Audio Refine Mask**, and optional **Frozen Video Cache** (~5.7× faster cached steps on RTX 5090; ~10 GB memory). Example workflow included; refine branch runs without the Turbo LoRA to restore undistilled audio quality. MIT. |
 | [minimax-h3-mlx](https://github.com/mrbizarro/minimax-h3-mlx) | mrbizarro | ![Port][cat-port] | Apple Silicon MLX port of the full H3 pipeline. AdaLN precompute drops 13B params at inference. Validated against the diffusers reference. |
 | [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) | nicolab28 | ![Port][cat-port] | Swap a large text encoder for a small one via a learned linear projection. MiniMax H3 conditioning from 15.7 GB down to 5.2 GB. Proof of concept. |
 | [ComfyUI MiniMax H3 Contex Loop](https://github.com/ethanfel/ComfyUI-MiniMaxH3-Contex-Loop) | ethanfel | ![Conditioning][cat-cond] | Turn one sampling body into a scene-by-scene production loop — each accepted scene carries motion + audio forward, saves a checkpoint, joins into final video without huge cumulative tensors. |
@@ -566,6 +625,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
 * [MiniMax-H3-Single-Frame-VAE-500K](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K) by iamkaikai - Single-frame **image** decoder (VAE) for MiniMax-H3, trained 500K steps — reconstructs, generates, and edits individual H3 frames (text-to-image, material edits, sketch→render, reconstruction). Ships `load_decoder.py` + example prompts; use alongside the H3 video VAE for image-only work. Download `minimax_h3_single_frame_decoder_500k.safetensors` (≈9.69 GB) via [resolve/main](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K/resolve/main/minimax_h3_single_frame_decoder_500k.safetensors).
 
+* [MiniMax-H3-Fun-Controlnet-Union](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union) by alibaba-pai (PAI) - **Fun ControlNet Union for MiniMax-H3** — single unified control adapter covering canny, depth, HED, MLSD, and pose conditioning for H3 video generation (sample results per mode in the repo). `MiniMax-H3-Fun-Controlnet-Union.safetensors` (6.81 GB); Apache-2.0 with MiniMax H3 Community License terms for the base model ([LICENSE](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union/blob/main/LICENSE)).
+
 
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -585,6 +646,12 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
 * [MiniMax H3 — Performance & Best-Configuration Report](guides/minimax-h3-performance.md) - Local-inference performance guide for MiniMax H3 (FL2VA / Ref2VA) across consumer & workstation GPUs, Apple Silicon, and the DGX Spark — distilled from 2 hard-numbered benchmarks and 17 community field reports. Covers a TL;DR config recommendation, hardware-tier tiers, the best speed/quality recipe, and caveats & licensing.
 * [MiniMax H3 on an RTX 3060 12GB: what we actually measured](https://www.minimaxh3tutorial.com/rtx-3060) - Real-world write-up of running MiniMax-H3 on a 12 GB RTX 3060 — what actually fits, at what resolution and step counts, and the configuration that worked.
+
+### ▣ Prompting & Prompt Datasets
+
+* [MiniMax H3 — 1,000-Prompt Curation](https://github.com/yangzhou-chaofan/minimax-h3-1000-prompts) - Curated index + analysis of the `ostris/minimax_h3_1k` dataset (1,000 prompts + 768p clips, generated with the pruned INT8-ConvRot FL2VA checkpoint @ 30 steps). Explains H3's 3-field prompt structure (`integrated_multimodal_description` / `overall_soundscape` / `non_diegetic_music`), highlights 10 reusable prompts with commentary, and compares H3 vs Seedance / Veo / Kling on fidelity, dialogue, sound design, and multi-shot continuity.
+* [Interactive atlas of all 1,000 clips (neta.art)](https://neta.art/use-cases/en/h3-1000-prompt-list) - Browse every clip from the 1K prompt dataset — every prompt, every style — with per-clip metadata: shooting-style/subject filters, prompt / soundscape / music / aspect-ratio / dialogue details, one-click generate or download.
+* [Codex × MiniMax H3 自动成片与验收 Skill](https://github.com/JiaYang-BUAA/codex-minimax-h3-video-skill) - Codex Skill for automated multi-shot H3 video production + QA: Codex splits storyboards and writes prompts, Z-Image generates first/last frames, **MiniMax H3 Director** schedules H3 shot generation (with audio), HyperFrames handles editable timeline editing/rendering, then Codex verifies dialogue (ASR), continuity, black frames, and specs — with local rework loops. Windows 11 + PowerShell 7 + ComfyUI ≥ 0.30; validated on RTX 5070 Ti 16 GB (~49 GB models). MIT; no model weights bundled.
 
 
 <p id="wf" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -674,6 +741,15 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 [gh-scottmudge]: https://img.shields.io/badge/scottmudge-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-starsFriday]: https://img.shields.io/badge/starsFriday-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-Hearmeman]: https://img.shields.io/badge/Hearmeman-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-joeygambino]: https://img.shields.io/badge/joeygambino-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-hoidhxd]: https://img.shields.io/badge/hoidhxd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-FastVideo]: https://img.shields.io/badge/FastVideo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-drozbay]: https://img.shields.io/badge/drozbay-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-sonnybox]: https://img.shields.io/badge/sonnybox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-xmarre]: https://img.shields.io/badge/xmarre-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-SexGod1979]: https://img.shields.io/badge/SexGod1979-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-alibaba-pai]: https://img.shields.io/badge/alibaba--pai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Beidouqixing]: https://img.shields.io/badge/Beidouqixing-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
