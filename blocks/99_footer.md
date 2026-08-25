@@ -51,6 +51,7 @@
 [gh-SexGod1979]: https://img.shields.io/badge/SexGod1979-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-alibaba-pai]: https://img.shields.io/badge/alibaba--pai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Beidouqixing]: https://img.shields.io/badge/Beidouqixing-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-adehong]: https://img.shields.io/badge/adehong-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square

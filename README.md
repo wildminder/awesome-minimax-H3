@@ -503,6 +503,10 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
 * [Playtime-AI/Minimax_H3-Mila_Kunis](https://huggingface.co/Playtime-AI/Minimax_H3-Mila_Kunis) - Character LoRA of actress Mila Kunis (`MM-H3 - Mila Kunis v1.70.safetensors`, 155 MB pruned). Ships a sample audio clip; minimal card (Apache-2.0).
 
+* [Playtime-AI/Minimax_H3-Sydney_Sweeney](https://huggingface.co/Playtime-AI/Minimax_H3-Sydney_Sweeney) - Character LoRA of actress Sydney Sweeney (`MM-H3 - Sydney Sweeney.safetensors`, 155 MB). Same pattern as Mila Kunis: ships a sample clip, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Salma_Hayek](https://huggingface.co/Playtime-AI/Minimax_H3-Salma_Hayek) - Character LoRA of actress Salma Hayek (`MM-H3 - Salma Hayek.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
 * SexGod1979 — AfterMidnight
   * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
 
@@ -525,6 +529,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 * [fal/research-mini-max-h3-realism-people-lora](https://huggingface.co/fal/research-mini-max-h3-realism-people-lora) - Realism LoRA for natural-looking people in everyday scenarios. Trained by fal on diverse photo data. (125 MB)
 
 * [Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) - Looping anime-style sketch LoRA. Hand-drawn 2D outlines, flat colors, white outline. Strength 0.75–1.25; pair with a Turbo LoRA for higher strength. (569 MB)
+
+* [suryatmodulus/studio-1939-old-animation-lora-minimax-h3](https://huggingface.co/suryatmodulus/studio-1939-old-animation-lora-minimax-h3) - **STUDIO 1939** — golden-age hand-painted animation style: gouache backgrounds with visible brushwork, warm celluloid palettes, classical character animation. Trained on a curated selection from a public-domain 1939 animated feature; two flavors from the same run — `light` (r16, painterly/storybook) and `strong` (r64, full cel with bold flat-shaded characters). Trigger `gulliv3r,` at prompt start; prompt expansion off; scale 1.0 for full look, 0.4–0.8 to blend under modern art direction; works 21:9 / 16:9 / 4:3. Character consistency via frozen verbatim character descriptions. By Lovis Odin ([@OdinLovis](https://x.com/OdinLovis)). (65.6 MB light r16 · 262 MB strong r64)
 
 * [nikdevs/minimax-h3-loras](https://huggingface.co/nikdevs/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Curated MiniMax-H3 LoRA collection (styles + characters). Browse at your own discretion; not enumerated with per-file downloads here.
 
@@ -552,6 +558,14 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | `MiniMaxSpicy.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxSpicy.safetensors) |
 | `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |
 
+* [adehong/minimax-h3-ntt-lora](https://huggingface.co/adehong/minimax-h3-ntt-lora) - ![no description][badge-noinfo] "NTT" v2 LoRA in three ranks (128 / 256 / 512). No model card; purpose and trigger words undocumented — use at own discretion.
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `ntt-v2-rank128.safetensors` | 1.12 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank128.safetensors) |
+| `ntt-v2-rank256.safetensors` | 2.24 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank256.safetensors) |
+| `ntt-v2-rank512.safetensors` | 4.48 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank512.safetensors) |
+
 * [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)
 
 * [mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA](https://huggingface.co/mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA) - **RAVEN: real-time autoregressive video extrapolation** — turns MiniMax-H3 into a causal streaming generator that extrapolates each chunk from previously generated content (4-NFE preview) instead of denoising one bidirectional clip. Academic preview (Imperial College London); the released weight is undertrained (limited texture) but validates the full RAVEN training→generation pipeline. Single PEFT LoRA adapter, `r=128` / `lora_alpha=128`; 192 frames @ 768×1376, 24 fps, causal chunking `sink=2 / window=2`. Training/inference/eval code in [mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN). MiniMax H3 Community License. (≈5.1 GB)<p id="nodes" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -578,6 +592,7 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton) | kijai | ![Acceleration][cat-accel] | SolAttention Triton kernel for ComfyUI. Optimized attention computation for H3 and other Sol-Attn models. |
 | [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn) | Saganaki22 | ![Acceleration][cat-accel] | Zero-copy Sol-Attn for SM89–SM120 with scheduled tau, graph preview, and feed-forward chunking. 1.14–1.44× vs SageAttention, −37% MLP peak VRAM on H3. |
 | [ComfyUI Spectrum MiniMax H3](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3) | xmarre | ![Acceleration][cat-accel] | Spectral feature forecasting — skips selected transformer evaluations via Chebyshev ridge regression. Adaptive scheduling with native fallbacks. |
+| [ComfyUI-MiniMax-H3-RefDelta-Solver](https://github.com/xmarre/ComfyUI-MiniMax-H3-RefDelta-Solver) | xmarre | ![Acceleration][cat-accel] | Dedicated ER-SDE-derived sampler + beta-prior scheduler pair built for the author's [Pruned Ref-Delta Fused r1024 checkpoint](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI): measures the fused checkpoint's divergent intermediate trajectory in ER-SDE solver coordinates and smoothly gates history-dependent corrections per stage, with separate video/audio risk reduction. Nodes: **RefDelta Sampler** (SamplerCustomAdvanced-compatible; strict stock mode delegates to native `sample_er_sde`), **RefDelta Scheduler** (`r1024_provisional` rank profile; profile JSON only at runtime), and a dev-only **Reference Diagnostic** guider comparing fused vs genuine Ref2VA on identical inputs. ⚠️ Experimental — controls/profile not yet calibrated against same-state telemetry. Requires `ModelSamplingAV`; compatible with ComfyUI-Spectrum-MiniMax-H3 v0.2.18+. GPL-3.0-or-later. |
 | [Herrgotts-H3-Infinite-Continuation-Suite](https://github.com/HerrgottMargott/Herrgotts-H3-Infinite-Continuation-Suite) | HerrgottMargott | ![Conditioning][cat-cond] | Freeze-aware, keyframe-anchored MiniMax H3 video continuation for ComfyUI — injects the previous clip's video+audio latent context into the next FL2VA segment, auto-detects H3's frozen tail for a safe handover, and stitches with a 4-frame video crossfade + 15 ms audio de-click. Experimental community project (GPL-3.0). |
 | [ComfyUI-MiniMaxH3-Cache](https://github.com/lihaoyun6/ComfyUI-MiniMaxH3-Cache) | lihaoyun6 | ![Acceleration][cat-accel] | EasyCache-style cache node for H3. Patches ComfyUI core to cache and reuse transformer block computations across timesteps. |
 | [MiniMax H3 Block Cache T8](https://github.com/T8mars/comfyui-minimax-h3-blockcache-T8) | T8mars | ![Acceleration][cat-accel] | F1B0 block cache — computes Block 0 and reuses residual for Blocks 1–49 when audio/video are stable. Skips up to 49 of 50 blocks per step. |
@@ -751,6 +766,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 [gh-SexGod1979]: https://img.shields.io/badge/SexGod1979-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-alibaba-pai]: https://img.shields.io/badge/alibaba--pai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Beidouqixing]: https://img.shields.io/badge/Beidouqixing-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-adehong]: https://img.shields.io/badge/adehong-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square

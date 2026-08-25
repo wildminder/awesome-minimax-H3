@@ -14,6 +14,10 @@
 
 * [Playtime-AI/Minimax_H3-Mila_Kunis](https://huggingface.co/Playtime-AI/Minimax_H3-Mila_Kunis) - Character LoRA of actress Mila Kunis (`MM-H3 - Mila Kunis v1.70.safetensors`, 155 MB pruned). Ships a sample audio clip; minimal card (Apache-2.0).
 
+* [Playtime-AI/Minimax_H3-Sydney_Sweeney](https://huggingface.co/Playtime-AI/Minimax_H3-Sydney_Sweeney) - Character LoRA of actress Sydney Sweeney (`MM-H3 - Sydney Sweeney.safetensors`, 155 MB). Same pattern as Mila Kunis: ships a sample clip, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Salma_Hayek](https://huggingface.co/Playtime-AI/Minimax_H3-Salma_Hayek) - Character LoRA of actress Salma Hayek (`MM-H3 - Salma Hayek.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
 * SexGod1979 — AfterMidnight
   * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
 
@@ -36,6 +40,8 @@
 * [fal/research-mini-max-h3-realism-people-lora](https://huggingface.co/fal/research-mini-max-h3-realism-people-lora) - Realism LoRA for natural-looking people in everyday scenarios. Trained by fal on diverse photo data. (125 MB)
 
 * [Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) - Looping anime-style sketch LoRA. Hand-drawn 2D outlines, flat colors, white outline. Strength 0.75–1.25; pair with a Turbo LoRA for higher strength. (569 MB)
+
+* [suryatmodulus/studio-1939-old-animation-lora-minimax-h3](https://huggingface.co/suryatmodulus/studio-1939-old-animation-lora-minimax-h3) - **STUDIO 1939** — golden-age hand-painted animation style: gouache backgrounds with visible brushwork, warm celluloid palettes, classical character animation. Trained on a curated selection from a public-domain 1939 animated feature; two flavors from the same run — `light` (r16, painterly/storybook) and `strong` (r64, full cel with bold flat-shaded characters). Trigger `gulliv3r,` at prompt start; prompt expansion off; scale 1.0 for full look, 0.4–0.8 to blend under modern art direction; works 21:9 / 16:9 / 4:3. Character consistency via frozen verbatim character descriptions. By Lovis Odin ([@OdinLovis](https://x.com/OdinLovis)). (65.6 MB light r16 · 262 MB strong r64)
 
 * [nikdevs/minimax-h3-loras](https://huggingface.co/nikdevs/minimax-h3-loras) - ⚠️ **Contains explicit / NSFW content.** Curated MiniMax-H3 LoRA collection (styles + characters). Browse at your own discretion; not enumerated with per-file downloads here.
 
@@ -62,6 +68,14 @@
 | `MiniMaxB.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxB.safetensors) |
 | `MiniMaxSpicy.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxSpicy.safetensors) |
 | `MiniMaxV.safetensors` | 310 MB | [![][gh-DIE2025]](https://huggingface.co/DIE2025/MiniMaxH3Loras/resolve/main/MiniMaxV.safetensors) |
+
+* [adehong/minimax-h3-ntt-lora](https://huggingface.co/adehong/minimax-h3-ntt-lora) - ![no description][badge-noinfo] "NTT" v2 LoRA in three ranks (128 / 256 / 512). No model card; purpose and trigger words undocumented — use at own discretion.
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `ntt-v2-rank128.safetensors` | 1.12 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank128.safetensors) |
+| `ntt-v2-rank256.safetensors` | 2.24 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank256.safetensors) |
+| `ntt-v2-rank512.safetensors` | 4.48 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank512.safetensors) |
 
 * [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)
 
