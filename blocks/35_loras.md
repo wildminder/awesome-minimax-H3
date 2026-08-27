@@ -18,6 +18,10 @@
 
 * [Playtime-AI/Minimax_H3-Salma_Hayek](https://huggingface.co/Playtime-AI/Minimax_H3-Salma_Hayek) - Character LoRA of actress Salma Hayek (`MM-H3 - Salma Hayek.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
 
+* [Playtime-AI/Minimax_H3-Jennifer_Connelly](https://huggingface.co/Playtime-AI/Minimax_H3-Jennifer_Connelly) - Character LoRA of actress Jennifer Connelly (`MM-H3 - Jennifer Connelly.safetensors`, 155 MB). Same Playtime-AI series; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Margot_Robbie](https://huggingface.co/Playtime-AI/Minimax_H3-Margot_Robbie) - Character LoRA of actress Margot Robbie (`MM-H3 - Margot Robbie.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
 * SexGod1979 — AfterMidnight
   * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
 

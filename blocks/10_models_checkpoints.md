@@ -91,6 +91,8 @@ Official and ComfyUI-repackaged model files.
 | `fl2v v1.0` · ConvRot · needs ComfyUI-LoraInt8Loader | 8 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
 | `lightx2v v0.1 · int8` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
 | `flashgen v1.0 768p` · T2VA · ⚠️ Ascend NPU / MindIE-SD / vllm-omni target (merge via `merge_lora_ckpt.py`) | 4 | Full | ![bf16][badge-bf16] | 1.26 GB | [![][gh-Beidouqixing]](https://huggingface.co/Beidouqixing/minimax-h3-4step-lora-flashgen/resolve/main/minimax_h3_4step_lora_flashgen_v1.0_768p_bf16.safetensors) |
+| `fl2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.37 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-FL2VA-Acc-8Step.safetensors) |
+| `ref2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.37 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-Ref2VA-Acc-8Step.safetensors) |
 
 *larryvrh also publishes experimental training checkpoints (11 `.bin` files: step 149/490/729/850/922, v2 step 298, v3 step 300, v4 step 150/600, v5 step 600; 7.26–10.17 GB) — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
 
