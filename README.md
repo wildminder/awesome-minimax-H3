@@ -141,8 +141,10 @@ Official and ComfyUI-repackaged model files.
 | `fl2v v1.0` · ConvRot · needs ComfyUI-LoraInt8Loader | 8 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16_int8convrot.safetensors) |
 | `lightx2v v0.1 · int8` · ConvRot · needs ComfyUI-LoraInt8Loader | 4 | Full | ![int8][badge-int8] | 991 MB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy/resolve/main/minimax_h3_lightx2v_turbo_4step_v0.1_comfy_int8convrot.safetensors) |
 | `flashgen v1.0 768p` · T2VA · ⚠️ Ascend NPU / MindIE-SD / vllm-omni target (merge via `merge_lora_ckpt.py`) | 4 | Full | ![bf16][badge-bf16] | 1.26 GB | [![][gh-Beidouqixing]](https://huggingface.co/Beidouqixing/minimax-h3-4step-lora-flashgen/resolve/main/minimax_h3_4step_lora_flashgen_v1.0_768p_bf16.safetensors) |
-| `fl2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.37 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-FL2VA-Acc-8Step.safetensors) |
-| `ref2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.37 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-Ref2VA-Acc-8Step.safetensors) |
+| `fl2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.28 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-FL2VA-Acc-8Step.safetensors) |
+| `ref2va Acc 8-step` · PDD (Parallel Decoding Distillation) | 8 NFE | Full | ![bf16][badge-bf16] | 1.28 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs/resolve/main/MiniMax-H3-Ref2VA-Acc-8Step.safetensors) |
+| `fl2v Dense 4-step v1` · ComfyUI-pruned | 4 | Pruned | ![bf16][badge-bf16] | 1018 MB | [![][gh-Hippotes]](https://huggingface.co/Hippotes/MiniMax-H3-Experiments/resolve/main/FastH3-Dense-4-step-v1-LoRA-ComfyUI-pruned.safetensors) |
+| `fl2v VSA-DataFree 4-step` · ⚠️ needs [companion node](https://github.com/barelymining/ComfyUI-MiniMax-H3-FastVideo) | 4 | Pruned | ![bf16][badge-bf16] | 2.05 GB | [![][gh-barelymining]](https://huggingface.co/barelymining/ComfyUI-MiniMax-H3-FastVideo/resolve/main/fasth3_vsa_4-steps-v5.safetensors) + [gate 3.59 GB](https://huggingface.co/barelymining/ComfyUI-MiniMax-H3-FastVideo/resolve/main/fasth3_vsa_gate.safetensors) |
 
 *larryvrh also publishes experimental training checkpoints (11 `.bin` files: step 149/490/729/850/922, v2 step 298, v3 step 300, v4 step 150/600, v5 step 600; 7.26–10.17 GB) — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
 
@@ -513,6 +515,18 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
 * [Playtime-AI/Minimax_H3-Margot_Robbie](https://huggingface.co/Playtime-AI/Minimax_H3-Margot_Robbie) - Character LoRA of actress Margot Robbie (`MM-H3 - Margot Robbie.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
 
+* [Playtime-AI/Minimax_H3-Zendaya](https://huggingface.co/Playtime-AI/Minimax_H3-Zendaya) - Character LoRA of actress Zendaya (`MM-H3 - Zendaya.safetensors`, 155 MB). Same Playtime-AI series; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Dolly_Parton](https://huggingface.co/Playtime-AI/Minimax_H3-Dolly_Parton) - Character LoRA of singer Dolly Parton (`MM-H3 - Dolly Parton v1.1.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Sadie_S](https://huggingface.co/Playtime-AI/Minimax_H3-Sadie_S) - Character LoRA of actress Sadie Sink (`MM-H3 - Sadie Sink.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Anya_Taylor_Joy](https://huggingface.co/Playtime-AI/Minimax_H3-Anya_Taylor_Joy) - Character LoRA of actress Anya Taylor-Joy (`MM-H3 - Anya Taylor Joy.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Megan_Fox](https://huggingface.co/Playtime-AI/Minimax_H3-Megan_Fox) - Character LoRA of actress Megan Fox (`MM-H3 - Megan Fox v1.1.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
+* [Playtime-AI/Minimax_H3-Ariana_Grande](https://huggingface.co/Playtime-AI/Minimax_H3-Ariana_Grande) - Character LoRA of singer Ariana Grande (`MM-H3 - Ariana Grande.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+
 * SexGod1979 — AfterMidnight
   * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
 
@@ -533,6 +547,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 * [Hearmeman/minimax-h3-loras](https://huggingface.co/Hearmeman/minimax-h3-loras/tree/main) - ⚠️ **Contains explicit / NSFW content.** LoRA collection for MiniMax-H3 (repo tagged NSFW; MiniMax H3 Community License). Browse at your own discretion; not enumerated with per-file downloads here.
 
 * [fal/research-mini-max-h3-realism-people-lora](https://huggingface.co/fal/research-mini-max-h3-realism-people-lora) - Realism LoRA for natural-looking people in everyday scenarios. Trained by fal on diverse photo data. (125 MB)
+
+* [orangesouth/MinimaxH3CinematicRealism](https://huggingface.co/orangesouth/MinimaxH3CinematicRealism) - **Cinematic Realism** style LoRA ("真实电影质感" / real film texture, V0.1) for MiniMax-H3 — adds a grounded, photographic cinematic look. Ships a Chinese prompt-preset `.json` plus plugin/usage notes; no model card. (`Minimax H3真实电影质感V0.1.safetensors`, 309 MB pruned).
 
 * [Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) - Looping anime-style sketch LoRA. Hand-drawn 2D outlines, flat colors, white outline. Strength 0.75–1.25; pair with a Turbo LoRA for higher strength. (569 MB)
 
@@ -571,6 +587,16 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | `ntt-v2-rank128.safetensors` | 1.12 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank128.safetensors) |
 | `ntt-v2-rank256.safetensors` | 2.24 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank256.safetensors) |
 | `ntt-v2-rank512.safetensors` | 4.48 GB | [![][gh-adehong]](https://huggingface.co/adehong/minimax-h3-ntt-lora/resolve/main/ntt-v2-rank512.safetensors) |
+
+* [NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints) - **CWM System-Chat LoRA adapters** — five selected LoRA adapters from 1344×768 q4 System-Chat training runs on MiniMax-H3 Ref2VA. Each adapter has 600 LoRA tensors for 200 target modules; supports inference + LoRA warm-start (no optimizer-level resume). Research release; manifest.json carries byte sizes, checksums and training steps. (2.39 GB each, BF16)
+
+| Variant | Size | Download |
+| :--- | :---: | :--- |
+| `dynamic_continuation_2e5_to_1e6` (step2160) | 2.39 GB | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints/resolve/main/q4_system_chat/dynamic_continuation_2e5_to_1e6/minimax-h3-new1344-q4-system-chat-dynamic-human-nodes-continuation-strict-step960-2ep-warmup100-cosine2e5to1e6-fa2-a100i-restart-v1-step00002160.safetensors) |
+| `dynamic_continuation_7e6_to_1e6` | 2.39 GB | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints/resolve/main/q4_system_chat/dynamic_continuation_7e6_to_1e6/minimax-h3-new1344-q4-system-chat-dynamic-human-nodes-continuation-strict-2ep-warmup50-cosine7e6to1e6-fa3-v1.safetensors) |
+| `dynamic_fresh_1ep_2e5_to_1e6` (step960) | 2.39 GB | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints/resolve/main/q4_system_chat/dynamic_fresh_1ep_2e5_to_1e6/minimax-h3-new1344-q4-system-chat-dynamic-human-nodes-fresh-official-1ep-warmup50-cosine2e5to1e6-fa3-v1-step00000960.safetensors) |
+| `rigid_3ep_1e5_to_1e6` | 2.39 GB | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints/resolve/main/q4_system_chat/rigid_3ep_1e5_to_1e6/minimax-h3-new1344-q4-system-chat-fresh-official-3ep-warmup100-cosine1e5to1e6-fa3-v1.safetensors) |
+| `rigid_3ep_2e5_to_1e6` | 2.39 GB | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints/resolve/main/q4_system_chat/rigid_3ep_2e5_to_1e6/minimax-h3-new1344-q4-system-chat-fresh-official-3ep-warmup100-cosine2e5to1e6-fa3-v1.safetensors) |
 
 * [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)
 
@@ -696,12 +722,16 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [OrbitQuant T2VA API Workflow](https://huggingface.co/WaveCut/MiniMax-H3-OrbitQuant-W4A4/resolve/main/comfyui/workflows/MiniMax-H3-OrbitQuant-T2VA-api.json) | WaveCut | T2VA | API-prompt version of the OrbitQuant T2VA workflow. |
 | [T2V — Custom Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20T2V%20-%20Custom%20Prompt.json) | Hearmeman24 | T2VA | You write the full H3 prompt; Turbo LoRA + preview wired. |
 | [T2V — Auto Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20T2V%20-%20Auto%20Prompt.json) | Hearmeman24 | T2VA | VLM writes the full six-section H3 prompt from one line. |
+| [Base Prompt generator](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Base%20Prompt%20generator.json) | StefanFalkok | T2VA | Writes the full six-section H3 prompt from a short idea; pairs with the I2V/Ref2V graphs. |
 | [Image-to-Video (I2V)](https://github.com/Comfy-Org/workflow_templates/blob/main/archived/api_hailuo_minimax_i2v.json) | Comfy-Org | I2VA | Official Comfy-Org template — API-based; archived. |
 | [I2V — Custom Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20I2V%20-%20Custom%20Prompt.json) | Hearmeman24 | I2VA | You write the prompt; image input + Turbo LoRA + preview. |
 | [I2V — Auto Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20I2V%20-%20Auto%20Prompt.json) | Hearmeman24 | I2VA | VLM writes the H3 prompt from one line + image. |
 | [INT8 I2V (javano2608.13)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.13.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow. |
 | [INT8 I2V (javano2608.14.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.14.1.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow (variant). |
 | [INT8 I2V (javano2608.15)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_I2V-javano2608.15.json) | javawock7618 | I2VA | INT8 low-VRAM image-to-video workflow (variant). |
+| [I2V](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20I2V.json) | StefanFalkok | I2VA | Image-to-video graph with stock LoRA/standard nodes. |
+| [I2V — Larryvrh Turbo](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20I2V%20(with%20Larryvrh%20Turbo%20Nodes).json) | StefanFalkok | I2VA | I2V with the Larryvrh 4-step Turbo sampler node wired in. |
+| [I2V — PDD-Acc 8-Steps Turbo](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20I2V%20(with%20PDD-Acc%208-Steps%20Turbo%20Nodes).json) | StefanFalkok | I2VA | I2V with the Jalen-Brunson PDD-Acc 8-step turbo node. |
 | [FL2V GGUF Workflow](https://huggingface.co/Abiray/MiniMax-H3-GGUF/resolve/main/minimax_fl2v_gguf_workflow.json) | Abiray | FL2VA | ComfyUI workflow for loading/running the GGUF-quantized FL2VA model. |
 | [Video (generic API)](https://github.com/Comfy-Org/workflow_templates/blob/main/archived/api_hailuo_minimax_video.json) | Comfy-Org | Ref2VA | Official Comfy-Org generic API video template; archived. |
 | [OrbitQuant Ref2VA API Workflow](https://huggingface.co/WaveCut/MiniMax-H3-OrbitQuant-W4A4/resolve/main/comfyui/workflows/MiniMax-H3-OrbitQuant-Ref2VA-api.json) | WaveCut | Ref2VA | API-prompt version of the OrbitQuant Ref2VA workflow. |
@@ -712,10 +742,17 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [INT8 R2V (javano2608.20.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.20.1.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow. |
 | [INT8 R2V (javano2608.22.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.22.1.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow (variant). |
 | [INT8 R2V (javano2608.23)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2608.23.json) | javawock7618 | Ref2VA | INT8 low-VRAM reference-to-video workflow (variant). |
+| [Ref2V](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Ref2V.json) | StefanFalkok | Ref2VA | Reference-to-video graph with stock nodes. |
+| [Ref2V — PDD-Acc 8-Steps Turbo](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Ref2V%20(with%20PDD-Acc%208-Steps%20Turbo%20Nodes).json) | StefanFalkok | Ref2VA | Ref2V with the Jalen-Brunson PDD-Acc 8-step turbo node. |
+| [Ref2V Prompt generator](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Ref2V%20Prompt%20generator.json) | StefanFalkok | Ref2VA | Writes the H3 prompt for reference-to-video from references. |
+| [Music-Video — Long-Shot Latent-Mask (Base+Ref)](https://huggingface.co/RuneXX/Minimax-H3-Workflows/resolve/main/Music-Video/Minimax-H3_-_Music-Video_Long-Shot-Latent-Mask_Base-Ref.json) | RuneXX | Ref2VA | Music-video workflow: long single shot with latent masking, base + reference conditioning. |
+| [Music-Video — Long-Shot Latent-Mask (Multi-Scene Ref)](https://huggingface.co/RuneXX/Minimax-H3-Workflows/resolve/main/Music-Video/Minimax-H3_-_Music-Video_Long-Shot-Latent-Mask_MultiScene-Ref.json) | RuneXX | Ref2VA | Music-video workflow: multi-scene reference conditioning with latent masking. |
+| [V2V — Extend Any Video (latent masking)](https://huggingface.co/RuneXX/Minimax-H3-Workflows/resolve/main/Video-to-Video/Minimax-H3_-_V2V_Extend_Any_Video_latent_masking.json) | RuneXX | Ref2VA | Video-to-video extension of any source clip via latent masking. |
 | [H3 Seamless Chain (CORE)](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Seamless_Chain_CORE.json) | joeygambino | Multi-shot | Core seamless multi-shot chaining graph (FL2VA/Ref2VA clips). |
 | [H3 Seamless Chain v2](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Seamless_Chain_v2.json) | joeygambino | Multi-shot | Multi-shot chaining workflow (v2). |
 | [H3 Extend Take](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Extend_Take.json) | joeygambino | Multi-shot | Clip extension / take workflow. |
 | [H3 Keyframes](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow/resolve/main/workflows/H3_Keyframes.json) | joeygambino | Multi-shot | Keyframe-conditioned chaining. |
+| [Music-Video — Multi-Scene Shot-by-Shot](https://huggingface.co/RuneXX/Minimax-H3-Workflows/resolve/main/Music-Video/Minimax-H3_-_Music-Video_Multi-Scene_Shot-by-Shot.json) | RuneXX | Multi-shot | Music-video workflow that builds a multi-scene clip shot-by-shot. |
 | [comfy-MiniMax-H3-workflows (pack)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) | javawock7618 | Bundle | Full INT8 low-VRAM acceleration stack: INT8 + SageAttention + Spectrum + Lightx2v + Turbo + Motion Context + Latent Upscale + TTS (+ Music, Ref2Image utilities). |
 | [INT8 TTS](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_TTS-javano2608.1.json) | javawock7618 | Bundle | TTS audio workflow. |
 | [Music3](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/extra/MiniMax-Music3-javano2608.1.json) | javawock7618 | Bundle | Music generation workflow. |
@@ -778,6 +815,9 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 [gh-alibaba-pai]: https://img.shields.io/badge/alibaba--pai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Beidouqixing]: https://img.shields.io/badge/Beidouqixing-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-adehong]: https://img.shields.io/badge/adehong-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-NTU-yiwen]: https://img.shields.io/badge/NTU--yiwen-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Hippotes]: https://img.shields.io/badge/Hippotes-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-barelymining]: https://img.shields.io/badge/barelymining-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
