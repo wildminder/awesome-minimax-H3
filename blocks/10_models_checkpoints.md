@@ -309,6 +309,27 @@ Official **data-free DMD2 few-step distillation** of MiniMax-H3 FL2VA by the Fas
 
 > ℹ️ Note: `Beidouqixing/MiniMax-H3-DMD2-4step` (previously circulated link) is dead (HF 404) — FastVideo's repos are the canonical DMD2 distills.
 
+#### FastH3 & Specialized Quants (NVFP4 / Nunchaku)
+
+Distilled / rotated / Nunchaku-packed checkpoints that need a **custom loader node** (not the stock diffusion-model loader). NVFP4 rows are Blackwell SM120 (native NVFP4); Nunchaku rows are W4A4/INT4 packs for [ComfyUI-Nunchaku](https://github.com/2damachines/ComfyUI-nunchaku).
+
+| Checkpoint | Precision | Method | Size | Loader | Download |
+| :--- | :---: | :--- | :---: | :--- | :--- |
+| FastH3 4-step (pottokao) · rotated NVFP4 | ![nvfp4][badge-nvfp4] | Rotated NVFP4 | 12.8 GB | [H3RotNVFP4Loader](https://github.com/pottokao/H3-RotNVFP4-ComfyUI-Loader) | [![][gh-pottokao]](https://huggingface.co/pottokao/MiniMax-H3-FastH3-NVFP4-rotated/resolve/main/h3_fasth3_T1.safetensors) |
+| FastH3 8-step (pottokao) · rotated NVFP4 · higher quality | ![nvfp4][badge-nvfp4] | Rotated NVFP4 | 12.5 GB | [H3RotNVFP4Loader](https://github.com/pottokao/H3-RotNVFP4-ComfyUI-Loader) | [![][gh-pottokao]](https://huggingface.co/pottokao/MiniMax-H3-NVFP4-rotated/resolve/main/h3_base_T1.safetensors) |
+| FastVideo INT8→NVFP4 (LoboForge) | ![nvfp4][badge-nvfp4] | NVFP4 | 14.5 GB | NVFP4 (Blackwell SM120) | [![][gh-LoboForge]](https://huggingface.co/LoboForge/minimax-h3-fastvideo-nvfp4/resolve/main/minimax_h3_fastvideo_vsa_datafree_1300step_4step_nvfp4.safetensors) |
+| Nunchaku-Lite NVFP4 (rootonchair) | ![nvfp4][badge-nvfp4] | Nunchaku W4A4 | 19.4 GB | [ComfyUI-Nunchaku](https://github.com/2damachines/ComfyUI-nunchaku) | [![][gh-rootonchair]](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-nvfp4) |
+| Nunchaku-Lite INT4 (rootonchair) | ![int4][badge-int4] | Nunchaku W4A4 | 18.4 GB | [ComfyUI-Nunchaku](https://github.com/2damachines/ComfyUI-nunchaku) | [![][gh-rootonchair]](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-int4) |
+
+#### VDN-H3 (Video DeltaNet)
+
+**Video DeltaNet** — a hybrid-attention architecture that adds a constant-cost **linear-attention (Video Delta Attention) branch** plus two small LoRA adapters on top of the MiniMax-H3 backbone, replacing quadratic long-range attention so inference cost grows *linearly* with clip length. Plug-and-play: the branch + adapters merge into the backbone at inference without touching backbone weights. The 8-step DMD stage (`stage-dmd-step-250`) runs near-lossless vs dense H3. Reference impl: [OpenVDN/vdn-minimax-h3](https://github.com/OpenVDN/vdn-minimax-h3) (Apache-2.0); weights under the MiniMax H3 Community License (excludes EU/UK/Korea/US).
+
+* **[OpenVDN/vdn-minimax-h3](https://huggingface.co/OpenVDN/vdn-minimax-h3)** — reference weights (~82 GB): `h3-base/` MiniMax-H3 backbone (transformer + video/audio VAEs, ~72 GB) plus two stages — `stage-b-step-2000` (linear branch + default adapter) and `stage-dmd-step-250` (8-step DMD: linear branch + default + turbo adapters).
+* **[t8star/Vdn-Minimax-H3-Comfy](https://huggingface.co/t8star/Vdn-Minimax-H3-Comfy)** — ComfyUI-ready VDN bundle. Key files: `minimax_h3_fl2va_int8_convrot.safetensors` (34.0 GB), `minimax_h3_fl2va_pruned_int8_convrot.safetensors` (21.0 GB), `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors` text encoder (15.7 GB, NVFP4 AWQ), video VAE fp16 (5.2 GB), audio VAE fp32 (0.61 GB), plus the stage-dmd adapters (default 334 MB / turbo 851 MB / turbo_pruned_curve_fl2va 1.15 GB) and 4.28 GB linear branch.
+* **[drbaph/vdn-minimax-h3-int8-convrot-comfyui](https://huggingface.co/drbaph/vdn-minimax-h3-int8-convrot-comfyui)** — pre-quantized `stage-dmd-step-250` INT8 ConvRot (Comfy Kitchen) for ComfyUI-VDN-H3: `linear_branch/model_int8_convrot_comfyui.safetensors` (2.30 GB int8, was 4.28 GB bf16) + `adapters/default` (334 MB) + `adapters/turbo` (851 MB); stage ~3.4 GB. Requires ComfyUI-VDN-H3 v1.3.0+.
+* **[Saganaki22/ComfyUI-VDN-H3](https://github.com/Saganaki22/ComfyUI-VDN-H3)** — native ComfyUI node (port of OpenVDN, not a fork) that applies the VDN hybrid-attention patches as runtime model patches; no ComfyUI core changes, zero new deps. See the node table.
+
 #### Notes
 
 * **t8star Ref2VA patchin HF 1.02** — experimental weight modification (not a quant): +2% on 2×2 spatial HF patch in the video-input projection. Tests showed weak HF agent gain; "oily/waxy" look not confirmed removed. [Repo](https://huggingface.co/t8star/minimax_h3_ref2va_patchin_hf102). (31.70 GB, INT8 ConvRot, listed in the Ref2VA table above with `*(patchin)*` label.)

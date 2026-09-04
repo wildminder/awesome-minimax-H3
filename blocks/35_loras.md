@@ -34,6 +34,19 @@
 
 * [Playtime-AI/Minimax_H3-Ariana_Grande](https://huggingface.co/Playtime-AI/Minimax_H3-Ariana_Grande) - Character LoRA of singer Ariana Grande (`MM-H3 - Ariana Grande.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
 
+* [Playtime-AI/Minimax_H3-Kiernan_Shipka](https://huggingface.co/Playtime-AI/Minimax_H3-Kiernan_Shipka) - Character LoRA of actress Kiernan Shipka (`MM-H3 - Kiernan Shipka.safetensors`, 155 MB). Same Playtime-AI series as above; sample clip included, minimal card (Apache-2.0).
+* [Playtime-AI/Minimax_H3-Millie_Bobby_Brown](https://huggingface.co/Playtime-AI/Minimax_H3-Millie_Bobby_Brown) - Character LoRA of actress Millie Bobby Brown (`MM-H3 - Millie Bobby Brown.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+* [Playtime-AI/Minimax_H3-Milly_Alcock](https://huggingface.co/Playtime-AI/Minimax_H3-Milly_Alcock) - Character LoRA of actress Milly Alcock (`MM-H3 - Milly Alcock.safetensors`, 155 MB). Same series as above; sample clip included, minimal card (Apache-2.0).
+* [Playtime-AI/Minimax_H3-The_Dude-Jeff_Bridges](https://huggingface.co/Playtime-AI/Minimax_H3-The_Dude-Jeff_Bridges) - Character LoRA of Jeff Bridges as "The Dude" (The Big Lebowski) (`MM-H3 - The Dude.safetensors`, 155 MB). Same Playtime-AI series as above; sample clip included, minimal card (Apache-2.0).
+
+* JOKER141
+  * [MiniMax-H3-Combat-Base-V2](https://huggingface.co/JOKER141/MiniMax-H3-Combat-Base-V2) - **Combat / action base v2** — combat, action, and dialogue motion LoRA for H3 (`H3_Combat_V2.safetensors`, 155 MB pruned). Ships 2 workflow JSONs.
+  * [MiniMax-H3-General-Motion-Continuity-Repair](https://huggingface.co/JOKER141/MiniMax-H3-General-Motion-Continuity-Repair) - **General motion-continuity repair** — smooths/repairs motion continuity across running, sports, dance, and combat clips (`Motion_Repair.safetensors`, 155 MB pruned).
+
+* [KennethFal/vh5tape-vhs-lora-minimax-h3](https://huggingface.co/KennethFal/vh5tape-vhs-lora-minimax-h3) - **VHS / retro 1980s** — VHS/analog retro video style LoRA (`vh5tape.safetensors` ~131 MB, plus a `vh5tape-comfyui` variant); ships sample clips. MiniMax H3 Community License.
+
+* [prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp](https://huggingface.co/prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp) - **Facial realism / close-up** — face-realism and close-up portrait LoRA (`minimax-h3-facial-realism-closeup-cp2000.safetensors`, 75 MB). MiniMax H3 Community License.
+
 * SexGod1979 — AfterMidnight
   * [AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) - ⚠️ **Contains explicit / NSFW content.** "AfterMidnight" Ref2VA NSFW style LoRA family (rank 64): `sexytime` v1 / v1.1 / v1.2 and `softer` v1. Apache-2.0. Also mirrored byte-identical at [sasimi/AfterMidnight-MiniMax-H3-NSFW](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW).
 
@@ -70,6 +83,13 @@
   * [minimax-h3-spatial-physics-lora](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) - **Spatial & physics (objects)** — teaches H3 object physics (collision, stacking, falling, occlusion) via pure spatial+physics captions; complements the wushu LoRA, which covers body motion. No fixed trigger word — describe object motion directly. Trained on CLEVRER / WISA / PhyCo-Kubric (700 clips); ai-toolkit, rank 16. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned · 310 MB full)
   * [minimax-h3-yunjing-lora](https://huggingface.co/Jojocodex/minimax-h3-yunjing-lora) - **Camera-movement (yunjing) control** — cinematic camera-movement control (push in/out, orbit, tracking, handheld) via the `yunjing` trigger word. 12 movement types trained (handheld / pull / dolly best-covered; pan / crane / 360° weakly covered). ai-toolkit, rank 32, 1000 steps; pruned + full. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA (6–8 steps, Euler, Beta). (310 MB pruned · 620 MB full)
   * [minimax-h3-Camera-Motion-lora](https://huggingface.co/Jojocodex/minimax-h3-Camera-Motion-lora) - **Dedicated camera-motion LoRA (v1, 1000 steps)** — broader camera-movement control for H3, shipped with a `camera_motion_Prompt Library.md` of ready-made motion prompts. Separate, dedicated camera-motion training from the `yunjing` LoRA (use one or the other per shot). ai-toolkit, pruned safetensors. ComfyUI users load `_pruned` at 0.8–1.0; stacks with the Turbo LoRA. (155 MB pruned)
+  * [wushu-action-v7-minimax-h3-fl2va-ref2va-lora](https://huggingface.co/Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora) - **Wushu / martial-arts action v7** — expanded FL2VA + Ref2VA wushu training with several pruned builds: NO-ADALN (~310 MB), adaln (~620 MB), musubi (~596 MB), ref2va (~310/620 MB). Ships 2 workflow JSONs + 招式TAGS清单.md (movement TAG list).
+
+* vpakarinen
+  * [insta-tiktok-aesthetics-h3-lora](https://huggingface.co/vpakarinen/insta-tiktok-aesthetics-h3-lora) - **Insta / TikTok aesthetics** — aesthetic style LoRA for MiniMax-H3 targeting the polished, high-contrast "Instagram / TikTok" look (skin smoothing, vibrant grade, trendy framing). (310 MB pruned)
+  * [better-human-motion-h3-lora](https://huggingface.co/vpakarinen/better-human-motion-h3-lora) - **Better human motion** — motion-quality LoRA for MiniMax-H3 improving the naturalism and coherence of human movement (gait, gesture, weight shift). (310 MB pruned)
+
+* [rzgar/minimax-h3_fl2v_8Step_motion_enhancer](https://huggingface.co/rzgar/minimax-h3_fl2v_8Step_motion_enhancer) - ⚠️ **Contains explicit / NSFW content.** **FL2VA 8-step motion enhancer** — anatomy / motion enhancer LoRA built on LightX2V's 8-step distilled FL2VA; amplifies motion intensity and anatomical detail at low step counts. NSFW-oriented. (1.96 GB)
 
 ### ▣ Experimental / Other
 
@@ -108,3 +128,5 @@
 * [MATLOWAI/MiniMax-H3-Motion-Adapter](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) - **Motion adapter (pilot, r16)** — a small rank-16 BF16 LoRA that improves the de-rope pass in ComfyUI-MAINodes on fast motion: reduces frame-by-frame advance/snap alternation and over-production, and transfers to both FL2VA and Ref2VA graphs (one file). Trained bf16 (rank 16, alpha 16). MIT for the adapter weights; base model use is under the MiniMax H3 Community License. Load with a stock `LoraLoaderModelOnly` at strength 1.0 on the de-rope pass only. (63 MB)
 
 * [mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA](https://huggingface.co/mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA) - **RAVEN: real-time autoregressive video extrapolation** — turns MiniMax-H3 into a causal streaming generator that extrapolates each chunk from previously generated content (4-NFE preview) instead of denoising one bidirectional clip. Academic preview (Imperial College London); the released weight is undertrained (limited texture) but validates the full RAVEN training→generation pipeline. Single PEFT LoRA adapter, `r=128` / `lora_alpha=128`; 192 frames @ 768×1376, 24 fps, causal chunking `sink=2 / window=2`. Training/inference/eval code in [mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN). MiniMax H3 Community License. (≈5.1 GB)
+
+* [DANNY621/H3-World](https://huggingface.co/DANNY621/H3-World) - **H3-World: interactive world model** — rank-32 (65.6M-param, 131 MB) interactive world-model LoRA on MiniMax-H3. Maps keyboard controls → language instructions → directed-attention routing so a scene responds to live input. Requires a directed-attention patch (the unmodified pipeline won't reproduce the behavior). Apache-2.0. (131 MB)
