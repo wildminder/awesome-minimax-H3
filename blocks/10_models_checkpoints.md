@@ -41,10 +41,16 @@ Official and ComfyUI-repackaged model files.
 | `fl2v v1.0 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors) |
 | `fl2v v1.0` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_bf16.safetensors) |
 | `fl2v v1.0 · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors) |
+| `fl2v v1.0 768p` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_768p_bf16.safetensors) |
+| `fl2v v1.0 768p · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors) |
 | `fl2v v1.1 768p` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_bf16.safetensors) |
 | `fl2v v1.1 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_comfyui_bf16.safetensors) |
+| `fl2v v1.2 768p` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.2_768p_bf16.safetensors) |
+| `fl2v v1.2 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.2_768p_comfyui_bf16.safetensors) |
 | `ref2v v0.1` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors) |
 | `ref2v v0.1 · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors) |
+| `ref2v v1.0 768p` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.0_768p_bf16.safetensors) |
+| `ref2v v1.0 768p · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors) |
 | `fl2v v0.1 768p · SLA` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_bf16.safetensors) |
 | `fl2v v1.0 768p · SLA · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_comfyui_bf16.safetensors) |
 | `fl2v DasiwaREF2VAHybridV1 · curveproj1025 (T8)` · ConvRot | 4 | Full | ![int8][badge-int8] | 757.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/Minimax-H3-Dasiwa-V1-Hybird-4steps/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_DasiwaREF2VAHybridV1_curveproj1025_compat_v001-T8.safetensors) |
@@ -302,6 +308,31 @@ Native ComfyUI single-file conversion of [`diffusers-modular/MiniMax-H3-Pruned-R
 | BF16 native conversion | ![bf16][badge-bf16] | 37.47 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy.safetensors) |
 | INT8 tensorwise · fc2 bf16 | ![int8][badge-int8] | 23.12 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy-int8-fc2bf16.safetensors) |
 | INT8 ConvRot gs256 · fc2 bf16 | ![int8][badge-int8] | 23.13 GiB | [![][gh-xmarre]](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI/resolve/main/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-comfy-int8-convrot-fc2bf16.safetensors) |
+
+#### 10Eros-Max (TenStrip) — NSFW Grafted Checkpoints
+
+⚠️ **Contains explicit / NSFW content.** Merged-checkpoint family by [TenStrip](https://huggingface.co/TenStrip/10Eros-Max) — "Eros" grafts NSFW character data from LTX 2.3 (Sulphur lineage), Wan 2.2, and Krea 2 into MiniMax-H3's attention layers at a level that preserves H3's visual and audio quality, built on the delta1024 H3 merge (same delta-extraction class as ethanfel's adapters). Grafting methodology is open-sourced in the repo (`h3_graft_methodology.md`). License: MiniMax H3 Community License **plus** each source model's community license for the grafted portions. Sampling on beta4: euler/simple 6–8 steps, all modes (SLA / sparsity / shift to taste); beta3 is effectively T2V-only (its turbo harms referenced starts in I2V/Ref modes). INT8 mirrors: [cicalooo/10Eros-Max-h3-int8-convrot](https://huggingface.co/cicalooo/10Eros-Max-h3-int8-convrot). t8star's 10ErosMax turbo-LoRA conversions are listed in the [Turbo table](#checkpoints).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| TURBO-hybrid beta4 (current) | ![bf16][badge-bf16] | 37.46 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta4.safetensors) |
+| TURBO-hybrid beta4 · ConvRot | ![int8][badge-int8] | 19.53 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta4_int8_convrot.safetensors) |
+| TURBO-hybrid beta3 · T2V-only | ![bf16][badge-bf16] | 37.47 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta3.safetensors) |
+| TURBO-hybrid beta3 · ConvRot | ![int8][badge-int8] | 19.54 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta3_int8_convrot.safetensors) |
+| TURBO ref2va beta2 | ![bf16][badge-bf16] | 37.47 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_TURBO_ref2va_beta2.safetensors) |
+| fl2va beta2 pruned | ![bf16][badge-bf16] | 37.46 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_fl2va_beta2_pruned.safetensors) |
+| ref2va beta2 pruned | ![bf16][badge-bf16] | 37.46 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/10Eros-Max/resolve/main/10Eros_Max_h3_ref2va_beta2_pruned.safetensors) |
+
+**Beta5 testing line** — [TenStrip/LTX2.3-10Eros_Version-Testing](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) (⚠️ gated — manual access approval). Despite the LTX2.3 repo name, the files are H3 checkpoints (`10Eros_Max_h3_*`): TURBO-hybrid and non-turbo hybrid beta5 in BF16 (37.46 GB) and INT8 (19.53 GB), plus W4A8 variants — `graft_preserving` (17.88 GB, with a quality report) and a `14gb_optimized` build (13.04 GB, turbo-hybrid only).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| TURBO-hybrid beta5 | ![bf16][badge-bf16] | 37.46 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta5.safetensors) |
+| TURBO-hybrid beta5 · int8 | ![int8][badge-int8] | 19.53 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta5_int8.safetensors) |
+| TURBO-hybrid beta5 · w4a8 14 GB-optimized | w4a8 | 13.04 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta5_w4a8_14gb_optimized.safetensors) |
+| hybrid beta5 (no turbo) | ![bf16][badge-bf16] | 37.46 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_hybrid_beta5.safetensors) |
+| hybrid beta5 · int8 | ![int8][badge-int8] | 19.53 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_hybrid_beta5_int8.safetensors) |
+| hybrid beta5 · w4a8 graft-preserving | w4a8 | 17.88 GB | [![][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_h3_hybrid_beta5_w4a8_graft_preserving.safetensors) |
 
 #### FastH3 DMD2 Distillation (FastVideo)
 

@@ -18,6 +18,8 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 
 *FP8-mixed quantized VAE set by [dummy9996](https://huggingface.co/dummy9996/minimax_h3_vae_fp8) — smaller video VAE (2.60 GB, fp8) and audio VAE (289 MB, bf16) for low-VRAM workflows.*
 
+*TensorRT/ONNX VAE builds by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-VAE-ONNX) — compile the ONNX encoder (344 MB) and decoder (4.5 GB, or a 1.2 GB `w4a16_awq` variant for <12 GB VRAM) into TensorRT engines via the [ComfyUI-H3VAE_TRT](https://github.com/lihaoyun6/ComfyUI-H3VAE_TRT) node for up to 1.7× faster VAE.*
+
 <p id="tae" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Tiny Autoencoder (TAE)

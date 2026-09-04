@@ -41,7 +41,7 @@
 
 * JOKER141
   * [MiniMax-H3-Combat-Base-V2](https://huggingface.co/JOKER141/MiniMax-H3-Combat-Base-V2) - **Combat / action base v2** — combat, action, and dialogue motion LoRA for H3 (`H3_Combat_V2.safetensors`, 155 MB pruned). Ships 2 workflow JSONs.
-  * [MiniMax-H3-General-Motion-Continuity-Repair](https://huggingface.co/JOKER141/MiniMax-H3-General-Motion-Continuity-Repair) - **General motion-continuity repair** — smooths/repairs motion continuity across running, sports, dance, and combat clips (`Motion_Repair.safetensors`, 155 MB pruned).
+  * [MiniMax-H3-General-Motion-Continuity-Repair](https://huggingface.co/JOKER141/MiniMax-H3-General-Motion-Continuity-Repair) - **General motion-continuity repair** — general-purpose motion-support LoRA (not combat-only): running, sports, dance, acrobatics, character interaction, combat, and weapon motion. Targets the sub-second "dropped-chain" moments — sudden slow-motion, missing action transitions, abnormal limb trajectories, broken interactions — rather than uniformly amplifying motion; A/B gains are largest exactly where the base model starts to struggle. Optional trigger `bunny_crisp_motion`. Recommended strength: ≈0.9 standalone · 0.5–0.7 stage-1 paired with the Combat LoRA above (Combat supplies speed/impact, this corrects continuity/coordination/prompt-following) · 0.2–0.3 on the stage-2 refine pass (higher over-stabilizes and dulls motion). (`Motion_Repair.safetensors`, 155 MB)
 
 * [KennethFal/vh5tape-vhs-lora-minimax-h3](https://huggingface.co/KennethFal/vh5tape-vhs-lora-minimax-h3) - **VHS / retro 1980s** — VHS/analog retro video style LoRA (`vh5tape.safetensors` ~131 MB, plus a `vh5tape-comfyui` variant); ships sample clips. MiniMax H3 Community License.
 

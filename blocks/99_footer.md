@@ -58,6 +58,7 @@
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-LoboForge]: https://img.shields.io/badge/LoboForge-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-rootonchair]: https://img.shields.io/badge/rootonchair-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-TenStrip]: https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
