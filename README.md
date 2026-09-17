@@ -757,6 +757,8 @@ Multi-LoRA repositories — browsing pointers, not enumerated per-file here. All
 
 * [h3.c (h3-metal)](https://github.com/antirez/h3.c) by antirez - Native C/Metal inference engine for Apple Silicon. Prompt-to-video/audio, first/last-frame, and Ref2VA references work end-to-end on M3/M5 Max. Interactive Iris-style session. Not a ComfyUI node — standalone binary.
 
+* [h3-ops](https://github.com/quantz8a/h3-ops) by quantz8a - Local ops companion for [antirez/h3.c](https://github.com/antirez/h3.c) on Apple Silicon: `h3ctl doctor` / GPU lock, ContextDoc CIR (`compile`/`validate`/`revise`), presets, and honest HD labels (`native` / `upscale_*` / optional cloud 2K). Does not fork Metal/DiT. MIT. Not a ComfyUI node — standalone CLI.
+
 * [h3-webui](https://github.com/AntaresAlice/h3-webui) by AntaresAlice - Self-hosted video-generation **web UI** on ComfyUI + MiniMax-H3: merged 3-view interface (Chat / Overview / Studio), workspaces, history, real step-level progress (WebSocket→SSE), reference reuse, and video continuation (last-frame → next first-frame). Native H3 audio out; Turbo-LoRA auto-match. Frontend native JS + aiohttp backend; MIT. Not a ComfyUI node — wraps your existing ComfyUI instance.
 
 * [Omni-Rewriter](https://github.com/WayneJin0918/Omni-Rewriter) by WayneJin0918 - Open agentic prompt-expansion (PE) harness for image/video generation. Turns everyday intent into validated, model-ready prompts via a bounded AI-agent loop (Analyze → Draft → Validate → Repair → Render). Current video profile is MiniMax-H3; ships a CLI (`omni-rewriter expand`) + HTTP server (`POST /v1/expand`), deterministic PE validation, and a reusable CI lint Action. Apache-2.0. Not a ComfyUI node — standalone tool (generation adapters stay outside `expand`).
