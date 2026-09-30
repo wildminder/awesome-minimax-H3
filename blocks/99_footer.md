@@ -94,9 +94,13 @@
 [gh-ostris]: https://img.shields.io/badge/ostris-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-akatz--ai]: https://img.shields.io/badge/akatz--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Veda--Sparse]: https://img.shields.io/badge/Veda--Sparse-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-SOLRICKS]: https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-isichan--ai]: https://img.shields.io/badge/isichan--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-RunningHubAI]: https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Cseti]: https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Felldude]: https://img.shields.io/badge/Felldude-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-rehan--fal]: https://img.shields.io/badge/rehan--fal-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Gonzaluigi]: https://img.shields.io/badge/Gonzaluigi-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
