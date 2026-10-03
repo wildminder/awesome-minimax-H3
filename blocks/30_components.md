@@ -20,6 +20,8 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 
 *TensorRT/ONNX VAE builds by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-VAE-ONNX) — compile the ONNX encoder (344 MB) and decoder (4.5 GB, or a 1.2 GB `w4a16_awq` variant for <12 GB VRAM) into TensorRT engines via the [ComfyUI-H3VAE_TRT](https://github.com/lihaoyun6/ComfyUI-H3VAE_TRT) node for up to 1.7× faster VAE.*
 
+*■ **Light video VAE decoder** by [corechan](https://huggingface.co/corechan/MiniMax-H3-LightVAE) — a converted copy of **LynnReal-Omni**'s distilled decoder, which decodes ordinary H3 latents with **26 transformer blocks instead of 36**. Ships as a diffusers-key fp16 safetensors (3.26 GB) **and** an ONNX tile for TensorRT (`1×24×7×16×16` latent → `1×3×28×256×256` pixels, opset 17). ⚠️ **Not a drop-in ComfyUI swap** — it is *decoder-only*: truncate `vae.decoder.transformer_blocks` to the first 26 and `load_state_dict(..., strict=False)`; the encoder, latent space and temporal structure are stock H3, so take the encoder and audio VAE from the official repo. On RTX PRO 6000 (G4) at 1280×704 / 124 frames: **5.2 s via TensorRT** vs 7.1 s for the official decoder+TensorRT and 8.3 s for this decoder in PyTorch (TensorRT matches PyTorch at 52.8 dB). No quality comparison against the stock decoder is published. Unofficial — no retraining, just ComfyUI→diffusers key re-layout, fp16, and the ONNX export.*
+
 <p id="tae" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Tiny Autoencoder (TAE)
