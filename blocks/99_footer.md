@@ -101,6 +101,9 @@
 [gh-Felldude]: https://img.shields.io/badge/Felldude-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-rehan--fal]: https://img.shields.io/badge/rehan--fal-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Gonzaluigi]: https://img.shields.io/badge/Gonzaluigi-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ij]: https://img.shields.io/badge/ij-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-akhaliq]: https://img.shields.io/badge/akhaliq-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ZhengmingYu]: https://img.shields.io/badge/ZhengmingYu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
