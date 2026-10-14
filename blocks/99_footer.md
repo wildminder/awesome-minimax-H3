@@ -23,6 +23,9 @@
 [gh-Mamad8]: https://img.shields.io/badge/Mamad8-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-NicoLab28]: https://img.shields.io/badge/NicoLab28-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-sandpies]: https://img.shields.io/badge/sandpies-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-nimblecloud13]: https://img.shields.io/badge/nimblecloud13-lightgrey?style=flat-square&logo=github&logoColor=white
+[gh-ModelTC]: https://img.shields.io/badge/ModelTC-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-pytraveler]: https://img.shields.io/badge/pytraveler-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lihaoyun6]: https://img.shields.io/badge/lihaoyun6-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-LBH-123-AI]: https://img.shields.io/badge/LBH--123--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white

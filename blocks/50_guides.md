@@ -1,4 +1,4 @@
-
+﻿
 <p id="guides" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ Guides & Tutorials
@@ -11,6 +11,7 @@
 ### ▣ ComfyUI Tutorials
 
 * [ComfyUI MiniMax-H3 Tutorial](https://docs.comfy.org/tutorials/video/minimax/minimax-h3) - Official ComfyUI documentation tutorial for MiniMax-H3 setup and usage.
+* [ComfyUI MiniMax-H3 Guide (nimblecloud13)](https://github.com/nimblecloud13/ComfyUI-MiniMax-H3-Guide) - Plain-English beginner guide to MiniMax-H3 in ComfyUI, delivered as a **PDF plus a self-contained HTML page** (both in the repo — GitHub renders the HTML as source, so download it). Every entry answers what it is, what it does to the image or video, and what to set it to, across seven sections: big picture, what the model does, the parts, file names, settings, your hardware, first run. Sizing advice is written for a **16 GB card with 32 GB RAM**, with notes for smaller cards. The repo also covers Wan 2.2, Qwen Image 2.1 and Krea 2, but only the H3 guide applies here.
 * [MiniMax H3 Day-0 Support in ComfyUI](https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui) - ComfyUI blog post covering open weights, native audio, 2K video output, and local execution on a 3060.
 
 ### ▣ Performance
