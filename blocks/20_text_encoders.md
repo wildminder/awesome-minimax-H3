@@ -26,11 +26,19 @@ GGUF quantized text encoder, bundled with the [Abiray/MiniMax-H3-GGUF](https://h
 
 ### ▣ Full-Precision Pruned Encoder (Felldude)
 
-An FP32 build of the pruned H3 text encoder by [Felldude](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32) — one 95.9 GB `model.safetensors`. The author's **QP (Quantization Prediction)** method predicts the trailing 16 Matnitsa bits when going BF16 → FP32, which they report improves 40–50% of blocks while never degrading the rest below the BF16 rounding floor (validated on full-FP32-trained models such as T5). For maximum-fidelity conditioning on a large-VRAM box; most setups are better served by the INT8 / INT4 / GGUF encoders above.
+An FP32 build of the pruned H3 text encoder by [Felldude](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32) — one 95.9 GB `model.safetensors` for maximum-fidelity conditioning on a large-VRAM box; most setups are better served by the INT8 / INT4 / GGUF encoders above.
 
 | Model Name | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
 | `qwen3vl_32b_minimax_h3` · pruned | ![fp32][badge-fp32] | 95.9 GB | [![][gh-Felldude]](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32/resolve/main/model.safetensors) |
+
+### ▣ MXFP8 Text Encoder (intel-ai)
+
+The same Intel auto-round **MXFP8** treatment applied to the Qwen3-VL text encoder, shipped in [intel-ai/MiniMax-H3-MXFP8-CT-AutoRound](https://huggingface.co/intel-ai/MiniMax-H3-MXFP8-CT-AutoRound) alongside the two quantized DiTs (see the [models tables](#quants)). Only the language-model linears are quantized; the vision tower, embeddings, norms and `lm_head` stay BF16. Diffusers-format, not a ComfyUI single-file.
+
+| Model Name | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `qwen3vl_32b_minimax_h3` · MXFP8 | ![mxfp8][badge-mxfp8] | 33.98 GB | [![][gh-intel-ai]](https://huggingface.co/intel-ai/MiniMax-H3-MXFP8-CT-AutoRound/resolve/main/FL2VA/text_encoder/model-00001-of-00007.safetensors) |
 
 <p id="enc-heretic" align="center">· · · · · · · · · · · · · ·</p>
 

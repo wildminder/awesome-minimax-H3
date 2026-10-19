@@ -27,6 +27,7 @@ A curated list of models, text encoders, quants, and tools for the MiniMax-H3 om
   * [Clip Projection (ClipProj)](#cliproj)
 * [LoRA](#lora)
   * [All LoRAs](#lora)
+  * [RefMods](#refmods)
   * [Collections](#lora)
   * [Turbo (Acceleration LoRA)](#checkpoints)
 * [ComfyUI Nodes](#nodes)

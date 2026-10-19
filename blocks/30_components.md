@@ -18,16 +18,16 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 
 *FP8-mixed quantized VAE set by [dummy9996](https://huggingface.co/dummy9996/minimax_h3_vae_fp8) — smaller video VAE (2.60 GB, fp8) and audio VAE (289 MB, bf16) for low-VRAM workflows.*
 
-*TensorRT/ONNX VAE builds by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-VAE-ONNX) — compile the ONNX encoder (344 MB) and decoder (4.5 GB, or a 1.2 GB `w4a16_awq` variant for <12 GB VRAM) into TensorRT engines via the [ComfyUI-H3VAE_TRT](https://github.com/lihaoyun6/ComfyUI-H3VAE_TRT) node for up to 1.7× faster VAE.*
+*TensorRT/ONNX VAE builds by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-VAE-ONNX) — compile the ONNX encoder (344 MB) and decoder (4.5 GB, or a 1.2 GB `w4a16_awq` variant for <12 GB VRAM) into TensorRT engines via the [ComfyUI-H3VAE_TRT](https://github.com/lihaoyun6/ComfyUI-H3VAE_TRT) node.
 
-*■ **Light video VAE decoder** by [corechan](https://huggingface.co/corechan/MiniMax-H3-LightVAE) — a converted copy of **LynnReal-Omni**'s distilled decoder, which decodes ordinary H3 latents with **26 transformer blocks instead of 36**. Ships as a diffusers-key fp16 safetensors (3.26 GB) **and** an ONNX tile for TensorRT (`1×24×7×16×16` latent → `1×3×28×256×256` pixels, opset 17). ⚠️ **Not a drop-in ComfyUI swap** — it is *decoder-only*: truncate `vae.decoder.transformer_blocks` to the first 26 and `load_state_dict(..., strict=False)`; the encoder, latent space and temporal structure are stock H3, so take the encoder and audio VAE from the official repo. On RTX PRO 6000 (G4) at 1280×704 / 124 frames: **5.2 s via TensorRT** vs 7.1 s for the official decoder+TensorRT and 8.3 s for this decoder in PyTorch (TensorRT matches PyTorch at 52.8 dB). No quality comparison against the stock decoder is published. Unofficial — no retraining, just ComfyUI→diffusers key re-layout, fp16, and the ONNX export.*
-*■ **LightVAE (lightx2v / ModelTC)** — [lightx2v/LightVAE](https://huggingface.co/lightx2v/LightVAE) ([paper](https://github.com/ModelTC/LightVAE), Apache-2.0) is a *proper* temporal-low-rank + block-pruned video autoencoder, not the one-off decoder conversion above. It is **multi-backbone**: Wan2.1, Wan2.2 and MiniMax-H3, each in **Lite** (pruned, faster) and **Pro** (original depth, higher fidelity) — Wan models also ship a real **encoder**, which Wan keeps by default, while H3 keeps its stock encoder or takes the provided Lite one. For H3 that means the **Lite decoder (3.25 GB)** and an optional **Lite encoder (406 MB)** — the first H3 encoder replacement in the list. ⚠️ **The `-comfy.safetensors` files need the `Load LightVAE (TLR)` custom node from [ModelTC/LightVAE](https://github.com/ModelTC/LightVAE)** — loading them with stock `VAELoader` fails. The non-`-comfy` files are for the Python path. **Keep the H3 audio VAE untouched** in every case. The decoder-only swap also works on Ref2VA; for Ref2VA reference encoding connect the Lite encoder too. No H3 reconstruction benchmark is published (the Wan comparisons live in the paper).
+*■ **Light video VAE decoder** by [corechan](https://huggingface.co/corechan/MiniMax-H3-LightVAE) — a converted copy of **LynnReal-Omni**'s distilled decoder, which decodes ordinary H3 latents with **26 transformer blocks instead of 36**. Ships as a diffusers-key fp16 safetensors (3.26 GB) **and** an ONNX tile for TensorRT. ⚠️ **Not a drop-in ComfyUI swap** — it is *decoder-only*: truncate `vae.decoder.transformer_blocks` to the first 26 and `load_state_dict(..., strict=False)`; the encoder, latent space and temporal structure are stock H3.
+*■ **LightVAE (lightx2v / ModelTC)** — [lightx2v/LightVAE](https://huggingface.co/lightx2v/LightVAE) ([paper](https://github.com/ModelTC/LightVAE), Apache-2.0) is a *proper* temporal-low-rank + block-pruned video autoencoder, multi-backbone (Wan2.1, Wan2.2, MiniMax-H3), each in **Lite** (pruned, faster) and **Pro** (original depth). For H3 that means the **Lite decoder (3.25 GB)** and an optional **Lite encoder (406 MB)** — the first H3 encoder replacement in the list. ⚠️ **The `-comfy.safetensors` files need the `Load LightVAE (TLR)` custom node from [ModelTC/LightVAE](https://github.com/ModelTC/LightVAE)** — loading them with stock `VAELoader` fails. **Keep the H3 audio VAE untouched.** No H3 reconstruction benchmark is published.*
 
 <p id="tae" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Tiny Autoencoder (TAE)
 
-Quickly trained 2D tiny VAE for MiniMax-H3 by [Kijai](https://huggingface.co/Kijai/MiniMax-H3-TAE). Not the greatest outcome, still beats latent2rgb for preview purposes. Currently only works with the `ModelPreviewOverride` node in [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
+Tiny 2D VAE for fast H3 previews by [Kijai](https://huggingface.co/Kijai/MiniMax-H3-TAE) — beats latent2rgb. Currently only works with the `ModelPreviewOverride` node in [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
 
 | Component | Size | Download |
 | :--- | :---: | :--- |
@@ -45,7 +45,7 @@ Experimental image-specialized MiniMax H3 VAE that decodes a single temporal lat
 
 ### ▣ Clip Projection (ClipProj + Conditioning)
 
-Learned linear projections to condition H3 from a smaller text encoder. Two families: (1) **ClipProj** — swap the large Qwen3-VL-32B for a 4B/8B one (text-encoder VRAM ~15.7 GB → 4.5 GB, no change to the diffusion model, VAE, or sampler), and (2) **H3 Control** — identity/zero matrices for a no-control baseline. Projection files are fp16, MIT-licensed. Requires the [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) node; place files in `ComfyUI/models/clip_projections/`. Full variant matrix (4B/8B × base/MLP/celeb/celeb-MLP): [repo](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3).
+Learned linear projections to condition H3 from a smaller text encoder — swap the large Qwen3-VL-32B for a 4B/8B one (text-encoder VRAM ~15.7 GB → 4.5 GB, no change to the diffusion model, VAE, or sampler); H3 Control identity/zero matrices provide a no-control baseline. fp16, MIT-licensed. Requires the [ComfyUI-ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) node; place files in `ComfyUI/models/clip_projections/`. Full variant matrix (4B/8B × base/MLP/celeb/celeb-MLP): [repo](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3).
 
 | Variant | Encoder | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -66,7 +66,7 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 
 ### ▣ Ref Patch (lihaoyun6)
 
-`fl2va` → `ref2va` behavior patch by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-Ref-Patch). Extracts 112 specific keys shared between the `ref2va` and `fl2va` weights and stores their differences as a single patch, letting the lighter FL2VA checkpoint partially mimic Ref2VA output quality. Requires the [ComfyUI-MiniMaxH3_Ref-Patch](https://github.com/lihaoyun6/ComfyUI-MiniMaxH3_Ref-Patch) node to load. Apache-2.0.
+`fl2va` → `ref2va` behavior patch by [lihaoyun6](https://huggingface.co/lihaoyun6/MiniMax-H3-Ref-Patch) — lets the lighter FL2VA checkpoint partially mimic Ref2VA output quality. Requires the [ComfyUI-MiniMaxH3_Ref-Patch](https://github.com/lihaoyun6/ComfyUI-MiniMaxH3_Ref-Patch) node to load. Apache-2.0.
 
 | Component | Size | Download |
 | :--- | :---: | :--- |
@@ -76,7 +76,7 @@ Learned linear projections to condition H3 from a smaller text encoder. Two fami
 
 ### ▣ Latent Upscaler (LBH-123-AI)
 
-Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler). Works directly on H3's 24-channel VAE latents to upscale spatial resolution (H×W) while preserving the time dimension — **accelerates high-res video gen by skipping the costly ~5B-param VAE decode → pixel-upscale → encode round-trip**, and avoids the ghosting / double-image artifacts of naive bilinear/bicubic latent interpolation. 3D-convolution backbone (2D and 3D node variants; one checkpoint serves both, architecture auto-detected). Trained on ~80k paired samples (≈70k video + ≈8k 2K image pairs). Apache-2.0. Pairs with the [ComfyUI_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) node. Current release is **v1** in `minimax_h3_latent_upscaler_3d_conv_v1/`; the filename, not the folder, is what identifies the checkpoint once copied into ComfyUI's flat `models/latent_upscale_models/` directory. ⚠️ Saves **time, not VRAM** — the refine pass still runs at target resolution. [Asirus](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) also ships a derivative **BF16 Conservative v5** requantization from LBH's FP32 source, keeping 150 tensors in FP16 fallback to avoid the artifacting the author reports from naive BF16 casting.
+Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) — works directly on H3's 24-channel VAE latents to upscale spatial resolution (H×W) while preserving the time dimension, skipping the VAE decode → pixel-upscale → encode round-trip. 3D-convolution backbone (2D and 3D node variants), Apache-2.0. Pairs with the [ComfyUI_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) node. ⚠️ Saves **time, not VRAM** — the refine pass still runs at target resolution. [Asirus](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) also ships a derivative **BF16 Conservative v5** requantization.
 
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -91,7 +91,7 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 
 Control branch for MiniMax-H3 from Alibaba PAI's [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun) line, by [alibaba-pai](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0). Loaded **on top of** the base H3 transformer — the checkpoint holds only the control branch (`control_proj_in` + 10 control blocks, ≈13.5 GB) and is not a standalone model.
 
-**What 2.0 changes vs v1:** 8 control conditions instead of 5 (adds **Scribble, Layout, Gray** to Canny / Depth / HED / MLSD / Pose), a denser injection schedule (10 control blocks at layers `0, 5, 10, …, 45` instead of 5 at `0, 10, 20, 30, 40`), and a `post_norm` inpaint recipe (holes at mid-gray, following Wan 2.1) instead of `pre_norm`. `control_in_dim = 49` (latent + masked latent + mask) so the same branch does both control and inpainting; `control_apply_audio = false`; guidance-distilled (`guidance_scale = 1.0`).
+**What 2.0 changes vs v1:** 8 control conditions instead of 5 (adds **Scribble, Layout, Gray**), a denser injection schedule (10 control blocks at layers `0, 5, 10, …, 45` instead of 5), and a `post_norm` inpaint recipe. `control_in_dim = 49` (latent + masked latent + mask) so the same branch does both control and inpainting; guidance-distilled (`guidance_scale = 1.0`).
 
 > ⚠️ **A v1 config against this checkpoint fails silently.** With the old `minimax_h3_control.yaml` (5 blocks) only half the branch is built and `load_state_dict(strict=False)` drops `control_blocks.5~9` as unexpected keys — outputs are wrong with no error. Always use `minimax_h3_control_inpaint_post_norm.yaml`.
 

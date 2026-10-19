@@ -107,6 +107,10 @@
 [gh-ij]: https://img.shields.io/badge/ij-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-akhaliq]: https://img.shields.io/badge/akhaliq-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ZhengmingYu]: https://img.shields.io/badge/ZhengmingYu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-maxsssssss]: https://img.shields.io/badge/maxsssssss-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Alex995647]: https://img.shields.io/badge/Alex995647-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-intel-ai]: https://img.shields.io/badge/intel--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-witcherderivia]: https://img.shields.io/badge/witcherderivia-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
