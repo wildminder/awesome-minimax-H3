@@ -111,6 +111,16 @@
 [gh-Alex995647]: https://img.shields.io/badge/Alex995647-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-intel-ai]: https://img.shields.io/badge/intel--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-witcherderivia]: https://img.shields.io/badge/witcherderivia-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Justlora]: https://img.shields.io/badge/Justlora-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-aptech0081]: https://img.shields.io/badge/aptech0081-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-NyckM]: https://img.shields.io/badge/NyckM-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ms13d]: https://img.shields.io/badge/ms13d-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-taobao--content--ai]: https://img.shields.io/badge/taobao--content--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-OliviaRossi]: https://img.shields.io/badge/OliviaRossi-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-FX--FeiHou]: https://img.shields.io/badge/FX--FeiHou-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-LiconStudio]: https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-0001hmnt]: https://img.shields.io/badge/0001hmnt-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-lynaNSFW]: https://img.shields.io/badge/lynaNSFW-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
@@ -129,6 +139,7 @@
 [badge-int8]: https://img.shields.io/badge/int8-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
 [badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
+[badge-w6a8]: https://img.shields.io/badge/w6a8-d9534f?style=flat-square
 [badge-nvfp4]: https://img.shields.io/badge/nvfp4-6f42c1?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square

@@ -38,6 +38,10 @@
 | [MiniMaxH3 Dual-Clock Euler Sampler](https://github.com/shuaixn/ComfyUI-MiniMaxH3DualClockSampler) | shuaixn | ![Acceleration][cat-accel] | Separate video and audio schedules fix Turbo audio crackle at 4 steps. |
 | [H3-AudioRefine](https://github.com/Adudeguyman/ComfyUI-H3-AudioRefine) | Adudeguyman | ![Acceleration][cat-accel] | Audio-only refinement pass over a frozen video latent. |
 | [MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc) | Jalen-Brunson | ![Acceleration][cat-accel] | Loads the alibaba-pai PDD 8-step LoRAs with the head bank others drop. |
+| [ComfyUI-PTD](https://github.com/vita-epfl/PTD-inference) | vita-epfl | ![Acceleration][cat-accel] | PTD inference for MiniMax-H3; needs `pip install -e` next to the clone. |
+| [ComfyUI-MiniMaxH3-PTD](https://huggingface.co/taobao-content-ai/MiniMax-H3-PTD-LoRAs/tree/main/comfyui_node/ComfyUI-MiniMaxH3-PTD) | taobao-content-ai | ![Acceleration][cat-accel] | Loader for the 8- and 4-hop PTD checkpoints; requires ComfyUI-PTD. |
+| [ComfyUI-FeiHou-Easy-H3](https://github.com/FX-FeiHou/ComfyUI-FeiHou-Easy-H3) | FX-FeiHou | ![Acceleration][cat-accel] | Loader for the Remix checkpoints. |
+| [ComfyUI-DMAD](https://github.com/Yzmblog/DMAD/tree/main/comfyui/ComfyUI-DMAD) | ZhengmingYu | ![Acceleration][cat-accel] | DMAD sampler and sigma nodes for the 4-step DMAD students. |
 | [minimax-h3-mlx](https://github.com/mrbizarro/minimax-h3-mlx) | mrbizarro | ![Port][cat-port] | Apple Silicon MLX port of the full H3 pipeline. |
 | [ClipProj](https://github.com/nicolab28/ComfyUI-ClipProj) | nicolab28 | ![Port][cat-port] | Swap the 15.7 GB text encoder for a 5.2 GB projected one. |
 | [MiniMax H3 Contex Loop](https://github.com/ethanfel/ComfyUI-MiniMaxH3-Contex-Loop) | ethanfel | ![Conditioning][cat-cond] | Scene-by-scene production loop with checkpoints and seamless joins. |
@@ -65,6 +69,7 @@
 | [MaskVidExperiments](https://github.com/drozbay/MaskVidExperiments) | drozbay | ![Conditioning][cat-cond] | Stable-crop video masking and inpainting without jitter. |
 | [MiniMaxRefPack](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack) | Hearmeman24 | ![Prompt][cat-prompt] | Manage all 18 Ref2VA references from one node; writes the prompt. |
 | [H3-LongVideos](https://huggingface.co/Smite79/MiniMax-H3-Longvideos) | Smite79 | ![Conditioning][cat-cond] | Script-to-long-video chaining with continuity and audio discipline. |
+| [H3 ResCascade](https://github.com/tazmannner/ComfyUI-H3-ResCascade) | tazmannner | ![Upscaling][cat-upscale] | Render at 1 MP, then hires-refine to 1080p/1440p and keep the take. |
 
 ### ▣ Special Stuff
 
@@ -103,3 +108,5 @@
 * [MiniMax-H3-Fun-Controlnet-Union](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union) by alibaba-pai (PAI) - **Fun ControlNet Union for MiniMax-H3** — single unified control adapter covering canny, depth, HED, MLSD, and pose conditioning for H3 video generation. `MiniMax-H3-Fun-Controlnet-Union.safetensors` (6.81 GB); Apache-2.0 with MiniMax H3 Community License terms for the base model.
 
 * **MiniMax-H3 Concept Embeddings** ([Comfy-Org/MiniMax-H3 · `embeddings/`](https://huggingface.co/Comfy-Org/MiniMax-H3/tree/main/embeddings)) - 10 small trigger/textual-inversion **concept embeddings** (0.5–1.5 MB each) invoked by keyword in a prompt: `art_is_explosion`, `blooming_flowers`, `bullet_time`, `dark_magic`, `fire_breath`, `four_seasons`, `kiss_camera`, `spiral_ascent`, `storm_magic`, `truman_show`. MiniMax H3 Community License applies to the base model.
+
+* [ComfyUI-H3-ResCascade](https://github.com/tazmannner/ComfyUI-H3-ResCascade) by tazmannner - Hires-finish pack for MiniMax-H3: render at 1 MP, then refine to 1080p/1440p through [LBH-123-AI's latent upscaler](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) — keeps the 1 MP take, the pass-1 audio and the fine detail. Also ships hold transfer, face-tile re-stitching, front-loaded sigmas and a resolution switch. Needs the upscaler weights in `models/latent_upscale_models`; the full anime chain also wants the same author's Fast De-rope / FaceDetail / AnimeCadence packs. MIT.*
