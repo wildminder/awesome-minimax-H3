@@ -257,6 +257,7 @@ The two distillations are structurally different and are **not** interchangeable
 <p id="quants" align="center">══════════════════════════════════</p>
 
 ### ▣ Quantized Models
+| [Ideoy](https://ideoy.ai) | Remake this week's viral meme videos from one selfie (MiniMax H3, 9:16) | Freemium | — |
 
 Unified quantization tables for FL2VA and Ref2VA. The **Pruned** column marks whether the checkpoint is AdaLN-pruned (smaller, ComfyUI-only). The **Method** column identifies the quantization scheme. Multiple sources for the same quant are separated by `┊`.
 
