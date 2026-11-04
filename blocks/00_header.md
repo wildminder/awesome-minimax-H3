@@ -20,6 +20,7 @@ A curated list of models, text encoders, quants, and tools for the MiniMax-H3 om
     * [GGUF](#gguf)
     * [Fine-tuned Checkpoints](#finetunes)
 * [Text Encoders](#text-encoder)
+  * [Alternative Encoders](#enc-alt)
 * [Separated Components](#components)
   * [VAE (Video & Audio)](#components-vae)
   * [Tiny Autoencoder (TAE)](#tae)

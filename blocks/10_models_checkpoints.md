@@ -51,6 +51,22 @@ Official and ComfyUI-repackaged model files.
 | `ref2v v0.1 · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors) |
 | `ref2v v1.0 768p` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.0_768p_bf16.safetensors) |
 | `ref2v v1.0 768p · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors) |
+| `fl2v v1.3 768p` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.3_768p_bf16.safetensors) |
+| `fl2v v1.3 768p · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.3_768p_comfyui_bf16.safetensors) |
+| `fl2v v1.1 768p 8step` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.1_768p_bf16.safetensors) |
+| `fl2v v1.1 768p 8step · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.1_768p_comfyui_bf16.safetensors) |
+| `ref2v 4step · SMD` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-Ref2VA-4step-ComfyUI/resolve/main/SMD-MiniMax-H3-Ref2VA-4step.safetensors) |
+| `ref2v 8step · SMD` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-Ref2VA-8step-ComfyUI/resolve/main/SMD-MiniMax-H3-Ref2VA-8step.safetensors) |
+| `t2va 4step · SMD` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-T2VA-4step-ComfyUI/resolve/main/SMD-MiniMax-H3-T2VA-4step.safetensors) |
+| `t2va 8step · SMD` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-T2VA-8step-ComfyUI/resolve/main/SMD-MiniMax-H3-T2VA-8step.safetensors) |
+| `ref2v 4step · SMD (diffusers)` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-Ref2VA-4step/resolve/main/smd_lora.safetensors) |
+| `ref2v 8step · SMD (diffusers)` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-Ref2VA-8step/resolve/main/smd_lora.safetensors) |
+| `t2va 4step · SMD (diffusers)` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-T2VA-4step/resolve/main/smd_lora.safetensors) |
+| `t2va 8step · SMD (diffusers)` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-zjwfufu]](https://huggingface.co/zjwfufu/SMD-MiniMax-H3-T2VA-8step/resolve/main/smd_lora.safetensors) |
+| `ref2v v1.0 768p 4step` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v1.0_768p_bf16.safetensors) |
+| `ref2v v1.0 768p 4step · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors) |
+| `ref2v v1.1 768p 8step` | 8 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.1_768p_bf16.safetensors) |
+| `ref2v v1.1 768p 8step · comfyui` | 8 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_8step_v1.1_768p_comfyui_bf16.safetensors) |
 | `fl2v v0.1 768p · SLA` | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_bf16.safetensors) |
 | `fl2v v1.0 768p · SLA · comfyui` | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA/resolve/main/minimax_h3_fl2v_turbo_4step_v0.1_768p_sla_comfyui_bf16.safetensors) |
 | `fl2v DasiwaREF2VAHybridV1 · curveproj1025 (T8)` · ConvRot | 4 | Full | ![int8][badge-int8] | 757.9 MB | [![][gh-t8star]](https://huggingface.co/t8star/Minimax-H3-Dasiwa-V1-Hybird-4steps/resolve/main/minimax_h3_turbo_4%E6%AD%A5%E5%8A%A0%E9%80%9F_DasiwaREF2VAHybridV1_curveproj1025_compat_v001-T8.safetensors) |
@@ -177,6 +193,8 @@ Official and ComfyUI-repackaged model files.
 *silveroxides/MiniMax-H3_tests is a single-author experiment hub beyond the rows listed — Ref2V/FL2V revision ladders, multistep deltas, FastH3 preview mirrors, a Viggle-Animate INT8 ConvRot conversion (31.7 GB), **silverturbo v1 and v2** in four builds each (the v2 files add optimized attention config layers — no attention-backend patcher needed) and a genuine ComfyUI-key-layout DMAD 4-step port (1.82 GB); browse the [repo](https://huggingface.co/silveroxides/MiniMax-H3_tests).*
 
 
+*■ **SMD** ([page](https://zjwfufu.github.io/SMD-Page/), [arXiv:2610.18472](https://arxiv.org/abs/2610.18472), [code](https://github.com/zjwfufu/SMD)) — on-policy distillation LoRAs (rank 128, alpha 128) for Ref2VA and T2VA at 4 / 8 steps, each in a ComfyUI-native build and a Diffusers PEFT original (`lora/adapter_model.safetensors`). Load at strength 1.0 with BasicGuider (no CFG) and the supplied ManualSigmas, video shift 12 / audio shift 3, final-interval scale 0.5. ⚠️ Do not stack H3 Lightning or Turbo LoRAs on top. ComfyUI builds need no custom nodes; the `download_models.py` installer pulls the Comfy-Org base files (compact profile ≈42 GB, bf16 profile ≈101 GB). Diffusers originals need Linux + Python 3.12 + two CUDA GPUs (FSDP2, ≈144 GB per workflow). MiniMax H3 Community License.*
+
 #### Wuli-Art Turbo (4-step + 8-step, ComfyUI conversions)
 
 ComfyUI repackaging of **Wuli-Art / Alibaba's MiniMax-H3 Turbo** few-step audio+video distillations by [sandpies](https://huggingface.co/sandpies/Wuli-MiniMax-H3-Turbo-ComfyUI) — nothing was retrained, and all credit for the weights goes to Wuli-Art, the Alibaba RTP-Compression Team and MiniMax. ⚠️ **CPU-verified only** — not yet validated with a GPU render. ⚠️ **Needs ComfyUI >= 0.38.0**; every file loads through stock nodes.
@@ -259,12 +277,15 @@ Unified quantization tables for FL2VA and Ref2VA. The **Pruned** column marks wh
 | ✓ | ![int8][badge-int8] | ⚠️ INT8 (diffusers + torchao) | 18.86 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-FP8/resolve/main/MiniMax-H3-INT8.safetensors) |
 | ✓ | ![int8][badge-int8] | ⚠️ INT8 ConvRot (diffusers + torchao) | 18.86 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-FP8/resolve/main/MiniMax-H3-INT8-ConvRot.safetensors) |
 | ✓ | ![fp8][badge-fp8] | ⚠️ FP8 (diffusers + torchao) | 18.87 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/MiniMax-H3-FP8/resolve/main/MiniMax-H3-FP8.safetensors) |
+| | ![fp8][badge-fp8] | FP8 E4M3 (diffusers layout, BF16 edges) | 31.69 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_fp8.safetensors) |
 
 *GGUF quants — see [GGUF section](#gguf) below.*
 
 *`no token_refiner` is a surgical derivative of Comfy-Org's pruned INT8 ConvRot FL2VA: [isichan-ai](https://huggingface.co/isichan-ai/MiniMax-H3-FL2VA-norefiner) deletes the 16 `token_refiner.blocks.*` tensors (1.44 GiB) and keeps `final_norm`, so the file simply loads in `UNETLoader` where the original went — same seed and prompt showed no visible quality change (not bit-identical), and it raises the author's resolution ceiling from 1.2 MP to 1.4 MP on a 32 GB RTX 5090. Everything else is byte-identical to the Comfy-Org file.*
 
 *■ **intel-ai MXFP8** ([repo](https://huggingface.co/intel-ai/MiniMax-H3-MXFP8-CT-AutoRound), MiniMax H3 Community License) is Intel auto-round's quant of **both** DiTs **and** the Qwen3-VL text encoder (see [Text Encoders](#text-encoder)): the 312 main-block linears go to F8_E4M3 with U8 E8M0 block scales (group 32, symmetric), while the ≈13 B-parameter **AdaLN branch stays BF16**. Each DiT drops from ~62 GB (bf16) to **43.65 GB (−29%)**; the text encoder 63 → 34 GB (−46%). Target stack is vLLM-Omni on 2×H200 (TP2), where the FP8 weights run through a Marlin **dequant** kernel — correct and memory-saving, **not** faster. Quality on the card's own seed-matched reproduction of the official T2VA showcase: VBench dense93 `imaging_quality` **0.6284 vs 0.6306** bf16 (−0.35%). Diffusers-format repo — **not a ComfyUI single-file**; the link above is shard 1 of 11.*
+
+*■ **lightx2v FP8 full transformer** (`minimax_h3_fl2v_turbo_4step_v1.1_768p_fp8.safetensors`, 31.69 GB) is not a LoRA: it is a full FP8 (94.9% F8_E4M3, BF16 edges) diffusers-layout transformer (`transformer_blocks.*`, `proj_in/out`). ⚠️ Stock ComfyUI does **not** detect it as MiniMax H3 (no `video_patch_proj`/`audio_patch_proj`, and no H3 diffusers→ComfyUI key map exists) — it needs the diffusers / LightX2V stack. Undocumented upstream (the card only advertises the online LightX2V Studio app). MiniMax H3 Community License.*
 
 </details>
 
@@ -502,13 +523,20 @@ Native ComfyUI single-file conversion of [`diffusers-modular/MiniMax-H3-Pruned-R
 
 #### PRISM — Singularity × 10Eros-Max (OliviaRossi)
 
-**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). All three carry `pruned: curve_rank8` in `__metadata__`. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft.
+**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6/beta7 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). The int8 / w6a8 builds carry `pruned: curve_rank8` in `__metadata__`; the fp16 build carries only the merge provenance. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft; the fp16 `__metadata__` names beta6 while `merge_recipe.json` names beta7 as source_b. The int8HQ PikaFlex / beta7 builds reference a `FastH3_Omni_support_bf16.safetensors` side-file that is **not shipped** in the repo.
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | PRISM fp16 | ![fp16][badge-fp16] | 61.70 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/Minimax-h3_Singularity_x_10Eros-Max_PRISM_fp16.safetensors) |
 | PRISM int8 | ![int8][badge-int8] | 18.89 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/Minimax-h3_Singularity_x_10Eros-Max_PRISM_int8.safetensors) |
 | PRISM w6a8 | ![w6a8][badge-w6a8] | 14.81 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/Minimax-h3_Singularity_x_10Eros-Max_PRISM_w6a8.safetensors) |
+| PRISM DMAD/PDMD int8 | ![int8][badge-int8] | 18.89 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/PRISM_DMAD_PDMD_int8.safetensors) |
+| PRISM DMAD/PDMD w6a8 g32 | ![w6a8][badge-w6a8] | 14.81 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/PRISM_DMAD_PDMD_w6a8_g32.safetensors) |
+| PRISM2 PikaFlex 0.85 int8HQ | ![int8][badge-int8] | 18.81 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_SingularityV2_PRISM2_PikaFlex_0.85_int8HQ.safetensors) |
+| PikaFlex 0.85 int8HQ | ![int8][badge-int8] | 21.32 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_SingularityV2_PikaFlex_0.85_int8HQ.safetensors) |
+| PikaFlex 1.00 int8HQ | ![int8][badge-int8] | 21.32 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_SingularityV2_PikaFlex_1.00_int8HQ.safetensors) |
+| 8step TURBO beta7 int8HQ | ![int8][badge-int8] | 21.32 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_h3_8stepTURBO_beta7_SingularityV2_int8HQ.safetensors) |
+| TURBO-hybrid beta5 v1.3 int8 | ![int8][badge-int8] | 19.53 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta5_Singularity_v1.3_int8.safetensors) |
 
 #### Remix (FX-FeiHou)
 
@@ -582,7 +610,32 @@ Civitai-backup repo of **merged / pre-quantized full checkpoints** — mostly co
 
 #### All-in-One Starter Pack (EllaPriest45)
 
-[EllaPriest45/MinimaxH3_base](https://huggingface.co/EllaPriest45/MinimaxH3_base) is a **single-download H3 starter bundle** (~85 files, ~85 GB) covering an entire working setup — INT8 ConvRot pruned FL2VA + Ref2VA transformers, GGUF text encoders, video/audio/TAE VAEs, the main Turbo LoRAs, ~10 ready workflow JSONs and ~38 zipped node packs, all prefixed by role. ⚠️ Civitai-backup provenance and mixed licensing; node ZIPs are snapshots (install from upstream repos for updates).
+[EllaPriest45/MinimaxH3_base](https://huggingface.co/EllaPriest45/MinimaxH3_base) is a **single-download H3 starter bundle** (116 files, 122.8 GB) covering an entire working setup — INT8 ConvRot pruned FL2VA + Ref2VA transformers, GGUF text encoders, video/audio/TAE VAEs, the main Turbo LoRAs, 12 workflow JSONs and 57 zipped node packs, all prefixed by role. ⚠️ Civitai-backup provenance and mixed licensing; node ZIPs are snapshots (install from upstream repos for updates).
+
+#### DenoMix (Deno2026)
+
+**DenoMix** — merged pruned INT8 ConvRot Ref2VA (R2V) checkpoint: Singularity merged into stock H3, single file for `UNETLoader` / Load Diffusion Model. Default 896×512 → 1792×1024, 8+2 steps — [Deno2026](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix). ⚠️ Needs a ComfyUI with pruned INT8 ConvRot support; ships the [R2V Turbo 8+2 workflow](#wf) (8-step low-res pass, ×2 latent upscale, 2-step refine). GPL-3.0-only workflow; model under the MiniMax H3 Community License.
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| DenoMix R2V pruned INT8 v3 | ![int8][badge-int8] | 19.53 GB | [![][gh-Deno2026]](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix/resolve/main/MiniMax-H3_DenoMix_ref2va_pruned_int8_v3.safetensors) |
+
+#### Realism-Turbo-Remix (Coffmeteor)
+
+**Realism-Turbo-Remix** — standalone INT8 merged checkpoint (no separate LoRA loading): MiniMax H3 + Singularity v1.3 + Ref2V Turbo v0.1 + Realism People + Better Human Motion, default 960×544 → 1632×928, 8+3 steps, trigger word `r34l1sm` — [Coffmeteor](https://huggingface.co/Coffmeteor/MiniMaxH3-Realism-Turbo-Remix) (Civitai mirror of model 3006411 / version 3411159). ⚠️ No-credit and no-different-license terms (`allowNoCredit: false`, `allowDifferentLicense: false`). MiniMax H3 Community License (Excludes EU/UK/US).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| Realism-Turbo-Remix INT8 v10 | ![int8][badge-int8] | 19.53 GB | [![][gh-Coffmeteor]](https://huggingface.co/Coffmeteor/MiniMaxH3-Realism-Turbo-Remix/resolve/main/int8/minimaxh3RealismTurbo_v10INT8.safetensors) |
+
+#### Slim packs (fkyyy)
+
+**fkyyy slim packs** — ready folder layouts for ComfyUI (`diffusion_models` / `loras` / `text_encoders` / `vae`), each ≈44 GB: pruned INT8 ConvRot transformer + matching lightx2v Turbo LoRA + NVFP4 text encoder + both VAEs (— Comfy-Org FL2VA / Ref2VA, Kijai experimental) — [fkyyy](https://huggingface.co/fkyyy/MiniMax-H3-comfy-slim) / [fkyyy](https://huggingface.co/fkyyy/MiniMax-H3-comfy-r2v-slim). The NVFP4 text encoder does **not** need a Blackwell GPU; prefer `int8_convrot` on cu130, `fp8_scaled` only as a last resort. MiniMax H3 Community License.
+
+| Pack | Base | Turbo LoRA | Size | Download |
+| :--- | :--- | :---: | :---: | :--- |
+| comfy-slim (FL2VA) | FL2VA pruned INT8 ConvRot | 8step v1.0 comfyui BF16 | 44.0 GB | [![][gh-fkyyy]](https://huggingface.co/fkyyy/MiniMax-H3-comfy-slim) |
+| comfy-r2v-slim (Ref2VA) | Ref2VA pruned INT8 ConvRot | 8step v1.1 768p comfyui BF16 | 44.0 GB | [![][gh-fkyyy]](https://huggingface.co/fkyyy/MiniMax-H3-comfy-r2v-slim) |
 
 #### VDN-H3 (Video DeltaNet)
 

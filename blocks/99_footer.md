@@ -23,6 +23,12 @@
 [gh-Mamad8]: https://img.shields.io/badge/Mamad8-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-NicoLab28]: https://img.shields.io/badge/NicoLab28-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-zjwfufu]: https://img.shields.io/badge/zjwfufu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Coffmeteor]: https://img.shields.io/badge/Coffmeteor-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-fkyyy]: https://img.shields.io/badge/fkyyy-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-dully3865]: https://img.shields.io/badge/dully3865-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-LBH-123-AI]: https://img.shields.io/badge/LBH--123--AI-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-sandpies]: https://img.shields.io/badge/sandpies-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-nimblecloud13]: https://img.shields.io/badge/nimblecloud13-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-ModelTC]: https://img.shields.io/badge/ModelTC-lightgrey?style=flat-square&logo=github&logoColor=white

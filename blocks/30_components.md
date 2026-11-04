@@ -15,6 +15,8 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 | Audio VAE | ![Comfy-Org][gh-Comfy--Org] | ![fp32][badge-fp32] | 577 MB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors) |
 | Video VAE | ![dummy9996][gh-dummy9996] | ![fp8][badge-fp8] | 2.60 GB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_video_vae_fp8mix.safetensors) |
 | Audio VAE | ![dummy9996][gh-dummy9996] | ![bf16][badge-bf16] | 289 MB | [![][gh-dummy9996]](https://huggingface.co/dummy9996/minimax_h3_vae_fp8/resolve/main/minimax_h3_audio_vae_bf16.safetensors) |
+| Video VAE | ![dully3865][gh-dully3865] | ![fp16][badge-fp16] | 4.85 GB | [![][gh-dully3865]](https://huggingface.co/dully3865/Minimax_H3_seamless_anime_VAE/resolve/main/minimax_h3_video_vae_dully_seamless_v1_fp16.safetensors) |
+| Video VAE | ![dully3865][gh-dully3865] | ![int8][badge-int8] | 2.60 GB | [![][gh-dully3865]](https://huggingface.co/dully3865/Minimax_H3_seamless_anime_VAE/resolve/main/minimax_h3_video_vae_dully_seamless_v1_int8convrot.safetensors) |
 
 *FP8-mixed quantized VAE set by [dummy9996](https://huggingface.co/dummy9996/minimax_h3_vae_fp8) — smaller video VAE (2.60 GB, fp8) and audio VAE (289 MB, bf16) for low-VRAM workflows.*
 
@@ -22,6 +24,8 @@ Separated VAE files for MiniMax-H3. The video VAE and audio VAE are required for
 
 *■ **Light video VAE decoder** by [corechan](https://huggingface.co/corechan/MiniMax-H3-LightVAE) — a converted copy of **LynnReal-Omni**'s distilled decoder, which decodes ordinary H3 latents with **26 transformer blocks instead of 36**. Ships as a diffusers-key fp16 safetensors (3.26 GB) **and** an ONNX tile for TensorRT. ⚠️ **Not a drop-in ComfyUI swap** — it is *decoder-only*: truncate `vae.decoder.transformer_blocks` to the first 26 and `load_state_dict(..., strict=False)`; the encoder, latent space and temporal structure are stock H3.
 *■ **LightVAE (lightx2v / ModelTC)** — [lightx2v/LightVAE](https://huggingface.co/lightx2v/LightVAE) ([paper](https://github.com/ModelTC/LightVAE), Apache-2.0) is a *proper* temporal-low-rank + block-pruned video autoencoder, multi-backbone (Wan2.1, Wan2.2, MiniMax-H3), each in **Lite** (pruned, faster) and **Pro** (original depth). For H3 that means the **Lite decoder (3.25 GB)** and an optional **Lite encoder (406 MB)** — the first H3 encoder replacement in the list. ⚠️ **The `-comfy.safetensors` files need the `Load LightVAE (TLR)` custom node from [ModelTC/LightVAE](https://github.com/ModelTC/LightVAE)** — loading them with stock `VAELoader` fails. **Keep the H3 audio VAE untouched.** No H3 reconstruction benchmark is published.*
+
+*■ **dully3865 anime VAE** ([repo](https://huggingface.co/dully3865/Minimax_H3_seamless_anime_VAE)) — drop-in replacement for the stock fp16 video VAE (identical key set): fine-tuned for 2D/anime expressiveness, removes the 16×16 and 256×256 grid artifacts, sharper edges, fixes flushed anime skin tones. Ships a TensorRT/ONNX decoder (4.53 GB external data). ⚠ï¸ The ONNX build keeps the last frame instead of frame 3 for single-frame decode (≈ − 15 dB) — same as the stock VAE. MiniMax H3 Community License.*
 
 <p id="tae" align="center">· · · · · · · · · · · · · ·</p>
 

@@ -70,6 +70,13 @@
 | [MiniMaxRefPack](https://github.com/Hearmeman24/ComfyUI-MiniMaxRefPack) | Hearmeman24 | ![Prompt][cat-prompt] | Manage all 18 Ref2VA references from one node; writes the prompt. |
 | [H3-LongVideos](https://huggingface.co/Smite79/MiniMax-H3-Longvideos) | Smite79 | ![Conditioning][cat-cond] | Script-to-long-video chaining with continuity and audio discipline. |
 | [H3 ResCascade](https://github.com/tazmannner/ComfyUI-H3-ResCascade) | tazmannner | ![Upscaling][cat-upscale] | Render at 1 MP, then hires-refine to 1080p/1440p and keep the take. |
+| [Tessera](https://github.com/hashu786/ComfyUI-Tessera) | hashu786 | ![Upscaling][cat-upscale] | Tiled, streamed H3 video refinement to 2K/4K/8K on one GPU; 9 nodes. MIT. |
+| [Open-H3 Face Region](https://github.com/BennyDaBall930/ComfyUI-Open-H3-FaceRegion) | BennyDaBall930 | ![Face Refine][cat-face] | Face mask and region-noise nodes that keep faces through the 2K regenerate pass. Apache-2.0. |
+| [Komikku](https://github.com/quinteroac/ComfyUI-Minimax-H3-Komikku) | quinteroac | ![Conditioning][cat-cond] | Turns an H3 multishot video into a manga/comic page: layout editor, panel reframing, lettering. MIT. |
+| [Open Video Relight](https://github.com/fredalinlinlin/ComfyUI-OpenVideoRelight) | fredalinlinlin | ![Conditioning][cat-cond] | Light-stage relighting: place lights on a sphere, a vision LM writes the prompts, H3 carries the light. MIT. |
+| [Dials](https://github.com/matlowai/ComfyUI-Dials) | matlowai | ![Conditioning][cat-cond] | Training-free prompt-pair steering sliders (~14 KB) for motion and mood; stacks with LoRAs. ⚠️ New work lives in MAINodes. AGPL-3.0. |
+| [MotionBridge](https://github.com/powerhouse90/motionbridge) | powerhouse90 | ![Port][cat-port] | Turns H3 video into game-ready skeletal animation on any humanoid rig via NVIDIA GEM. Apache-2.0. |
+| [H3 Continuity Studio](https://github.com/KadoBOT/ComfyUI-H3-Continuity-Studio) | KadoBOT | ![Conditioning][cat-cond] | Timeline studio for multi-shot sequences with visual memory across scenes and optional Story writing. ⚠️ Needs core Context Windows. MIT. |
 
 ### ▣ Special Stuff
 
@@ -100,6 +107,14 @@
   | GGUF ★ | ![Q8_0][badge-Q8_0] | 0.69 GB | [![][gh-pytraveler]](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF/resolve/main/MiniMax-H3-Prompt-Rewriter-LoRA-8B-Q8_0.gguf) |
 
   *★ Q8_0 recommended for most setups.*
+
+* **MiniMax-H3-Prompt-Rewriter-Qwen3.5-9B-Ref2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.5-9B-Ref2VA)) — full SFT of Qwen3.5-9B for Ref2VA (image / video / audio references accepted), served via **vLLM** (`vllm_server.sh` + `post_vllm.py`). 4 shards + MTP (18.0 GiB), 32K-token context, 16K-token output. Apache-2.0. Also ships `VIDEO_PROMPT_WRITING_GUIDE_ref_en.md`.
+
+* **MiniMax-H3-Prompt-Rewriter-Qwen3.5-9B-FL2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.5-9B-FL2VA)) — text-only + optional first/last frame FL2VA twin of the 9B Ref2VA rewriter, same vLLM serving. 4 shards + MTP (18.0 GiB). Apache-2.0.
+
+* **MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA)) — 27B Ref2VA rewriter, vLLM served. 12 shards + MTP (51.8 GiB). ⚠️ No `LICENSE` file shipped in the repo.
+
+* **MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA)) — 27B FL2VA twin (12 shards, no MTP, 51.0 GiB), text + optional first/last frame. ⚠️ No `LICENSE` file shipped in the repo.
 
 * **MiniMax-H3-Prompt-Rewriter-LoRA-Omni** — PEFT LoRA adapter on **Qwen2.5-Omni-7B** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni)) — the multimodal sibling of the 8B rewriter. Rewrites short requests *with optional image / video / audio references* into structured MiniMax-H3 audio-video prompts; covers T2AV / I2AV / L2AV / FL2AV and Ref2AV. Text-only output (`enhanced_prompt`); does not render. Apache-2.0. No GGUF variant.
 

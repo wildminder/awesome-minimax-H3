@@ -56,3 +56,14 @@ Built from [`llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic`](https://h
 
 *A **text-encoder-side** LoRA also circulates for prompt writing: [RunningHubAI's `…qwen3vl32b__prompt_generation_overlay__polaris_r16_plus_heretic_v2`](https://huggingface.co/RunningHubAI/rh-minimax-h3-qwen3vl32b-prompt-generation-overlay-polaris-r16-plus-heretic-v2.safetensors-lora) (261 MB, rank 16) overlays a prompt-generation behavior on the Qwen3-VL-32B encoder, built on the Heretic v2 line — load it on the text encoder, not the DiT.*
 
+<a id="enc-alt"></a>
+
+### ▣ Alternative Encoder (Molmo2-8B, experimental)
+
+[Molmo2-8B-Minimax-H3](https://huggingface.co/Alissonerdx/Molmo2-8B-Minimax-H3) by Alissonerdx — INT8 ConvRot Molmo2-8B plus a pilot projector into H3 conditioning, loaded as a `CLIP` by the [ComfyUI-Molmo2-H3](https://github.com/alisson-anjos/ComfyUI-Molmo2-H3) node. ⚠️ Not a drop-in `CLIPLoader` file — it needs its own runtime; the projector is a pilot with identity quality unvalidated. Apache-2.0.
+
+| Model Name | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `molmo2_8b_int8_convrot` | ![int8][badge-int8] | 8.65 GB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Molmo2-8B-Minimax-H3/resolve/main/molmo2_8b_int8_convrot.safetensors) |
+| `molmo2-8b-h3-tap24-phaseb-pilot` · projector | ![fp16][badge-fp16] | 328 MB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Molmo2-8B-Minimax-H3/resolve/main/projections/molmo2-8b-h3-tap24-phaseb-pilot.safetensors) |
+
