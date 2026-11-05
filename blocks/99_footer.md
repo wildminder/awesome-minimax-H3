@@ -127,6 +127,9 @@
 [gh-LiconStudio]: https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-0001hmnt]: https://img.shields.io/badge/0001hmnt-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lynaNSFW]: https://img.shields.io/badge/lynaNSFW-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-AbrahamPJ]: https://img.shields.io/badge/AbrahamPJ-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Spectrallic]: https://img.shields.io/badge/Spectrallic-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-yeowon]: https://img.shields.io/badge/yeowon-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square

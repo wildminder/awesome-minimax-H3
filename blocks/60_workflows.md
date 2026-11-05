@@ -47,7 +47,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [Music-Video — Multi-Scene Shot-by-Shot](https://huggingface.co/RuneXX/Minimax-H3-Workflows/resolve/main/Music-Video/Minimax-H3_-_Music-Video_Multi-Scene_Shot-by-Shot.json) | RuneXX | Multi-shot | Music-video workflow that builds a multi-scene clip shot-by-shot. |
 | [comfy-MiniMax-H3-workflows (pack)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) | javawock7618 | Bundle | Full INT8 low-VRAM acceleration stack: INT8 + native Block Sparse Attention + Spectrum + Lightx2v + Turbo + native Extend + Fun ControlNet Union V2V (openpose/canny/depth) + Latent Upscaler + TTS (+ Music, Ref2Image, LLM system-prompt utilities). |
 | [PlagueKind-MinimaxH3 (pack)](https://huggingface.co/Plaguekind/Minimax-H3) | Plaguekind | Bundle | "Ease of use" I2V/R2V workflow line, currently **V9** (needs his nodepack v1.4.7 + latest ComfyUI), with an included fast turbo LoRA; Eros / Sulphur-model and FaceID compatible. Older V1–V8 kept under `old/`. MIT. |
-| [INT8 TTS (javano2610.1.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_TTS-javano2610.1.1.json) | javawock7618 | Bundle | Audio-only speech generation. |
+| [INT8 TTS (javano2611.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_TTS-javano2611.1.json) | javawock7618 | Bundle | Audio-only speech generation. |
 | [Music3](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/extra/MiniMax-Music3-javano2608.1.json) | javawock7618 | Bundle | Music generation workflow. |
 | [Ref2Image](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/extra/MiniMax_int8-Ref2Image-javano2608.2.json) | javawock7618 | Bundle | Reference-to-image utility. |
 | [INT8 Bridge (javano2610.4)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_Bridge-javano2610.4.json) | javawock7618 | Bundle | Transition clip between two videos. |
@@ -60,6 +60,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [Keyframe timeline (pack)](https://huggingface.co/AI-KSK/minimax-h3-keyframe-timeline-two-graphs-300) | AI-KSK | Bundle | FL2VA first/last-frame and Ref2VA multi-reference graphs with keyframe story beats. |
 | [H25 hybrid multi-ref (pack)](https://huggingface.co/AI-KSK/minimax-h3-h25-hybrid-multiref-293) | AI-KSK | Bundle | H25 hybrid multi-reference 8-step graph. |
 | [H3 Ad Recast (pack)](https://github.com/m24927605/h3-long-ads) | m24927605 | Bundle | Recasts an ad's person and product in one pass with synced dialogue; also a 30 s product-ad graph. ⚠️ Needs ComfyUI master (context windows). MIT. |
+| [MiniMax-H3-ComfyUI workflows (pack)](https://huggingface.co/Alissonerdx/Minimax-H3-ComfyUI/tree/main/workflows) | Alissonerdx | Bundle | 16 graphs for the repo's LMS, style transfer, VFX edit, head swap, character swap and motion-transfer LoRAs. |
 
 *Comfy-Org's original `templates/video_minimax_h3_*` T2V/I2V/R2V graphs were moved to `archived/` and are now API-based (Hailuo/Minimax API) templates — links above point to the archived JSONs.*
 
