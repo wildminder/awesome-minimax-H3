@@ -528,7 +528,7 @@ Native ComfyUI single-file conversion of [`diffusers-modular/MiniMax-H3-Pruned-R
 
 #### Hybrid DMAD/PDMD (OliviaRossi)
 
-Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked in; no LoRA loader needed. ⚠️ The W6A8_G32 build needs `comfy-kitchen` sub-byte bitpacking. [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-H3-Hybrid-DMAD-PDMD). MiniMax H3 Community License.
+Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked in; no LoRA loader needed. ⚠️ The W6A8_G32 build needs `comfy-kitchen` sub-byte bitpacking. [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-H3-Hybrid-DMAD-PDMD). MiniMax H3 Community License. [CivitAI mirror](https://civitai.red/models/3035549).
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -537,7 +537,7 @@ Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked
 
 #### PRISM — Singularity × 10Eros-Max (OliviaRossi)
 
-**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6/beta7 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). The int8 / w6a8 builds carry `pruned: curve_rank8` in `__metadata__`; the fp16 build carries only the merge provenance. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft; the fp16 `__metadata__` names beta6 while `merge_recipe.json` names beta7 as source_b. The int8HQ PikaFlex / beta7 builds reference a `FastH3_Omni_support_bf16.safetensors` side-file that is **not shipped** in the repo.
+**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6/beta7 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). The int8 / w6a8 builds carry `pruned: curve_rank8` in `__metadata__`; the fp16 build carries only the merge provenance. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft; the fp16 `__metadata__` names beta6 while `merge_recipe.json` names beta7 as source_b. The int8HQ PikaFlex / beta7 builds reference a `FastH3_Omni_support_bf16.safetensors` side-file that is **not shipped** in the repo. [CivitAI mirror](https://civitai.red/models/3019421).
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -685,6 +685,26 @@ Ternary-quantized pruned FL2VA checkpoint bundled with the **TheoremFlow-Ω** ru
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | `minimax_h3_fl2va_pruned_rung_omega` | Ternary (Base-243) | 16.2 GB | [![][gh-yeowon]](https://huggingface.co/yeowon/MiniMax-H3-Rung-Omega/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_rung_omega.safetensors) |
+
+#### SparseRef15 Hybrid (Aki7777777)
+
+FL2VA-based hybrid with sparse Ref2VA influence across 15 transformer blocks. ⚠️ Use FL2VA LoRAs, not Ref2V ones. [CivitAI](https://civitai.red/models/2900456).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| SparseRef15 · BF16 pruned | ![bf16][badge-bf16] | 37.54 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · INT8 pruned | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · INT8 ConvRot pruned | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · Turbo partial-INT8 | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · W4A8 ConvRot | ![w4a8][badge-w4a8] | 11.68 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+
+#### H3 ErosLite (4lth3rego)
+
+8-step Turbo NVFP4 checkpoint with BF16 edge blocks, sized for 16 GB GPUs; loads with the stock diffusion-model loader. ⚠️ NSFW. [CivitAI](https://civitai.red/models/3032433).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| ErosLite v1.0 | ![nvfp4][badge-nvfp4] | 14.25 GB | [![][badge-civitai]](https://civitai.red/models/3032433) |
 
 #### Notes
 

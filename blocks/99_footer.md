@@ -130,6 +130,7 @@
 [gh-AbrahamPJ]: https://img.shields.io/badge/AbrahamPJ-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Spectrallic]: https://img.shields.io/badge/Spectrallic-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yeowon]: https://img.shields.io/badge/yeowon-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[badge-civitai]: https://img.shields.io/badge/CivitAI-1976D2?style=flat-square
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
@@ -139,6 +140,7 @@
 [ltype-utility]: https://img.shields.io/badge/Utility-28a745?style=flat-square
 [ltype-research]: https://img.shields.io/badge/Research-6c757d?style=flat-square
 [ltype-nsfw]: https://img.shields.io/badge/NSFW-b02a37?style=flat-square
+[ltype-audio]: https://img.shields.io/badge/Audio-20c997?style=flat-square
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square

@@ -580,7 +580,7 @@ Native ComfyUI single-file conversion of [`diffusers-modular/MiniMax-H3-Pruned-R
 
 #### Hybrid DMAD/PDMD (OliviaRossi)
 
-Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked in; no LoRA loader needed. ⚠️ The W6A8_G32 build needs `comfy-kitchen` sub-byte bitpacking. [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-H3-Hybrid-DMAD-PDMD). MiniMax H3 Community License.
+Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked in; no LoRA loader needed. ⚠️ The W6A8_G32 build needs `comfy-kitchen` sub-byte bitpacking. [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-H3-Hybrid-DMAD-PDMD). MiniMax H3 Community License. [CivitAI mirror](https://civitai.red/models/3035549).
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -589,7 +589,7 @@ Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked
 
 #### PRISM — Singularity × 10Eros-Max (OliviaRossi)
 
-**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6/beta7 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). The int8 / w6a8 builds carry `pruned: curve_rank8` in `__metadata__`; the fp16 build carries only the merge provenance. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft; the fp16 `__metadata__` names beta6 while `merge_recipe.json` names beta7 as source_b. The int8HQ PikaFlex / beta7 builds reference a `FastH3_Omni_support_bf16.safetensors` side-file that is **not shipped** in the repo.
+**PRISM** — weight-space merge of WarmBloodAban's Singularity V2 BF16 with TenStrip's 10Eros-Max 8-step TURBO beta6/beta7 BF16 via a custom PRISM-v2 algorithm — [OliviaRossi](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM). The int8 / w6a8 builds carry `pruned: curve_rank8` in `__metadata__`; the fp16 build carries only the merge provenance. ⚠️ Requires the companion `adaln_affine.safetensors` side-file; one source is the NSFW 10Eros-Max graft; the fp16 `__metadata__` names beta6 while `merge_recipe.json` names beta7 as source_b. The int8HQ PikaFlex / beta7 builds reference a `FastH3_Omni_support_bf16.safetensors` side-file that is **not shipped** in the repo. [CivitAI mirror](https://civitai.red/models/3019421).
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -737,6 +737,26 @@ Ternary-quantized pruned FL2VA checkpoint bundled with the **TheoremFlow-Ω** ru
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | `minimax_h3_fl2va_pruned_rung_omega` | Ternary (Base-243) | 16.2 GB | [![][gh-yeowon]](https://huggingface.co/yeowon/MiniMax-H3-Rung-Omega/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_rung_omega.safetensors) |
+
+#### SparseRef15 Hybrid (Aki7777777)
+
+FL2VA-based hybrid with sparse Ref2VA influence across 15 transformer blocks. ⚠️ Use FL2VA LoRAs, not Ref2V ones. [CivitAI](https://civitai.red/models/2900456).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| SparseRef15 · BF16 pruned | ![bf16][badge-bf16] | 37.54 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · INT8 pruned | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · INT8 ConvRot pruned | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · Turbo partial-INT8 | ![int8][badge-int8] | 19.53 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+| SparseRef15 · W4A8 ConvRot | ![w4a8][badge-w4a8] | 11.68 GB | [![][badge-civitai]](https://civitai.red/models/2900456) |
+
+#### H3 ErosLite (4lth3rego)
+
+8-step Turbo NVFP4 checkpoint with BF16 edge blocks, sized for 16 GB GPUs; loads with the stock diffusion-model loader. ⚠️ NSFW. [CivitAI](https://civitai.red/models/3032433).
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| ErosLite v1.0 | ![nvfp4][badge-nvfp4] | 14.25 GB | [![][badge-civitai]](https://civitai.red/models/3032433) |
 
 #### Notes
 
@@ -999,7 +1019,7 @@ LoRA adapters for MiniMax-H3, organized by type. Trigger words live in the descr
 | Wushu Action | ![Motion][ltype-motion] | Human martial-arts motion (punches, kicks, spins, staff); no fixed trigger — describe the action. Load `_pruned` at 0.8–1.0; Turbo-compatible. | 155 MB · 310 MB | [![][gh-Jojocodex]](https://huggingface.co/Jojocodex/minimax-h3-wushu-action-lora) |
 | Wushu Action v7 | ![Motion][ltype-motion] | Current **E3** build; trigger `wushu_action`; pairs with Combat Base V2 / Motion Continuity Repair; ~25 steps on the int8 base. | 569 MB | [![][gh-Jojocodex]](https://huggingface.co/Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora) |
 | Wushu Action v8 | ![Motion][ltype-motion] | Movement / force-transfer trainer from untextured three-view mannequin animation — white-mannequin/black-void output is by design. Trigger `wushu_action` must lead the prompt; 0.6–0.8 for real scenes, 0.9–1.0 for reference sheets. Limits: 1.3–3 s clips, single person. | 569 MB | [![][gh-Jojocodex]](https://huggingface.co/Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora) |
-| Better Human Motion | ![Motion][ltype-motion] | Natural, consistent human movement (gait, gesture, weight shift); strength 0.4–0.8. | 296 MB | [![][gh-vpakarinen]](https://huggingface.co/vpakarinen/better-human-motion-h3-lora) |
+| Better Human Motion | ![Motion][ltype-motion] | Natural, consistent human movement (gait, gesture, weight shift); strength 0.4–0.8. | 296 MB | [![][gh-vpakarinen]](https://huggingface.co/vpakarinen/better-human-motion-h3-lora) ┊ [![][badge-civitai]](https://civitai.red/models/2734359) |
 | Motion Enhancer (4/8-step) | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | NSFW motion enhancer stacked on LightX2V's distilled FL2V turbo LoRA; **two files** — 4-step (1.31 GB) and 8-step (1.86 GB, the original). ⚠️ No trigger word or recommended strength documented. | 1.31 GB · 1.86 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/minimax-h3_fl2v_8Step_motion_enhancer) |
 | Motion Adapter | ![Motion][ltype-motion] | Fast-motion repair for the de-rope pass of [ComfyUI-MAINodes](https://github.com/matlowai/ComfyUI-MAINodes) — not a general-purpose motion LoRA. Apply to the de-rope pass only, stock `LoraLoaderModelOnly`, strength 1.0 / 0.75. | 63 MB each | [![][gh-MATLOWAI]](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) |
 | Icy Twerk Pro MAX | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | Volleyball-scene twerking motion LoRA; trigger `icytwerk`. | 148 MB | [![][gh-0001hmnt]](https://huggingface.co/0001hmnt/MinimaxH3_LoRa_Icy_Twerk_Pro_MAX/resolve/main/MinimaxH3_IcyTwerkPROmaxV2.safetensors) |
@@ -1038,6 +1058,138 @@ LoRA adapters for MiniMax-H3, organized by type. Trigger words live in the descr
 | CWM System-Chat | ![Research][ltype-research] | Five research adapters from 1344×768 q4 System-Chat runs on Ref2VA; inference + LoRA warm-start only. | 2.39 GB each | [![][gh-NTU-yiwen]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints) |
 | ai-toolkit Training Adapters | ![Research][ltype-research] | Seven undocumented **distillation** adapters from ostris's [ai-toolkit](https://github.com/ostris/ai-toolkit) H3 training work; trainer/validation artifacts rather than finished releases. | 148–334 MB | [![][gh-ostris]](https://huggingface.co/ostris/minimax_h3_training_adapter) |
 | RAVEN Streaming | ![Research][ltype-research] | Real-time autoregressive video extrapolation — turns H3 into a causal streaming generator. Academic preview, undertrained texture. | ≈5.1 GB | [![][gh-mvp--lab]](https://huggingface.co/mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA) |
+
+#### CivitAI listings
+
+LoRAs published on CivitAI. Some releases cover several base models — choose the **MiniMax H3** version on the page. ⚠️ Pages use a browser check and downloads may need a CivitAI account.
+
+| Name | Type | Description | Size | Download |
+| :--- | :---: | :--- | :---: | :---: |
+| Clementine (character) | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — consistent fictional character; triggers `zclclementine`, `zclclementinewoman`. | 142 MB | [![][badge-civitai]](https://civitai.red/models/3033293) ┊ [![][badge-civitai]](https://civitai.red/models/3033305) |
+| SERENA Belrose | ![Character][ltype-character] | Fictional lakeside criminologist character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2884117) |
+| Nevaeh Belwyn | ![Character][ltype-character] | Fictional antiquarian character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3026917) |
+| Minnie Belwyn | ![Character][ltype-character] | Fictional miniature-portrait painter character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3037068) |
+| Claudia WhiteMoon | ![Character][ltype-character] | Fictional steampunk athlete character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2762873) |
+| Leyla Phoenix | ![Character][ltype-character] | Fictional otherworldly model character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2699858) |
+| Sam Bramblepot | ![Character][ltype-character] | Fictional gnome gardener; trigger `samlora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2725096) |
+| Nox | ![Character][ltype-character] | Fictional living-shadow character; trigger `noxlora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2727604) |
+| Veyra — Crimson Character | ![Character][ltype-character] ![NSFW][ltype-nsfw] | Gothic vampire character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3016812) |
+| Looney Red Riding Hood | ![Character][ltype-character] | Dark-fantasy Red Riding Hood character; trigger `LRRH`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3038353) |
+| LORU & RIBS — Salt Flat Symphony | ![Character][ltype-character] | Skeleton duo in layered streetwear on reflective flats. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3030383) |
+| LORU & RIBS — Christmas Bone Dance | ![Character][ltype-character] | Skeleton duo in winter knitwear scenes. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3038289) |
+| Japanese / Brazilian Looks | ![Character][ltype-character] | Japanese and Brazilian appearance cues; triggers `japanese`, `brazilian`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3037922) |
+| Muscular Girl (alpha) | ![Character][ltype-character] | Muscular female character; trigger `muscular girl`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3038063) |
+| Western Figure Study | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — Western female figure study; trigger `Western Woman Boobs`. | 138 MB | [![][badge-civitai]](https://civitai.red/models/3037792) |
+| Lucie Belwyn | ![Character][ltype-character] | Fictional Belwyn family character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3036183) |
+| Darcy Belwyn | ![Character][ltype-character] | Fictional Bruges heiress character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3019448) |
+| Antonia Nordhaven | ![Character][ltype-character] | Fictional Swedish coastal-family character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3018175) |
+| Kimberly Wilson | ![Character][ltype-character] | Fictional teacher character; trigger `kimwilson`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2961210) |
+| Elizabeth WhiteMoon | ![Character][ltype-character] | Fictional steampunk archivist character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3033884) |
+| Lara WhiteMoon | ![Character][ltype-character] | Fictional steampunk character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3019705) |
+| Lina | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — consistent character in natural motion; trigger `lina_vid2`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3036339) |
+| Fictional Volleyball Player | ![Character][ltype-character] | Fictional Japanese volleyball player; triggers `ai39`, `Japanese woman`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3033252) |
+| Tia | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — fictional dark-haired character; trigger `young woman Tia`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/2989200) |
+| Game Heroines | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — Princess Peach, Rosalina and Samus looks. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3007369) |
+| Michaela Gobielle | ![Character][ltype-character] | Fictional character; trigger `mikalora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3032168) |
+| Shruti | ![Character][ltype-character] ![NSFW][ltype-nsfw] | Fictional character; trigger `shruti2x`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3031209) |
+| Maya Belwyn | ![Character][ltype-character] | Fictional Belwyn family character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3028320) |
+| Barbara | ![Character][ltype-character] | Fictional mature character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2560429) |
+| Sister Vita Nox | ![Character][ltype-character] | Fictional warrior-nun character; trigger `w4rriorn8n`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3030939) |
+| Noodles the Jellyfish | ![Character][ltype-character] | Jellyfish character with bouncy motion; trigger `t3nc`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3029800) |
+| Ashleigh M Phoenix | ![Character][ltype-character] | Fictional photography-curator character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2998843) |
+| Guin | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — fictional blonde character; trigger `Guin`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/1858057) |
+| Renee Hopkins | ![Character][ltype-character] | Fictional character; trigger `reneehopkins`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3029626) |
+| Kaida Pax | ![Character][ltype-character] | Fictional dragon-woman character; trigger `kaidapax`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2453861) |
+| Fern (bvga) | ![Character][ltype-character] | Fern character in the author's art style; trigger `bvgaFern`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3026210) |
+| Diya Von Vergin | ![Character][ltype-character] | Fictional English aristocrat character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3015175) |
+| Iman Belwyn | ![Character][ltype-character] | Fictional Belwyn family character. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2934660) |
+| Flat Lindsay | ![Character][ltype-character] | Fictional character; trigger `flatlindsaylora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2791401) |
+| Bonnie Rabbit | ![Character][ltype-character] | Fictional rabbit-girl character; trigger `bonnielora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2451356) |
+| Mira Thistlewhisk | ![Character][ltype-character] | Fictional mouse-girl character; trigger `miralora`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2445876) |
+| Manga Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | Manga-style rendering from reference images. | 71 MB | [![][badge-civitai]](https://civitai.red/models/2032489) |
+| Latex Outfit | ![Style][ltype-style] | Glossy latex outfit with pastel hair and neon-noir lighting. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2359957) |
+| INBT Cel Style | ![Style][ltype-style] | Ink-outlined cel-animation look; trigger `inbtsint`. | 591 MB | [![][badge-civitai]](https://civitai.red/models/3038668) |
+| Chibi Fish-Eye Motion | ![Style][ltype-style] | 2D anime fish-eye views with fast forward camera lunges. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3039219) |
+| Anime Action Illustration | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — dark anime action illustration; trigger `Tasagi`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3034699) |
+| Eminence in Shadow Style | ![Style][ltype-style] | Anime action-series look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3036507) |
+| Pastel Reverie | ![Style][ltype-style] ![NSFW][ltype-nsfw] | Surreal pastel dreamscape style. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3035963) |
+| Teal & Orange Cinematic | ![Style][ltype-style] ![NSFW][ltype-nsfw] | Teal-and-orange cinematic colour grade. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3034814) |
+| IllustratorCore CG | ![Style][ltype-style] | Realistic CGI rendering. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3034310) |
+| Corrugated Cardboard | ![Style][ltype-style] | Corrugated-paper craft look; trigger `CorrugatedCardboard_TeraWatt`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3034286) |
+| Euphoria Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — adult anime look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3033357) |
+| Adult Cartoon Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — exaggerated adult cartoon look; trigger `In the style of MNF`. | 142 MB | [![][badge-civitai]](https://civitai.red/models/3033139) |
+| Glamour Illustration | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — exaggerated glamour illustration style. | 142 MB | [![][badge-civitai]](https://civitai.red/models/951576) |
+| Sheer Nightwear | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — sheer nightwear outfit; trigger `sheer nighty`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3035162) |
+| Thai Traditional Dress | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — Thai traditional dress; trigger `Thailand Tradition Dress`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3034204) |
+| Cutout Shirt | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — shirt with chest cutouts. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3032590) |
+| Imaishi Anime Style | ![Style][ltype-style] | Hiroyuki Imaishi / Trigger anime look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3032525) |
+| Black and White Film | ![Style][ltype-style] ![NSFW][ltype-nsfw] | Black-and-white film look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/3032429) |
+| Watercolor | ![Style][ltype-style] | Watercolor painting look; trigger `Watercolor_TW`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3015456) |
+| Hataraki Ari Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — bold muscular anime look; trigger `hataraki ari`. | 142 MB | [![][badge-civitai]](https://civitai.red/models/1040711) |
+| Disgaea Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — Disgaea anime look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/2349096) |
+| Cyberpunk 50s | ![Style][ltype-style] | Atomic-age retro-futurist look. | 569 MB | [![][badge-civitai]](https://civitai.red/models/2459421) |
+| Teardrop Bikini | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — teardrop bikini outfit; trigger `Sterling Teardrop Bikini`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3029810) |
+| Obsidian Nightmare | ![Style][ltype-style] | Dark surreal horror look. | 569 MB | [![][badge-civitai]](https://civitai.red/models/2749232) |
+| Retro 90s Sci-Fi Anime | ![Style][ltype-style] ![NSFW][ltype-nsfw] | 1990s sci-fi anime look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/2181774) |
+| Leopard Lace Lingerie | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — leopard lace lingerie set. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3028231) |
+| InstaPic | ![Style][ltype-style] | Candid social-media photo look; trigger `instapic`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2168120) |
+| 3DCG Adult Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — polished 3DCG look; trigger `zy_3dcg`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3023233) |
+| Modeling Clay | ![Style][ltype-style] | Modelling-clay / stop-motion look; trigger `ModelingClay_TeraWatt`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3025654) |
+| Oil Painting | ![Style][ltype-style] | Oil-paint brushwork and texture; trigger `OilPainting_TeraWatt`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3021231) |
+| 80s Fantasy Movie | ![Style][ltype-style] | Early-80s fantasy-film look; trigger `ArsMovieStill`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/789313) |
+| Oral Intimacy | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — oral intimacy refinement; trigger `cunn1l1ngu5`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3013815) |
+| All-Fours Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — all-fours pose. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3038939) |
+| Forward-Leaning Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — forward lean with hands on knees; trigger `Lean forward and place hands on the knees`. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3037346) |
+| Intimate Teasing | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — POV intimate teasing with eye contact. | 250 MB | [![][badge-civitai]](https://civitai.red/models/3039167) |
+| Intimate Close-Up Finish | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — close-up intimate finish for I2V and T2V. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3037936) |
+| Intimate Accessory Detail | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — consistent intimate detail through motion. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3038278) |
+| Intimate Duo | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — combined intimate motion. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3023529) |
+| Oral Intimacy v1.5 | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — oral intimacy motion, updated build. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3033120) |
+| Intimate Embrace | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — close-contact intimacy for T2V / I2V / Ref2V. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3034804) |
+| Intimate Reclined Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — reclined intimate pose. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3033260) |
+| Restrained Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — restrained all-fours pose. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3034403) |
+| Lap Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — seated lap pose. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3007220) |
+| Intimate Motion AIO | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — all-in-one intimate motion; trigger `hmmotion`. | 592 MB | [![][badge-civitai]](https://civitai.red/models/2834417) |
+| Casting Poses | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — casting-scene positions. | 80 MB | [![][badge-civitai]](https://civitai.red/models/3032514) |
+| Intimate Finish | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — intimate finish effect. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3022363) |
+| Spooning Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — spooning intimacy. | 296 MB | [![][badge-civitai]](https://civitai.red/models/1803312) |
+| Intimate Rear | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — rear-entry intimacy. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3031553) |
+| Intimate Portrait | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — post-intimacy close-up. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3031433) |
+| Intimate Self-Pose | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — self-restraint pose; trigger `n1ppl3suck1ng`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/2984096) |
+| Intimate I2V Motion | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — close-contact I2V motion. | 1.16 GB | [![][badge-civitai]](https://civitai.red/models/2364658) |
+| Body Growth | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — subject grows larger; trigger `grows bigger`. | 38 MB | [![][badge-civitai]](https://civitai.red/models/1951971) |
+| Facial Expressions | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — facial close-up motion. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3029113) |
+| Intimate Close Effect | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — intimate finish motion; trigger `hmcumshot3`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2857340) |
+| Intimate Ref2VA | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — intimate Ref2VA motion. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3028491) |
+| Gay Intimacy | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — gay intimacy scenes. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3027138) |
+| Face Impact | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] | ⚠️ NSFW — face-impact motion. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3026497) |
+| Better Hair | ![Utility][ltype-utility] | Removes frizzy hair artifacts; trigger `ha8ir`. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3038528) |
+| Realistic Texture & Acting | ![Utility][ltype-utility] | Natural skin texture and more expressive acting. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3038259) |
+| Fire Spread Slider | ![Utility][ltype-utility] | Controls how far fire spreads across surfaces; no trigger. | 7 MB | [![][badge-civitai]](https://civitai.red/models/3037872) |
+| VBVR Pro V2 | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | Prompt following and object consistency for I2V / T2V. | 1.16 GB | [![][badge-civitai]](https://civitai.red/models/2497207) |
+| Snow & Blizzard Slider | ![Utility][ltype-utility] | Controls snow and blizzard effects; no trigger. | 15 MB | [![][badge-civitai]](https://civitai.red/models/3035996) |
+| Arrow Comet Slider | ![Utility][ltype-utility] | Controls supersonic arrow-comet VFX; no trigger. | 7.5 MB | [![][badge-civitai]](https://civitai.red/models/3034454) |
+| Tail | ![Utility][ltype-utility] | Adds a tail; trigger `tailed`. | 74 MB | [![][badge-civitai]](https://civitai.red/models/3035559) |
+| Content Unlock | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — lifts content restrictions. | 148 MB | [![][badge-civitai]](https://civitai.red/models/2925727) |
+| Balanced Figure | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — rounder figure proportions. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3004807) |
+| Figure Proportions | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — fuller figure proportions; trigger `AQueensTits`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/927534) |
+| Intimate Closeups | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — close-up intimate detail refinement. | 284 MB | [![][badge-civitai]](https://civitai.red/models/3032284) |
+| Instance Quantity Slider | ![Utility][ltype-utility] | Controls how many instances appear; no trigger. | 33 MB | [![][badge-civitai]](https://civitai.red/models/3032651) |
+| Voluminous Silhouette | ![Utility][ltype-utility] | Fuller backside proportions. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3009202) |
+| Realistic People | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | More realistic people. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3030636) |
+| Add Micro Details | ![Utility][ltype-utility] | Adds fine surface detail; trigger `addmicrodetails`. | 1.16 GB | [![][badge-civitai]](https://civitai.red/models/1377820) |
+| Motion Speed Slider | ![Utility][ltype-utility] | Controls motion and action speed; no trigger. | 3.2 MB | [![][badge-civitai]](https://civitai.red/models/2985458) |
+| Still Figure | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — still, passive figure for T2V / I2V. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3004560) |
+| Defined Silhouette | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | ⚠️ NSFW — defined lower-body silhouette. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3022599) |
+| BFS Face Swap | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] | Face and head replacement for Ref2VA. | 77 MB | [![][badge-civitai]](https://civitai.red/models/2027766) |
+| Natural Face & Speech | ![Utility][ltype-utility] | Natural facial motion with clear speech. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2925394) |
+| Hellfire Wheel Slider | ![Utility][ltype-utility] | Controls hellfire wheel and molten-ground VFX; no trigger. | 15 MB | [![][badge-civitai]](https://civitai.red/models/3028210) |
+| Fuuka Yamagishi Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Fuuka Yamagishi (Persona 3). | 142 MB | [![][badge-civitai]](https://civitai.red/models/3035085) |
+| Rise Kujikawa Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Rise Kujikawa (Persona 4). | 142 MB | [![][badge-civitai]](https://civitai.red/models/3035078) |
+| Sadayo Kawakami Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Sadayo Kawakami (Persona 5). | 142 MB | [![][badge-civitai]](https://civitai.red/models/3035059) |
+| Tae Takemi Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Tae Takemi (Persona 5). | 142 MB | [![][badge-civitai]](https://civitai.red/models/3035050) |
+| Mimosa Vermillion Voice | ![Audio][ltype-audio] | Audio-only English voice of Mimosa Vermillion (Black Clover). | 148 MB | [![][badge-civitai]](https://civitai.red/models/3035038) |
+| Tifa Lockheart Voice | ![Audio][ltype-audio] | Audio-only English voice of Tifa Lockheart (FF7). | 148 MB | [![][badge-civitai]](https://civitai.red/models/3032646) |
 
 ### ▣ RefMods
 
@@ -1427,6 +1579,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 [gh-AbrahamPJ]: https://img.shields.io/badge/AbrahamPJ-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Spectrallic]: https://img.shields.io/badge/Spectrallic-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yeowon]: https://img.shields.io/badge/yeowon-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[badge-civitai]: https://img.shields.io/badge/CivitAI-1976D2?style=flat-square
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
@@ -1436,6 +1589,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 [ltype-utility]: https://img.shields.io/badge/Utility-28a745?style=flat-square
 [ltype-research]: https://img.shields.io/badge/Research-6c757d?style=flat-square
 [ltype-nsfw]: https://img.shields.io/badge/NSFW-b02a37?style=flat-square
+[ltype-audio]: https://img.shields.io/badge/Audio-20c997?style=flat-square
 
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
