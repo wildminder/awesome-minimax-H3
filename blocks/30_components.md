@@ -80,7 +80,7 @@ Learned linear projections to condition H3 from a smaller text encoder — swap 
 
 ### ▣ Latent Upscaler (LBH-123-AI)
 
-Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) — works directly on H3's 24-channel VAE latents to upscale spatial resolution (H×W) while preserving the time dimension, skipping the VAE decode → pixel-upscale → encode round-trip. 3D-convolution backbone (2D and 3D node variants), Apache-2.0. Pairs with the [ComfyUI_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) node. ⚠️ Saves **time, not VRAM** — the refine pass still runs at target resolution. [Asirus](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) also ships a derivative **BF16 Conservative v5** requantization.
+Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) — works directly on H3's 24-channel VAE latents to upscale spatial resolution (H×W) while preserving the time dimension, skipping the VAE decode → pixel-upscale → encode round-trip. 3D-convolution backbone (2D and 3D node variants), Apache-2.0. Pairs with the [ComfyUI_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/ComfyUI_Minimax_h3_latent_Upscaler) node. ⚠️ Saves **time, not VRAM** — the refine pass still runs at target resolution. [Asirus](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) also ships a **BF16 Conservative v5** requantization, two FP16 **NEXORA** fine-tunes and stock FP16 / FP32 copies.
 
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -88,6 +88,8 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | Latent Upscaler v1 | ![fp16][badge-fp16] | 691 MB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_conv_v1/minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors) |
 | Latent Upscaler v1 | ![fp32][badge-fp32] | 1.38 GB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_conv_v1/minimax_h3_latent_upscaler_3d_conv_v1_fp32.pth) |
 | BF16 Conservative v5 | ![bf16][badge-bf16] | 691 MB | [![][gh-Asirus]](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY/resolve/main/minimax_h3_bf16_CONSERVATIVE_v5.safetensors) |
+| NEXORA FP16 · 400 steps | ![fp16][badge-fp16] | 691 MB | [![][gh-Asirus]](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY/resolve/main/Minimax_h3_NEXORA_LatentUpscaler_FP16_Steps400.safetensors) |
+| NEXORA FP16 · 6056 steps | ![fp16][badge-fp16] | 691 MB | [![][gh-Asirus]](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY/resolve/main/Minimax_h3_NEXORA_LatentUpscaler_FP16_Steps6056.safetensors) |
 
 <p id="controlnet" align="center">· · · · · · · · · · · · · ·</p>
 

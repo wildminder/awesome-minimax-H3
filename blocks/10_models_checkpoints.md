@@ -562,6 +562,8 @@ Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked
 | Remix v0.6 · int8 ConvRot v2 | ![int8][badge-int8] | 31.67 GB | [![][gh-FX--FeiHou]](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix/resolve/main/FeiHou_MiniMax-H3_Remix_v0.6_int8_convrot_v2.safetensors) |
 | Remix HSA turbo v0.8 · int8 ConvRot HQ | ![int8][badge-int8] | 45.95 GB | [![][gh-FX--FeiHou]](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix/resolve/main/FeiHou_MiniMax-H3_Remix_HSA_turbo_v0.8_int8_convrotHQ.safetensors) |
 | Remix HSA turbo v0.8 · int8 ConvRot HQ · pruned | ![int8][badge-int8] | 21.68 GB | [![][gh-FX--FeiHou]](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix/resolve/main/FeiHou_MiniMax-H3_Remix_HSA_turbo_v0.8_int8_convrotHQ_pruned.safetensors) |
+| Remix v0.5 · INT8 ConvRot | ![int8][badge-int8] | 45.95 GB | [![][gh-FX--FeiHou]](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix/resolve/main/FeiHou_MiniMax-H3_Remix_v0.5.safetensors) |
+| Remix HSA v0.7 · INT8 ConvRot | ![int8][badge-int8] | 31.70 GB | [![][gh-FX--FeiHou]](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix/resolve/main/FeiHou_MiniMax-H3_Remix_HSA_v0.7.safetensors) |
 #### FastH3 DMD2 Distillation (FastVideo)
 
 Official **data-free DMD2 few-step distillation** of MiniMax-H3 FL2VA by the FastVideo team (hao-ai-lab): 50-step base sampled in **4 steps**, joint video+audio, 768×1344 @ 124 frames. Diffusers-format full pipeline (only `transformer/` differs from base). Preview status — quality still maturing on high-motion detail. MiniMax H3 Community License. A ComfyUI-ready LoRA extraction of this checkpoint by drozbay is listed under [Turbo](#checkpoints).
@@ -628,7 +630,7 @@ Civitai-backup repo of **merged / pre-quantized full checkpoints** — mostly co
 
 #### DenoMix (Deno2026)
 
-**DenoMix** — merged pruned INT8 ConvRot Ref2VA (R2V) checkpoint: Singularity merged into stock H3, single file for `UNETLoader` / Load Diffusion Model. Default 896×512 → 1792×1024, 8+2 steps — [Deno2026](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix). ⚠️ Needs a ComfyUI with pruned INT8 ConvRot support; ships the [R2V Turbo 8+2 workflow](#wf) (8-step low-res pass, ×2 latent upscale, 2-step refine). GPL-3.0-only workflow; model under the MiniMax H3 Community License.
+**DenoMix** — merged pruned INT8 ConvRot Ref2VA (R2V) checkpoint: Singularity merged into stock H3, single file for `UNETLoader` / Load Diffusion Model. Default 896×512 → 1792×1024, 8+2 steps — [Deno2026](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix). ⚠️ Needs a ComfyUI with pruned INT8 ConvRot support; ships two R2V workflows: [Turbo 8+2](#wf) (8-step low-res pass, ×2 latent upscale, 2-step refine) and a 16 GB tiled sampler. GPL-3.0-only workflow; model under the MiniMax H3 Community License.
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
@@ -705,6 +707,14 @@ FL2VA-based hybrid with sparse Ref2VA influence across 15 transformer blocks. �
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | ErosLite v1.0 | ![nvfp4][badge-nvfp4] | 14.25 GB | [![][badge-civitai]](https://civitai.red/models/3032433) |
+
+#### FL–Singularity (LastEpisode)
+
+Pruned INT8 ConvRot FL2VA / Singularity merge with Singularity's time and AdaLN bundle. ⚠️ Experimental; reference-capable. [LastEpisode](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental). MiniMax H3 Community License.
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| FL–Singularity MA50 | ![int8][badge-int8] | 19.53 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/fl-singularity-ma50-sing-adaln-int8-convrot.safetensors) |
 
 #### Notes
 

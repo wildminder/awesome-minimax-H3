@@ -77,6 +77,7 @@
 | [Dials](https://github.com/matlowai/ComfyUI-Dials) | matlowai | ![Conditioning][cat-cond] | Training-free prompt-pair steering sliders (~14 KB) for motion and mood; stacks with LoRAs. ⚠️ New work lives in MAINodes. AGPL-3.0. |
 | [MotionBridge](https://github.com/powerhouse90/motionbridge) | powerhouse90 | ![Port][cat-port] | Turns H3 video into game-ready skeletal animation on any humanoid rig via NVIDIA GEM. Apache-2.0. |
 | [H3 Continuity Studio](https://github.com/KadoBOT/ComfyUI-H3-Continuity-Studio) | KadoBOT | ![Conditioning][cat-cond] | Timeline studio for multi-shot sequences with visual memory across scenes and optional Story writing. ⚠️ Needs core Context Windows. MIT. |
+| [SOLRICKS Upscaler](https://github.com/SOLRICKS/comfyui-solricks) | SOLRICKS | ![Upscaling][cat-upscale] | Upscales an H3 video through a latent upscaler plus an INT8 refiner; also ships anti-aliasing nodes. |
 
 ### ▣ Special Stuff
 

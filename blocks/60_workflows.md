@@ -33,6 +33,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [R2V — Auto Prompt](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/MiniMax%20-%20R2V%20-%20Auto%20Prompt.json) | Hearmeman24 | Ref2VA | VLM writes the H3 prompt from references. |
 | [R2V (video_minimax_h3_r2v)](https://github.com/Hearmeman24/comfyui-minimax/blob/master/workflows/MiniMax%20H3/video_minimax_h3_r2v.json) | Hearmeman24 | Ref2VA | Reference-to-video workflow (stock naming). |
 | [Deno R2V Turbo 8+2](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix/resolve/main/workflows/Deno_MiniMax_H3_R2V_Turbo_8plus2.json) | Deno2026 | Ref2VA | DenoMix low-res Turbo 8-step pass, ×2 latent upscale, 2-step refine (896×512 → 1792×1024). ⚠️ Needs DENO Custom Nodes, LBH H3 Latent Upscaler, KJNodes and VideoHelperSuite. (GPL-3.0-only) |
+| [Deno R2V 16GB Tiled Sampler](https://huggingface.co/Deno2026/MiniMax-H3-DenoMix/resolve/main/workflows/Deno_MiniMax_H3_R2V_16GB_Tiled_Sampler.json) | Deno2026 | Ref2VA | Low-VRAM tiled-sampler R2V graph for DenoMix. (GPL-3.0-only) |
 | [INT8 R2V (javano2610.7.1)](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows/resolve/main/MiniMax_int8_R2V-javano2610.7.1.json) | javawock7618 | Ref2VA | INT8 reference-to-video with Extend, ControlNet Union V2V, Latent Upscaler and Veda Sparse Attention. |
 | [Ref2V](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Ref2V.json) | StefanFalkok | Ref2VA | Reference-to-video graph with stock nodes. |
 | [Ref2V Prompt generator](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows/resolve/main/Minimax%20H3/Minimax%20H3%20Ref2V%20Prompt%20generator.json) | StefanFalkok | Ref2VA | Writes the H3 prompt for reference-to-video from references. |
@@ -61,6 +62,7 @@ ComfyUI workflow templates and community graphs for MiniMax-H3, organized by gen
 | [H25 hybrid multi-ref (pack)](https://huggingface.co/AI-KSK/minimax-h3-h25-hybrid-multiref-293) | AI-KSK | Bundle | H25 hybrid multi-reference 8-step graph. |
 | [H3 Ad Recast (pack)](https://github.com/m24927605/h3-long-ads) | m24927605 | Bundle | Recasts an ad's person and product in one pass with synced dialogue; also a 30 s product-ad graph. ⚠️ Needs ComfyUI master (context windows). MIT. |
 | [MiniMax-H3-ComfyUI workflows (pack)](https://huggingface.co/Alissonerdx/Minimax-H3-ComfyUI/tree/main/workflows) | Alissonerdx | Bundle | 16 graphs for the repo's LMS, style transfer, VFX edit, head swap, character swap and motion-transfer LoRAs. |
+| [SOLRICKS upscaler workflows (pack)](https://huggingface.co/SOLRICKS/MiniMax-H3-Upscaler/tree/main/SOLRICKS_MiniMaxH3_Workflows_T2V_I2V_FLF_Ref2V_V3_AllWorkflows) | SOLRICKS | Bundle | Five T2V / I2V / FLF / Ref2V / V2V graphs for the upscaler node. |
 
 *Comfy-Org's original `templates/video_minimax_h3_*` T2V/I2V/R2V graphs were moved to `archived/` and are now API-based (Hailuo/Minimax API) templates — links above point to the archived JSONs.*
 
