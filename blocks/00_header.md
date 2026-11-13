@@ -26,6 +26,7 @@ A curated list of models, text encoders, quants, and tools for the MiniMax-H3 om
   * [Tiny Autoencoder (TAE)](#tae)
   * [Image VAE (Mamad8)](#cliproj)
   * [Clip Projection (ClipProj)](#cliproj)
+  * [Mixed-Resolution Maps](#mpeg)
 * [LoRA](#lora)
   * [All LoRAs](#lora)
   * [RefMods](#refmods)

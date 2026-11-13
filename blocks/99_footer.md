@@ -132,6 +132,10 @@
 [gh-AbrahamPJ]: https://img.shields.io/badge/AbrahamPJ-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Spectrallic]: https://img.shields.io/badge/Spectrallic-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yeowon]: https://img.shields.io/badge/yeowon-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-funnygeeker]: https://img.shields.io/badge/funnygeeker-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-neonforestmist]: https://img.shields.io/badge/neonforestmist-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-tazmannner]: https://img.shields.io/badge/tazmannner-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-johndpope]: https://img.shields.io/badge/johndpope-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-civitai]: https://img.shields.io/badge/CivitAI-1976D2?style=flat-square
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
@@ -151,6 +155,7 @@
 [badge-fp32]: https://img.shields.io/badge/fp32-6c757d?style=flat-square
 [badge-int8]: https://img.shields.io/badge/int8-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
+[badge-oQ4e]: https://img.shields.io/badge/oQ4e-ffc107?style=flat-square
 [badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
 [badge-w6a8]: https://img.shields.io/badge/w6a8-d9534f?style=flat-square
 [badge-nvfp4]: https://img.shields.io/badge/nvfp4-6f42c1?style=flat-square

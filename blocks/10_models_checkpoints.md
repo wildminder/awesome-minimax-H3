@@ -716,6 +716,14 @@ Pruned INT8 ConvRot FL2VA / Singularity merge with Singularity's time and AdaLN 
 | :--- | :---: | :---: | :--- |
 | FL–Singularity MA50 | ![int8][badge-int8] | 19.53 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/fl-singularity-ma50-sing-adaln-int8-convrot.safetensors) |
 
+#### Ultima Hybrid Turbo (OmegaWPN)
+
+⚠️ **NSFW (adult content).** Pruned INT8 ConvRot hybrid with a Turbo bake, published as one ready-to-load diffusion-model file. ([CivitAI](https://civitai.red/models/3047487))
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| Ultima Hybrid Turbo · Level 99 | ![int8][badge-int8] | 19.5 GB | [![][badge-civitai]](https://civitai.red/models/3047487) |
+
 #### Notes
 
 * **Spectrallic/MiniMax-H3-PDMD-4step-int8-convrot** — pruned FL2VA and Ref2VA INT8 ConvRot with the 4-step PDMD LoRA merged in, so no LoRA loader is needed. ⚠️ PDMD was trained on the text-to-audio-video transformer and no Ref2VA results are published.*

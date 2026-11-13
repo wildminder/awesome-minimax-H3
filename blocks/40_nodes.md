@@ -78,6 +78,7 @@
 | [MotionBridge](https://github.com/powerhouse90/motionbridge) | powerhouse90 | ![Port][cat-port] | Turns H3 video into game-ready skeletal animation on any humanoid rig via NVIDIA GEM. Apache-2.0. |
 | [H3 Continuity Studio](https://github.com/KadoBOT/ComfyUI-H3-Continuity-Studio) | KadoBOT | ![Conditioning][cat-cond] | Timeline studio for multi-shot sequences with visual memory across scenes and optional Story writing. ⚠️ Needs core Context Windows. MIT. |
 | [SOLRICKS Upscaler](https://github.com/SOLRICKS/comfyui-solricks) | SOLRICKS | ![Upscaling][cat-upscale] | Upscales an H3 video through a latent upscaler plus an INT8 refiner; also ships anti-aliasing nodes. |
+| [Banzhang All](https://github.com/alinuo666/ComfyUI-Banzhang-All) | alinuo666 | ![Conditioning][cat-cond] | Chinese-language H3 node pack: three-pass sampling, multi-segment chaining, director studio and VRAM tools. ⚠️ Chinese UI; needs a full ComfyUI restart. GPL-3.0. |
 
 ### ▣ Special Stuff
 
@@ -116,6 +117,13 @@
 * **MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA)) — 27B Ref2VA rewriter, vLLM served. 12 shards + MTP (51.8 GiB). ⚠️ No `LICENSE` file shipped in the repo.
 
 * **MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA)) — 27B FL2VA twin (12 shards, no MTP, 51.0 GiB), text + optional first/last frame. ⚠️ No `LICENSE` file shipped in the repo.
+
+* **Prompt Rewriter Qwen3.8-27B Ref2VA — abliterated oQ4e quants** — 27B Ref2VA rewriter with safety refusals removed, in Apple Silicon MLX quants with the MTP head kept. ⚠️ [oMLX](https://github.com/jundot/omlx) / MLX only; not loadable in ComfyUI or vLLM. No licence file shipped.
+
+  | Format | Precision | Size | Download |
+  | :--- | :---: | :---: | :--- |
+  | oQ4e · BF16 | ![oQ4e][badge-oQ4e] | 16.3 GB | [![][gh-funnygeeker]](https://huggingface.co/funnygeeker/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA-heretic-oQ4e-mtp/tree/main) |
+  | oQ4e · FP16 | ![oQ4e][badge-oQ4e] | 17.2 GB | [![][gh-funnygeeker]](https://huggingface.co/funnygeeker/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-Ref2VA-heretic-oQ4e-fp16-mtp/tree/main) |
 
 * **MiniMax-H3-Prompt-Rewriter-LoRA-Omni** — PEFT LoRA adapter on **Qwen2.5-Omni-7B** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni)) — the multimodal sibling of the 8B rewriter. Rewrites short requests *with optional image / video / audio references* into structured MiniMax-H3 audio-video prompts; covers T2AV / I2AV / L2AV / FL2AV and Ref2AV. Text-only output (`enhanced_prompt`); does not render. Apache-2.0. No GGUF variant.
 

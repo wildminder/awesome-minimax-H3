@@ -107,3 +107,15 @@ Control branch for MiniMax-H3 from Alibaba PAI's [VideoX-Fun](https://github.com
 
 *MiniMax H3 Community License Agreement; 8 control conditions plus video inpainting, one checkpoint. V2V control workflows (openpose/canny/depth) in javawock7618's INT8 pack wire this branch in.*
 
+<p id="mpeg" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ Mixed-Resolution Maps (MPEG-Diffusion)
+
+Research weights for two-track mixed-resolution H3 sampling: most of the frame renders at half resolution while a chosen region keeps full-resolution detail. ⚠️ Needs the companion [mpeg-diffusion](https://github.com/scrya-com/mpeg-diffusion) sampler — not a drop-in diffusion model, and the matching LoRA is not published. MiniMax H3 Community License; use and redistribution excluded in the EU, UK, KR and US. ([repo](https://huggingface.co/johndpope/MiniMax-H3-MPEG-Diffusion))
+
+| Component | Size | Download |
+| :--- | :---: | :--- |
+| K/V up-maps | 31.3 MB | [![][gh-johndpope]](https://huggingface.co/johndpope/MiniMax-H3-MPEG-Diffusion/resolve/main/kv_maps/up_maps_tt.safetensors) |
+| Region head v3 | 21.3 kB | [![][gh-johndpope]](https://huggingface.co/johndpope/MiniMax-H3-MPEG-Diffusion/resolve/main/region_head_v3/region_head_tt.safetensors) |
+| Region head (self-selected) | 21.3 kB | [![][gh-johndpope]](https://huggingface.co/johndpope/MiniMax-H3-MPEG-Diffusion/resolve/main/region_head/region_head_tt.safetensors) |
+
