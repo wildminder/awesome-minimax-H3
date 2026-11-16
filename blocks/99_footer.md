@@ -130,6 +130,8 @@
 [gh-Zakyrie]: https://img.shields.io/badge/Zakyrie-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-LastEpisode]: https://img.shields.io/badge/LastEpisode-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AbrahamPJ]: https://img.shields.io/badge/AbrahamPJ-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-S3ckn11g0r]: https://img.shields.io/badge/S3ckn11g0r-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-jialidddh]: https://img.shields.io/badge/jialidddh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Spectrallic]: https://img.shields.io/badge/Spectrallic-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yeowon]: https://img.shields.io/badge/yeowon-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-funnygeeker]: https://img.shields.io/badge/funnygeeker-lightgrey?style=flat-square&logo=huggingface&logoColor=white

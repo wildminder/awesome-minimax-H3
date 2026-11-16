@@ -173,6 +173,12 @@ Official and ComfyUI-repackaged model files.
 | `DMAD 4-step` · full-critic variant · ⚠️ needs the DMAD inference script | 4 | Full | ![bf16][badge-bf16] | 1.29 GB | [![][gh-ZhengmingYu]](https://huggingface.co/ZhengmingYu/DMAD/resolve/main/minimax_h3/dmad_minimax_h3_4step_full_critic.safetensors) |
 | `DMAD 4-step` · ComfyUI layout · lora_critic | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-ZhengmingYu]](https://huggingface.co/ZhengmingYu/DMAD/resolve/main/minimax_h3/dmad_minimax_h3_4step_lora_critic_comfyui.safetensors) |
 | `DMAD 4-step` · ComfyUI layout · full_critic | 4 | Full | ![bf16][badge-bf16] | 1.82 GB | [![][gh-ZhengmingYu]](https://huggingface.co/ZhengmingYu/DMAD/resolve/main/minimax_h3/dmad_minimax_h3_4step_full_critic_comfyui.safetensors) |
+| `CROWN HyperPDMD-HD · fl2va r38` | 3–4 | Pruned | ![bf16][badge-bf16] | 346.7 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/CROWN_MiniMax_H3_HyperPDMD_HD_FL2VA_3_4Step_r38.safetensors) |
+| `CROWN HyperPDMD-HD · ref2va r38` | 3–4 | Pruned | ![bf16][badge-bf16] | 340.3 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/CROWN_MiniMax_H3_HyperPDMD_HD_Ref2VA_3_4Step_r38.safetensors) |
+| `CROWN HyperPDMD-HD · fl2va r64 full` | 3–4 | Full | ![bf16][badge-bf16] | 591.6 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/full_rank64/CROWN_MiniMax_H3_HyperPDMD_HD_FL2VA_3_4Step_r64_full.safetensors) |
+| `CROWN HyperPDMD-HD · ref2va r64 full` | 3–4 | Full | ![bf16][badge-bf16] | 591.6 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/full_rank64/CROWN_MiniMax_H3_HyperPDMD_HD_Ref2VA_3_4Step_r64_full.safetensors) |
+
+*CROWN HyperPDMD-HD is an acceleration-and-sharpness LoRA that also restores detail on non-BF16 bases. Its repo ships nine T2V / I2V / R2V [workflows](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/tree/main/workflows).*
 
 *larryvrh also publishes experimental training checkpoints — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
 
