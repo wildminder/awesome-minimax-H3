@@ -23,6 +23,8 @@
 [gh-Mamad8]: https://img.shields.io/badge/Mamad8-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-NicoLab28]: https://img.shields.io/badge/NicoLab28-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ModelsLab]: https://img.shields.io/badge/ModelsLab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Wuli--art]: https://img.shields.io/badge/Wuli--art-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zjwfufu]: https://img.shields.io/badge/zjwfufu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Coffmeteor]: https://img.shields.io/badge/Coffmeteor-lightgrey?style=flat-square&logo=huggingface&logoColor=white

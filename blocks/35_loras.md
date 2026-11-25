@@ -178,7 +178,7 @@ LoRAs published on CivitAI. Some releases cover several base models — choose t
 | Lena Mossclaw | ![Character][ltype-character] | Fictional catgirl character; trigger `lenalora`. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/2443132) |
 | CivChan | ![Character][ltype-character] | Unofficial CivitAI mascot character. | 233.2 MB | [![][badge-civitai]](https://civitai.red/models/2768290) |
 | Dhev V. Arleatz | ![Character][ltype-character] | Character LoRA; no description published. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3045319) |
-| Nola — Southern Street Muse | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — consistent Southern street-muse character; triggers `znolanola`, `znolawoman`. Both listings ship the same weights. | 142.3 MB | [![][badge-civitai]](https://civitai.red/models/3041979) ┊ [![][badge-civitai]](https://civitai.red/models/3041940) |
+| Nola — Southern Street Muse | ![Character][ltype-character] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — consistent Southern street-muse character; triggers `znolanola`, `znolawoman`. Core LoRA plus RefLoRA + RefMod builds; both listings ship the same weights. | 142.3 / 145.3 MB + 1.5 MB RefMod | [![][badge-civitai]](https://civitai.red/models/3041979) ┊ [![][badge-civitai]](https://civitai.red/models/3041940) |
 | Staci 80s | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — fictional 1980s party-girl character. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3035617) |
 | Roxana | ![Character][ltype-character] ![NSFW][ltype-nsfw] | ⚠️ NSFW — character LoRA; test upload with no description. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3049378) |
 | Manga Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | Manga-style rendering from reference images. | 71 MB | [![][badge-civitai]](https://civitai.red/models/2032489) |
@@ -207,7 +207,7 @@ LoRAs published on CivitAI. Some releases cover several base models — choose t
 | Obsidian Nightmare | ![Style][ltype-style] | Dark surreal horror look. | 569 MB | [![][badge-civitai]](https://civitai.red/models/2749232) |
 | Retro 90s Sci-Fi Anime | ![Style][ltype-style] ![NSFW][ltype-nsfw] | 1990s sci-fi anime look. | 71 MB | [![][badge-civitai]](https://civitai.red/models/2181774) |
 | Leopard Lace Lingerie | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — leopard lace lingerie set. | 148 MB | [![][badge-civitai]](https://civitai.red/models/3028231) |
-| InstaPic | ![Style][ltype-style] | Candid social-media photo look; trigger `instapic`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/2168120) |
+| InstaPic | ![Style][ltype-style] | Candid social-media photo look; trigger `instapic`. | 147.9–295.8 MB | [![][badge-civitai]](https://civitai.red/models/2168120) |
 | 3DCG Adult Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — polished 3DCG look; trigger `zy_3dcg`. | 296 MB | [![][badge-civitai]](https://civitai.red/models/3023233) |
 | Modeling Clay | ![Style][ltype-style] | Modelling-clay / stop-motion look; trigger `ModelingClay_TeraWatt`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3025654) |
 | Oil Painting | ![Style][ltype-style] | Oil-paint brushwork and texture; trigger `OilPainting_TeraWatt`. | 233 MB | [![][badge-civitai]](https://civitai.red/models/3021231) |
@@ -308,7 +308,28 @@ LoRAs published on CivitAI. Some releases cover several base models — choose t
 | Kotone Shiomi Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Kotone Shiomi (Persona 3). | 142.3 MB | [![][badge-civitai]](https://civitai.red/models/3046300) |
 | Elizabeth Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Elizabeth (Persona 3). | 142.3 MB | [![][badge-civitai]](https://civitai.red/models/3046304) |
 | Margaret Voice | ![Audio][ltype-audio] | Audio-only Japanese voice of Margaret (Persona 4). | 142.3 MB | [![][badge-civitai]](https://civitai.red/models/3046381) |
-| North American Female Accents | ![Audio][ltype-audio] | Adds Utah, Atlanta and New Jersey accents to speech. | 296.5 MB | [![][badge-civitai]](https://civitai.red/models/3047714) |
+| Female Accents | ![Audio][ltype-audio] | Regional accent voices; triggers are the accent names (Utah, Atlanta, New Jersey, Liverpool, Minnesota, Texas, Cajun, Essex, Valley Girl, Quebecois). | 74.2–296.5 MB | [![][badge-civitai]](https://civitai.red/models/3047714) |
+| Intimate Finale (MiniMax H3) | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — intimate close-up action sequence in T2V, I2V and Ref2V. | 71.2 MB | [![][badge-civitai]](https://civitai.red/models/3054740) |
+| Male Anatomy Detail (H3) | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — improves male anatomical detail; strength 0.60–1.00. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3054540) |
+| Kinetic Sakuga | ![Style][ltype-style] | Dynamic action-animation style with motion trails and impact effects; trigger `kinetic_sakuga2`. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3054508) |
+| Jet Black Purifier Slider | ![Utility][ltype-utility] | Keeps black garments and armor a deep matte black under strong color spill. | 11.6 MB | [![][badge-civitai]](https://civitai.red/models/3049801) |
+| Violet Mercer | ![Character][ltype-character] | Original slime-girl character by Miko Goblin. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/2733186) |
+| Curvy Neighbor | ![Character][ltype-character] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — curvy middle-aged neighbor character. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3053989) |
+| Large Adult Prop | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — large adult prop for adult scenes. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/1442486) |
+| Clear Chair Plushie Crush | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — recreates the viral clear-chair plushie crush trend. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3053062) |
+| 3D World | ![Style][ltype-style] | Wireframe mesh style with visible topology over a 3D-render look; trigger `3DWorld`. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/358801) |
+| Anime Intimate Close-Up | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — anime-style intimate close-up sequences. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3053642) |
+| Thai Woman (chr_mth) | ![Character][ltype-character] | Thai woman character; trigger `Meaw`. | 142.3 MB | [![][badge-civitai]](https://civitai.red/models/2317655) |
+| Tanja (Draenei Character) | ![Character][ltype-character] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — blue-skinned Draenei character with body and voice adapters. | 147.9 MB (2 files) | [![][badge-civitai]](https://civitai.red/models/3052013) |
+| Armpit Hair Detail | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — natural-looking armpit hair detail; trigger `H4iry`. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3051450) |
+| Intimate Close-Up (Solo) | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — close-up intimate solo action; best in Ref2V or with a first frame. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3051965) |
+| Nick Wilde (Zootopia) | ![Character][ltype-character] | Zootopia fox character for Ref2V; four checkpoints. | 147.9 MB (4 files) | [![][badge-civitai]](https://civitai.red/models/3051609) |
+| Zaynab Von Vergin | ![Character][ltype-character] | Fictional Oxford-aristocracy woman character. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3051201) |
+| Rear Position (MiniMax) | ![Motion][ltype-motion] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — rear-position intimate motion. | 145.3 MB | [![][badge-civitai]](https://civitai.red/models/3051148) |
+| Maggie Thompson | ![Character][ltype-character] | Original grem aircraft-mechanic character. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3050512) |
+| Nyarlith | ![Character][ltype-character] | Original eldritch tentacled character. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/2912301) |
+| Doctor Penny | ![Character][ltype-character] | Original plague-doctor persona character; v2 improves voice. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/2857823) |
+| Sister Hazel | ![Character][ltype-character] | Original chipmunk nun character. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/2849433) |
 
 #### H3-Image LoRAs
 
@@ -320,6 +341,12 @@ LoRAs for the **image-only** H3-Image builds ([P-H3-Image](https://huggingface.c
 | WHISK FACE Black | ![Character][ltype-character] | Dark-variant whiskered-face character; trigger `whiskface-black`. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3046443) |
 | CROWN Influencer Portrait | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — polished influencer-portrait look; trigger `dy_chunyu_yujie`. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3047887) |
 | Blender 3D Render Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] | ⚠️ NSFW — polished 3D-render look; trigger `A 3d render`. | 142.4 MB | [![][badge-civitai]](https://civitai.red/models/3049318) |
+| Zenith (Furry Wolf) | ![Character][ltype-character] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — furry wolf character for H3 Image. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3054904) |
+| Natural Proportions | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — natural bust proportions for H3 Image. | 284.5 MB | [![][badge-civitai]](https://civitai.red/models/2904630) |
+| Realistic Female Anatomy | ![Utility][ltype-utility] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — realistic female anatomy for H3 Image. | 284.4 MB | [![][badge-civitai]](https://civitai.red/models/3054468) |
+| Rurudo Style | ![Style][ltype-style] | Flat anime-color illustration style for H3 Image. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3054448) |
+| Woodland Camo BDU | ![Character][ltype-character] | Woodland-camo uniform; trigger `Woodland Camo BDU`. Also reported to work in H3 video. | 295.8 MB | [![][badge-civitai]](https://civitai.red/models/3054134) |
+| Sweet Butter Cookie Style | ![Style][ltype-style] ![NSFW][ltype-nsfw] |  ⚠️ NSFW — turns photos or renders into a cookie-like style while keeping the composition. | 147.9 MB | [![][badge-civitai]](https://civitai.red/models/3035952) |
 
 ### ▣ RefMods
 
@@ -337,6 +364,7 @@ Per-character **reference bundles** for H3's omni-reference mode — tiny extrac
 | Bunny characters pack (Lucy Baldwin) | ![Character][ltype-character] | Lucy Baldwin (Assassin's Creed) per-character RefMod bundle. | 1.4 MB | [![][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/MinimaxH3_Characters/resolve/main/Bunny%20H3%20Character%20RefMod%20Collection%20Lucy%20Baldwin%20Assassin%27s%20Creed%20-%20MinimaxH3.safetensors) |
 | Aaliyah v1 | ![Character][ltype-character] | Aaliyah per-character RefMod bundle (EllaPriest45 `REFMOD/` folder). | 1.1 MB | [![][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/MinimaxH3_Characters/resolve/main/REFMOD/minimaxh3_aaliyah_v1_refmod.safetensors) |
 | Clementine RefMod | ![Character][ltype-character] | Per-character RefMod for Clementine; both editions ship the same 1.5 MB bundle. | 1.5 MB | [![][badge-civitai]](https://civitai.red/models/3033293) ┊ [![][badge-civitai]](https://civitai.red/models/3033305) |
+| OrdinaryJoe RefMod | ![Character][ltype-character] | Ordinary middle-aged man RefMod; needs refmod nodes. Trigger `OrdinaryJoe`. | 1.1 MB | [![][badge-civitai]](https://civitai.red/models/2483401) |
 
 ### ▣ Collections
 

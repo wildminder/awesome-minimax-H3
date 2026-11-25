@@ -67,3 +67,15 @@ Built from [`llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic`](https://h
 | `molmo2_8b_int8_convrot` | ![int8][badge-int8] | 8.65 GB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Molmo2-8B-Minimax-H3/resolve/main/molmo2_8b_int8_convrot.safetensors) |
 | `molmo2-8b-h3-tap24-phaseb-pilot` · projector | ![fp16][badge-fp16] | 328 MB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Molmo2-8B-Minimax-H3/resolve/main/projections/molmo2-8b-h3-tap24-phaseb-pilot.safetensors) |
 
+<a id="enc-qwen35"></a>
+
+### ▣ Alternative Encoder (Qwen3.5-9B, experimental)
+
+[Qwen3.5-9B-Minimax-H3](https://huggingface.co/Alissonerdx/Qwen3.5-9B-Minimax-H3) by Alissonerdx — Qwen3.5-9B as a multimodal conditioning encoder for H3 Ref2VA through a projection and alignment LoRA. ⚠️ Not a drop-in `CLIPLoader` file — it needs the [ComfyUI-Qwen3.5-H3](https://github.com/alisson-anjos/ComfyUI-Qwen3.5-H3) node (v0.2.6+); `experimental/` holds in-progress checkpoints. Apache-2.0.
+
+| Model Name | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| `qwen3.5_9b_projection` | ![fp32][badge-fp32] | 368.1 MB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Qwen3.5-9B-Minimax-H3/resolve/main/minimax_h3_qwen3.5_9b_projection.safetensors) |
+| `qwen3.5_9b_lora` | ![bf16][badge-bf16] | 14.6 MB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/Qwen3.5-9B-Minimax-H3/resolve/main/minimax_h3_qwen3.5_9b_lora.safetensors) |
+
+

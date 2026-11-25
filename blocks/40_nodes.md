@@ -118,6 +118,14 @@
 
 * **MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA** ([lightx2v](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-Qwen3.8-27B-FL2VA)) — 27B FL2VA twin (12 shards, no MTP, 51.0 GiB), text + optional first/last frame. ⚠️ No `LICENSE` file shipped in the repo.
 
+* **Gemma4-12B-H3-Prompt-Extend** ([Wuli-art](https://huggingface.co/Wuli-art/Gemma4-for-MiniMax-H3-Prompt-Extend)) — Gemma4-12B prompt rewriter for H3 FL2VA / Ref2VA. ⚠️ Needs separate ComfyUI workflows, not a drop-in text encoder. Apache-2.0.
+
+  | Format | Precision | Size | Download |
+  | :--- | :---: | :--- | :--- |
+  | BF16 | ![bf16][badge-bf16] | 22.31 GB | [![][gh-Wuli--art]](https://huggingface.co/Wuli-art/Gemma4-for-MiniMax-H3-Prompt-Extend/resolve/main/gemma4_12b_h3_pe_bf16.safetensors) |
+  | FP8 | ![fp8][badge-fp8] | 12.11 GB | [![][gh-Wuli--art]](https://huggingface.co/Wuli-art/Gemma4-for-MiniMax-H3-Prompt-Extend/resolve/main/gemma4_12b_h3_pe_fp8_scaled.safetensors) |
+  | INT8 | ![int8][badge-int8] | 12.13 GB | [![][gh-Wuli--art]](https://huggingface.co/Wuli-art/Gemma4-for-MiniMax-H3-Prompt-Extend/resolve/main/gemma4_12b_h3_pe_int8.safetensors) |
+
 * **Prompt Rewriter Qwen3.8-27B Ref2VA — abliterated oQ4e quants** — 27B Ref2VA rewriter with safety refusals removed, in Apple Silicon MLX quants with the MTP head kept. ⚠️ [oMLX](https://github.com/jundot/omlx) / MLX only; not loadable in ComfyUI or vLLM. No licence file shipped.
 
   | Format | Precision | Size | Download |

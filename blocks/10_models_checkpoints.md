@@ -177,10 +177,27 @@ Official and ComfyUI-repackaged model files.
 | `CROWN HyperPDMD-HD · ref2va r38` | 3–4 | Pruned | ![bf16][badge-bf16] | 340.3 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/CROWN_MiniMax_H3_HyperPDMD_HD_Ref2VA_3_4Step_r38.safetensors) |
 | `CROWN HyperPDMD-HD · fl2va r64 full` | 3–4 | Full | ![bf16][badge-bf16] | 591.6 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/full_rank64/CROWN_MiniMax_H3_HyperPDMD_HD_FL2VA_3_4Step_r64_full.safetensors) |
 | `CROWN HyperPDMD-HD · ref2va r64 full` | 3–4 | Full | ![bf16][badge-bf16] | 591.6 MB | [![][gh-S3ckn11g0r]](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/resolve/main/full_rank64/CROWN_MiniMax_H3_HyperPDMD_HD_Ref2VA_3_4Step_r64_full.safetensors) |
+| `v4+rl_s3` | 8 | Full | ![bf16][badge-bf16] | 1.30 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/MiniMax-H3-Turbo-RL/resolve/main/minimax_h3_turbo_v4_rl_s3.safetensors) |
+| `v4+rl_s5` | 8 | Full | ![bf16][badge-bf16] | 1.30 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/MiniMax-H3-Turbo-RL/resolve/main/minimax_h3_turbo_v4_rl_s5.safetensors) |
+| `v4+rl_s6_step33` | 8 | Full | ![bf16][badge-bf16] | 1.30 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/MiniMax-H3-Turbo-RL/resolve/main/minimax_h3_turbo_v4_rl_s6_step33.safetensors) |
+| `ref2v fusion 4-step` | 4 | Full | ![bf16][badge-bf16] | 3.52 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_4step_v1.0.safetensors) |
+| `ref2v fusion 4-step · comfyui` | 4 | Full | ![bf16][badge-bf16] | 4.85 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_4step_v1.0_comfyui.safetensors) |
+| `ref2v fusion 4-step lite r32` | 4 | Full | ![bf16][badge-bf16] | 0.62 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_4step_v1.0_lite_r32.safetensors) |
+| `ref2v fusion 4-step lite · comfyui` | 4 | Full | ![bf16][badge-bf16] | 0.75 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_4step_v1.0_lite_r32_comfyui.safetensors) |
+| `ref2v fusion 4-step pruned · comfyui` | 4 | Pruned | ![bf16][badge-bf16] | 4.86 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/pruned/minimax_h3_ref2v_turbo_fusion_4step_v1.0_pruned_comfyui.safetensors) |
+| `ref2v fusion 4-step lite pruned · comfyui` | 4 | Pruned | ![bf16][badge-bf16] | 0.76 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/pruned/minimax_h3_ref2v_turbo_fusion_4step_v1.0_lite_r32_pruned_comfyui.safetensors) |
+| `ref2v fusion 8-step` | 8 | Full | ![bf16][badge-bf16] | 3.52 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_8step_v1.0.safetensors) |
+| `ref2v fusion 8-step · comfyui` | 8 | Full | ![bf16][badge-bf16] | 4.85 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_8step_v1.0_comfyui.safetensors) |
+| `ref2v fusion 8-step lite r32` | 8 | Full | ![bf16][badge-bf16] | 0.62 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_8step_v1.0_lite_r32.safetensors) |
+| `ref2v fusion 8-step lite · comfyui` | 8 | Full | ![bf16][badge-bf16] | 0.75 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/minimax_h3_ref2v_turbo_fusion_8step_v1.0_lite_r32_comfyui.safetensors) |
+| `ref2v fusion 8-step pruned · comfyui` | 8 | Pruned | ![bf16][badge-bf16] | 4.86 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/pruned/minimax_h3_ref2v_turbo_fusion_8step_v1.0_pruned_comfyui.safetensors) |
+| `ref2v fusion 8-step lite pruned · comfyui` | 8 | Pruned | ![bf16][badge-bf16] | 0.76 GB | [![][gh-lightx2v]](https://huggingface.co/lightx2v/Minimax-H3-Turbo-Fusion/resolve/main/pruned/minimax_h3_ref2v_turbo_fusion_8step_v1.0_lite_r32_pruned_comfyui.safetensors) |
 
 *CROWN HyperPDMD-HD is an acceleration-and-sharpness LoRA that also restores detail on non-BF16 bases. Its repo ships nine T2V / I2V / R2V [workflows](https://huggingface.co/S3ckn11g0r/CROWN-MiniMax-H3-HyperPDMD-HD-3-4Step-LoRA/tree/main/workflows).*
 
 *larryvrh also publishes experimental training checkpoints — see the [repo](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora/tree/main).*
+*ModelsLab's `v4+rl` files keep the Turbo V4 and RL adapters as exact side-by-side branches — ⚠️ load as LoRA branches, not merged into base weights. The repo also ships a 1.10 GB Ref2VA DWD head file (`minimax_h3_ref2va_dwd_head_v1.safetensors`, undocumented). MiniMax H3 Community License.*
+*lightx2v **Turbo Fusion** folds its Ref2VA distillation, Pika Flex and Larry's Turbo V4 into one LoRA; ⚠️ do not stack the component LoRAs on top. `lite r32` are smaller compressed builds; `pruned/` targets pruned bases. `_comfyui` files use the ComfyUI key layout. MiniMax H3 Community License.*
 
 *■ **DMAD** — *Distribution Matching as Adversarial Distillation* (ZhengmingYu, [arXiv:2610.02188](https://arxiv.org/abs/2610.02188), [code](https://github.com/Yzmblog/DMAD), Apache-2.0) distills a 50-step teacher into a **4-step** student. Two critic regimes ship: `lora_critic` (paper checkpoint) and `full_critic`. The Diffusers-layout originals need the repo's own `inference.py` (a custom re-noise rule the students trained with); the `_comfyui` conversions load through `LoraLoaderModelOnly` at strength 1.0, cfg 1.0, shift 12 / audio shift 2, with the `lcm` sampler and `simple` scheduler — or the [ComfyUI-DMAD](https://github.com/Yzmblog/DMAD/tree/main/comfyui/ComfyUI-DMAD) sampler and sigma nodes. "12.5×" is the NFE count (50→4), not a measured speedup.*
 
@@ -558,6 +575,16 @@ Accelerated FL2VA/Ref2VA hybrid checkpoint with DMAD and PDMD distillation baked
 | 8step TURBO beta7 int8HQ | ![int8][badge-int8] | 21.32 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_h3_8stepTURBO_beta7_SingularityV2_int8HQ.safetensors) |
 | TURBO-hybrid beta5 v1.3 int8 | ![int8][badge-int8] | 19.53 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM/resolve/main/10Eros_Max_h3_TURBO-hybrid_beta5_Singularity_v1.3_int8.safetensors) |
 
+#### Sulphur3 + 10Eros-Max Merges (OliviaRossi)
+
+⚠️ **NSFW (adult content).** Full-checkpoint merges built on TenStrip's 10Eros-Max graft, with distillation LoRAs baked in. The TriPrism build adds Singularity V2, LightX2V Turbo-Fusion and the Realism Slider; ⚠️ the card's filenames for it are outdated, use the tree's. MiniMax H3 Community License plus upstream terms.
+
+| Checkpoint | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| Sulphur3 + 10Eros-Max | ![bf16][badge-bf16] | 37.54 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-Merge/resolve/main/Minimax-H3-Sulphur3-10Erosmax-Merge_bf16.safetensors) |
+| Sulphur3 + 10Eros-Max | ![int8][badge-int8] | 19.61 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-Merge/resolve/main/Minimax-H3-Sulphur3-10Erosmax-Merge_int8_convrot.safetensors) |
+| TriPrism TurboFusion | ![bf16][badge-bf16] | 37.54 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-SingularityV2-TriPrism-TurboFusion/resolve/main/Sulphur3_10ErosMax_SingularityV2_TriPRISM_TurboFusion_realism_bf16.safetensors) |
+| TriPrism TurboFusion | ![int8][badge-int8] | 19.61 GB | [![][gh-OliviaRossi]](https://huggingface.co/OliviaRossi/Minimax-H3-Sulphur3-10Erosmax-SingularityV2-TriPrism-TurboFusion/resolve/main/Sulphur3_10ErosMax_SingularityV2_TriPRISM_TurboFusion_realism_int8_convrot.safetensors) |
 #### Remix (FX-FeiHou)
 
 **Remix** — hierarchical recombination of two H3 branches at targeted response blocks, with AdaLN handled separately and LoRA contributions statically fused — [FX-FeiHou](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix). ⚠️ Requires the [ComfyUI-FeiHou-Easy-H3](https://github.com/FX-FeiHou/ComfyUI-FeiHou-Easy-H3) node pack.
@@ -716,19 +743,23 @@ FL2VA-based hybrid with sparse Ref2VA influence across 15 transformer blocks. �
 
 #### FL–Singularity (LastEpisode)
 
-Pruned INT8 ConvRot FL2VA / Singularity merge with Singularity's time and AdaLN bundle. ⚠️ Experimental; reference-capable. [LastEpisode](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental). MiniMax H3 Community License.
+⚠️ Experimental FL / Singularity merge with reference and first/last-frame support. Two builds differ only in whose timestep conditioning they keep: v1 uses Singularity's, v2 uses stock FL's. [LastEpisode](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental). MiniMax H3 Community License.
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
-| FL–Singularity MA50 | ![int8][badge-int8] | 19.53 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/fl-singularity-ma50-sing-adaln-int8-convrot.safetensors) |
+| FL–Singularity MA50 v1 · sing-adaln | ![int8][badge-int8] | 19.53 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/episode-h3-fl-singularity-ma50-v1-sing-adaln-int8.safetensors) |
+| FL–Singularity MA50 v1 · sing-adaln | ![w6a8][badge-w6a8] | 15.60 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/episode-h3-fl-singularity-ma50-v1-sing-adaln-w6a8.safetensors) |
+| FL–Singularity MA50 v2 · fl-adaln | ![int8][badge-int8] | 19.53 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/episode-h3-fl-singularity-ma50-v2-fl-adaln-int8.safetensors) |
+| FL–Singularity MA50 v2 · fl-adaln | ![w6a8][badge-w6a8] | 15.60 GB | [![][gh-LastEpisode]](https://huggingface.co/LastEpisode/MiniMax-H3-FL-Singularity-Experimental/resolve/main/episode-h3-fl-singularity-ma50-v2-fl-adaln-w6a8.safetensors) |
 
 #### Ultima Hybrid Turbo (OmegaWPN)
 
-⚠️ **NSFW (adult content).** Pruned INT8 ConvRot hybrid with a Turbo bake, published as one ready-to-load diffusion-model file. ([CivitAI](https://civitai.red/models/3047487))
+⚠️ **NSFW (adult content).** Pruned INT8 ConvRot hybrid with a Turbo bake, published as ready-to-load diffusion-model files. ([CivitAI](https://civitai.red/models/3047487))
 
 | Checkpoint | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Ultima Hybrid Turbo · Level 99 | ![int8][badge-int8] | 19.5 GB | [![][badge-civitai]](https://civitai.red/models/3047487) |
+| Ultima Hybrid Turbo · Level 120 | ![int8][badge-int8] | 19.5 GB | [![][badge-civitai]](https://civitai.red/models/3047487) |
 
 #### Notes
 
